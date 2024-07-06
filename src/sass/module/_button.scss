@@ -1,0 +1,97 @@
+@use "global" as *;
+
+.button {
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: $white;
+  color: $black;
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: calc(32 / 24);
+  letter-spacing: 0.2em;
+  padding-block: rem(16);
+  padding-left: rem(74);
+  padding-right: rem(52);
+  width: rem(360);
+  max-width: 100%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  left: rem(23);
+  width: rem(48);
+  height: rem(45);
+  background-color: $red;
+  mask-image: url(../images/icon-tel.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  transition: background-color 0.3s;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  right: rem(20);
+  width: rem(21);
+  height: rem(34);
+  background-color: currentColor;
+  mask-image: url(../images/icon-arrow.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.button span {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.button--reservation,
+.button--instagram {
+  @extend .button;
+}
+
+.button--reservation {
+  padding-right: rem(34);
+}
+
+.button--reservation::before {
+  mask: initial;
+  background-color: $red;
+  mask-image: url(../images/icon-calendar01.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  width: rem(50);
+  height: rem(48);
+  transition: background-image 0.3s;
+}
+
+.button--instagram::before {
+  mask-image: url(../images/icon-instagram.svg);
+  width: rem(40);
+  height: rem(40);
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: $red;
+    color: $white;
+  }
+
+  .button:hover::before {
+    background-color: $white;
+  }
+
+  .button--reservation:hover::before {
+    background-color: $white;
+  }
+}

@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.lunch {
+  overflow-x: clip;
+}
+
+.layout-lunch {}
+
+.lunch__inner {}
+
+.lunch__hading {}
+
+.lunch__container {
+  background-color: $black;
+  padding-bottom: rem(100);
+}
+
+.lunch__content {}
+
+.lunch__button {
+  margin-top: rem(40);
+}

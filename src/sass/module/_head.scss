@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.head {}
+
+.head--white,
+.head--small {
+  @extend .head;
+}
+
+.head__line {
+  display: inline-block;
+  background-color: $black;
+  color: $white;
+}
+
+.head__line::first-letter {
+  color: $red;
+}
+
+.head__line span {
+  font-size: rem(26);
+  font-weight: $bold;
+  line-height: calc(32/26);
+  letter-spacing: 0.2em;
+}
+
+.head--small .head__line span {
+  font-size: rem(20);
+  line-height: calc(32/20);
+}
+
+.head__line:nth-child(2) {
+  transform: translateX(50%);
+}
+
+.head--white .head__line {
+  background-color: $white;
+  color: $black;
+}

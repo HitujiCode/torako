@@ -1,0 +1,49 @@
+@use "global" as *;
+
+
+.food-grid {
+  background-color: $black;
+}
+
+.food-grid__inner {}
+
+.food-grid__container {}
+
+.grid-block {
+}
+
+.grid-block__head {
+  grid-area: head;
+}
+
+.grid-block__text {
+  margin-top: rem(24);
+  grid-area: text;
+}
+
+.grid-block__images {
+  margin-top: rem(40);
+  margin-inline: calc(50% - 50vw);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-block__img1 {
+}
+
+.grid-block__img2 {
+  width: 50%;
+}
+
+.grid-block__img3 {
+  width: 50%;
+}
+
+.grid-block__img1 img,
+.grid-block__img2 img,
+.grid-block__img3 img{
+  aspect-ratio: 196/283;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

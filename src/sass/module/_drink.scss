@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.drink {
+  padding-top: rem(30);
+}
+
+.layout-drink {}
+
+.drink__inner {}
+
+.drink__container {}
+
+.drink__container-black {
+  background-color: $black;
+  padding-bottom: rem(100);
+}
+
+.drink__note {
+  text-align: right;
+}
+
+.drink__heading {
+  margin-top: rem(52);
+}
+
+.drink__content {}
+
+.drink__button {
+  margin-top: rem(40);
+}

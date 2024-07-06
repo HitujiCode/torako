@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.food-block {}
+
+.food-block__inner {}
+
+.food-block__head {
+  // margin-top: rem(40);
+}
+
+.food-block__img {
+  margin-inline: calc(50% - 50vw);
+}
+
+.food-block__text {
+  margin-top: rem(24);
+}
+
+.food-block__info {
+  margin-top: rem(20);
+}
+
+.food-block__note {
+  font-size: rem(14);
+  color: $white;
+  line-height: calc(20/14);
+  letter-spacing: 0.25em;
+  text-indent: -1.25em;
+  padding-left: 1.25em;
+}
+
+.food-block__images {
+  margin-top: rem(40);
+  margin-inline: calc(50% - 50vw);
+}
+
+.food-block__images--square {
+  @extend .food-block__images;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(68);
+}
+
+.food-block__drink {
+  background-color: $white;
+  margin-inline: calc(50% - 50vw);
+  padding-top: rem(68);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(68);
+}
+
+.food-block__button {
+  margin-top: rem(40);
+}

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(44);
+  place-items: center;
+  position: relative;
+}
+
+.section-head::before {
+  content: "";
+  position: absolute;
+  width: rem(52);
+  height: rem(12);
+  background-image: url("../images/icon-bone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.section-head__sub {
+  font-size: rem(32);
+  font-family: $second-font;
+  line-height: calc(46/32);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.section-head__main {
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc(32/20);
+  letter-spacing: 0.2em;
+}
+
+.section-head--white {
+  @extend .section-head;
+  color: $white;
+}

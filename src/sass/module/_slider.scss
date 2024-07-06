@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.slider {}
+
+.slider__wrapper {}
+
+.swiper-wrapper {}
+
+.slider__slide {
+  width: calc(328/392*100%);
+}
+
+.slider__slide img {
+  aspect-ratio: 328/232;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__prev {}
+
+.swiper-button-prev {
+  text-rendering: optimizespeed;
+}
+
+.slider__next {}
+
+.swiper-button-next {
+  text-rendering: optimizespeed;
+}

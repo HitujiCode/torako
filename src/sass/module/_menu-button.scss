@@ -1,0 +1,145 @@
+@use "global" as *;
+
+.menu-button {
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: $white;
+  padding-block: rem(16);
+  padding-right: rem(60);
+  padding-left: rem(46);
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: calc(24/18);
+  letter-spacing: 0.2em;
+  width: 100%;
+  transition: background-color 0.3, color 0.3;
+
+  @include mq("md") {
+    font-size: rem(32);
+    line-height: calc(54/32);
+    padding: rem(33) rem(112);
+  }
+}
+
+.menu-button::after {
+  position: absolute;
+  content: "";
+  right: rem(16);
+  width: rem(43);
+  aspect-ratio: 1/1;
+  background-color: $black;
+  mask-image: url(../images/icon-menu.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  transition: background-color 0.3s;
+}
+
+.menu-button__text {
+  display: inline-grid;
+  align-items: center;
+  text-align: center;
+  padding-left: rem(68);
+  padding-right: rem(24);
+  transition: color 0.3s;
+  position: relative;
+}
+
+.menu-button__text::before,
+.menu-button__text::after {
+  position: absolute;
+  content: "";
+  background-color: $red;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-button__text::before {
+  mask-image: url(../images/icon-meat.svg);
+  left: 0;
+  width: rem(52);
+  height: rem(52);
+  transform: rotate(-36deg);
+}
+
+.menu-button__text::after {
+  mask-image: url(../images/icon-stick.svg);
+  right: 0;
+  width: rem(16);
+  height: rem(52);
+  transform: rotate(15deg);
+}
+
+.menu-button--drink {
+  @extend .menu-button;
+  padding-right: rem(60);
+  padding-left: rem(46);
+}
+
+.menu-button--drink .menu-button__text {
+  padding-left: rem(44);
+  padding-right: rem(28);
+}
+
+.menu-button--drink .menu-button__text::before,
+.menu-button--drink .menu-button__text::after {
+  width: rem(19);
+  height: rem(47);
+}
+
+.menu-button--drink .menu-button__text::before {
+  mask-image: url(../images/icon-glass.svg);
+  transform: rotate(-20deg);
+}
+
+.menu-button--drink .menu-button__text::after {
+  mask-image: url(../images/icon-glass.svg);
+  transform: rotate(20deg);
+}
+
+.menu-button--lunch {
+  @extend .menu-button;
+  padding-right: rem(60);
+  padding-left: rem(46);
+}
+
+.menu-button--lunch .menu-button__text {
+  padding-inline: rem(28);
+}
+
+.menu-button--lunch .menu-button__text::before,
+.menu-button--lunch .menu-button__text::after {
+  width: rem(19);
+  height: rem(60);
+}
+
+.menu-button--lunch .menu-button__text::before {
+  mask-image: url(../images/icon-fork.svg);
+  transform: rotate(-20deg);
+}
+
+.menu-button--lunch .menu-button__text::after {
+  mask-image: url(../images/icon-spoon.svg);
+  transform: rotate(20deg);
+}
+
+@media (any-hover: hover) {
+  .menu-button:hover {
+    background-color: $red;
+    color: $white;
+  }
+
+  .menu-button:hover::after {
+    background-color: $white;
+  }
+
+  .menu-button:hover .menu-button__text::before,
+  .menu-button:hover .menu-button__text::after {
+    background-color: $white;
+    transform: initial
+  }
+}

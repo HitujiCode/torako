@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.course {
+  padding-top: rem(100);
+}
+
+.layout-course {}
+
+.course__inner {}
+
+.course__container {}
+
+.course__container-black {
+  background-color: $black;
+  margin-top: rem(40);
+  padding-top: rem(16);
+  padding-bottom: rem(70);
+}
+
+.course__heading {}
+
+.course__content {
+  margin-top: rem(40);
+}
+
+.course__list {}
+
+.course__block {}
+
+.course__block+.course__block {
+  margin-top: rem(16);
+}

@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.course-block {
+  background-color: $white;
+  padding: rem(16);
+}
+
+.course-block__label {
+  margin-left: rem(-16);
+  padding-block: rem(12);
+  padding-left: rem(25);
+  padding-right: rem(33);
+  background-color: $black;
+  display: inline-block;
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $white;
+  line-height: calc(20/16);
+  letter-spacing: 0.2em;
+  clip-path: polygon(100% 0, 95% 48%, 100% 100%, 0 100%, 0 0);
+}
+
+.course-block__title {
+  margin-top: rem(24);
+  text-align: center;
+  font-weight: $bold;
+  color: $black;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+
+.course-block__title-main {
+  font-size: rem(24);
+  line-height: calc(32/24);
+}
+
+.course-block__title-sub {
+  margin-top: rem(8);
+  font-size: rem(18);
+  line-height: calc(24/18);
+  letter-spacing: 0;
+}
+
+.course-block__note {
+  margin-top: rem(25);
+  text-align: right;
+}
+
+.course-block__menu {
+  margin-top: rem(8);
+  padding: rem(32);
+  background-color: $black;
+}
+
+.course-block__menu+.course-block__menu {
+  margin-top: rem(16);
+}
+
+.course-block__menu-title {
+  font-size: rem(24);
+  font-weight: $bold;
+  color: $white;
+  line-height: calc(32/24);
+  text-align: center;
+}
+
+.course-block__menu-red {
+  color: $red;
+}
+
+.course-block__menu-small {
+  font-size: rem(18);
+  line-height: calc(24/18);
+}
+
+.course-block__menu-amount {
+  font-size: rem(24);
+  font-weight: $regular;
+  font-family: $second-font;
+  line-height: calc(28/24);
+}
+
+.course-block__menu-list {
+  margin-top: rem(24);
+}
+
+.course-block__menu-item {}
+
+.course-block__menu-white {
+  margin-top: rem(16);
+  padding: rem(16) rem(14);
+  border: 1px solid;
+}
+
+.course-block__lineup {}
+
+.course-block__lineup+.course-block__menu-notes {
+  margin-top: rem(40);
+}
+
+.course-block__menu-note {
+  text-align: left;
+  text-indent: -1.25em;
+  padding-left: 1.25em;
+}

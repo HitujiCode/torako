@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.infomation {
+  padding-block: rem(100);
+}
+
+.infomation__inner {}
+
+.infomation__heading {}
+
+.infomation__list {
+  margin-top: rem(40);
+  border-top: 1px solid;
+}
+
+.infomation__item {
+  padding-block: rem(24);
+  border-bottom: 1px solid;
+}
+
+.infomation__date {
+  font-size: rem(24);
+  font-family: $second-font;
+  line-height: calc(28/24);
+}
+
+.infomation__text {
+  margin-top: rem(8);
+}

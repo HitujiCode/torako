@@ -1,0 +1,266 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 900;
+}
+
+.header__inner {
+  height: inherit;
+  // padding-left: rem(16);
+}
+
+.header__hamburger {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1200;
+  width: rem(68);
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  background-color: $black;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.header__hamburger span:not(:nth-of-type(3)) {
+  position: relative;
+  display: block;
+  width: rem(40);
+  height: 2px;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: rem(-4);
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: rem(8);
+}
+
+.header__hamburger span:nth-of-type(3) {
+  position: relative;
+  top: rem(14);
+}
+
+.header__hamburger span:nth-of-type(3)::before,
+.header__hamburger span:nth-of-type(3)::after {
+  font-size: rem(12);
+  font-weight: $medium;
+  color: $white;
+  line-height: calc(20/12);
+  letter-spacing: 0.25em;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.header__hamburger span:nth-of-type(3)::before {
+  content: "MENU";
+  opacity: 1;
+}
+
+.header__hamburger span:nth-of-type(3)::after {
+  content: "CLOSE";
+  position: absolute;
+  top: rem(12);
+  left: 0;
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: rem(4);
+  transform: rotate(45deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  top: rem(2);
+  transform: rotate(-45deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(3)::before {
+  opacity: 0;
+  top: rem(-10);
+}
+
+.header__hamburger.is-open span:nth-of-type(3)::after {
+  opacity: 1;
+  top: rem(6);
+}
+
+.header__wrapper {
+  // padding-top: rem(90);
+  // padding-bottom: rem(32);
+  display: grid;
+  position: fixed;
+  z-index: 1000;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: $black;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  transition: top 0.5s;
+
+  @include mq("md") {
+    // padding-top: rem(82);
+    // padding-bottom: rem(78);
+    height: initial;
+    padding-inline: rem(25);
+  }
+}
+
+.header__drawer {
+  padding-top: rem(90);
+  padding-bottom: rem(32);
+  display: grid;
+  // top: -100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  transition: top 0.5s;
+
+  @include mq("md") {
+    padding-top: rem(82);
+    padding-bottom: rem(78);
+    padding-inline: rem(25);
+    grid-template-columns: calc(208/1440*100%) calc(532/1224*100%) auto;
+    grid-template-areas:
+      "logo nav button"
+      "logo address button";
+    // column-gap: min(calc(56/1440*100vw), rem(56));
+    justify-content: space-between;
+    height: initial;
+    max-width: rem(1274);
+    margin-inline: auto;
+  }
+}
+
+.header__wrapper.is-open {
+  top: 0;
+}
+
+.header__logo {
+  width: rem(113);
+  position: absolute;
+  top: rem(16);
+  left: rem(16);
+
+  @include mq("md") {
+    position: initial;
+    grid-area: logo;
+    width: 100%;
+  }
+}
+
+.header__logo.is-open {
+  position: fixed;
+
+  @include mq("md") {
+    position: initial;
+  }
+}
+
+.header__logo img {
+  aspect-ratio: 113/125;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header__container {
+  padding-inline: rem(16);
+  text-align: center;
+
+  @include mq("md") {
+    display: contents;
+  }
+}
+
+.header__nav {
+  width: clamp(rem(140), calc(360/767*100vw), rem(360));
+  margin-inline: auto;
+
+  @include mq("md") {
+    grid-area: nav;
+    width: 100%;
+  }
+}
+
+.grobal-nav__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(24);
+
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: calc(68/1440*100vw);
+  }
+}
+
+.grobal-nav__item {}
+
+.grobal-nav__item a {
+  display: inline-block;
+  width: 100%;
+  font-size: rem(23);
+  font-family: $second-font;
+  color: $white;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.grobal-nav__item span {
+  margin-top: rem(4);
+  display: block;
+  font-size: 10px;
+  font-family: $base-font;
+  line-height: calc(16/10);
+  letter-spacing: 0.25em;
+}
+
+.header__buttons {
+  margin-top: rem(40);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(8);
+  place-content: center;
+
+  @include mq("md") {
+    margin-top: initial;
+    grid-area: button;
+    gap: rem(32);
+  }
+}
+
+.header__button {}
+
+.header__address {
+  margin-top: rem(40);
+  font-size: min(calc(12/392*100vw), rem(12));
+  color: $white;
+  line-height: calc(20/12);
+  letter-spacing: 0.25em;
+
+  @include mq("md") {
+    grid-area: address;
+    font-size: 12px;
+    padding-left: min(calc(40/1440*100vw), rem(40));
+  }
+}
+
+@media (any-hover: hover) {
+  .header__item a:hover {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.food {
+  overflow-x: clip;
+}
+
+.food__heading {}
+
+.food__container {
+  margin-top: rem(40);
+}
+
+.food__container--black {
+  @extend .food__container;
+  background-color: $black;
+  margin-top: initial;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+}
+
+.food__container:has(.menu-button) {
+  padding-bottom: rem(80);
+}
+
+.food__content {
+  // padding-bottom: rem(40);
+}
+
+.food__menu+.food__content {
+  margin-top: rem(40);
+}
+
+.food__menu {
+}
+
+.food__grid {}
