@@ -6,6 +6,14 @@
   gap: rem(44);
   place-items: center;
   position: relative;
+
+  @include mq("md") {
+    width: fit-content;
+    grid-template-columns: repeat(2, auto);
+    gap: rem(108);
+    place-content: center;
+    margin-inline: auto;
+  }
 }
 
 .section-head::before {
@@ -17,6 +25,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  margin-top: rem(12);
+
+  @include mq("md") {
+    background-image: url("../images/pc/icon-bone.svg");
+    width: rem(28);
+    height: rem(120);
+    left: rem(342);
+  }
 }
 
 .section-head__sub {
@@ -25,6 +41,11 @@
   line-height: calc(46/32);
   letter-spacing: 0.25em;
   text-transform: uppercase;
+
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: calc(116/80);
+  }
 }
 
 .section-head__main {
@@ -32,9 +53,14 @@
   font-weight: $bold;
   line-height: calc(32/20);
   letter-spacing: 0.2em;
+
+  @include mq("md") {
+    font-size: rem(56);
+    line-height: calc(80/56);
+  }
 }
 
-.section-head--white {
+.section-head--white1 {
   @extend .section-head;
   color: $white;
 }

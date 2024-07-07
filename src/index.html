@@ -132,58 +132,50 @@
       </div>
       <p class="mv__title">仙台でホルモン・ユッケ・肉刺し・<wbr>焼肉を堪能するなら【トラコ文化横丁店】</p>
       <h1 class="mv__logo">
-        <img src="./assets/images/logo.svg" alt="TORAKO" width="" height="" />
+        <img src="./assets/images/logo_mv_white.svg" alt="TORAKO" width="" height="" />
       </h1>
       <figure class="mv__catch">
         <img src="./assets/images/catch.svg" alt="トラコでカンパイ！！" width="" height="" />
       </figure>
     </section>
 
-    <div class="slider swiper js-slider">
-      <div class="slider__wrapper swiper-wrapper">
-        <div class="slider__slide swiper-slide">
+    <div class="thumbnail swiper js-thumbnail">
+      <div class="thumbnail__wrapper swiper-wrapper">
+        <div class="thumbnail__slide swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc/slide_01.webp" type="image/webp" media="(min-width: 768px)" />
-            <source srcset="./assets/images/pc/slide_01.jpg" media="(min-width: 768px)" />
             <source srcset="./assets/images/slide_01.webp" type="image/webp" />
             <img src="./assets/images/slide_01.jpg" alt="肉刺しとホルモンTORAKO" width="" height="" />
           </picture>
         </div>
-        <div class="slider__slide swiper-slide">
+        <div class="thumbnail__slide swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc/slide_02.webp" type="image/webp" media="(min-width: 768px)" />
-            <source srcset="./assets/images/pc/slide_02.jpg" media="(min-width: 768px)" />
             <source srcset="./assets/images/slide_02.webp" type="image/webp" />
             <img src="./assets/images/slide_02.jpg" alt="肉刺しとホルモンTORAKO" width="" height="" />
           </picture>
         </div>
-        <div class="slider__slide swiper-slide">
+        <div class="thumbnail__slide swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc/slide_03.webp" type="image/webp" media="(min-width: 768px)" />
-            <source srcset="./assets/images/pc/slide_03.jpg" media="(min-width: 768px)" />
             <source srcset="./assets/images/slide_03.webp" type="image/webp" />
             <img src="./assets/images/slide_03.jpg" alt="肉刺しとホルモンTORAKO" width="" height="" />
           </picture>
         </div>
-        <div class="slider__slide swiper-slide">
+        <div class="thumbnail__slide swiper-slide">
           <picture>
-            <source srcset="./assets/images/pc/slide_04.webp" type="image/webp" media="(min-width: 768px)" />
-            <source srcset="./assets/images/pc/slide_04.jpg" media="(min-width: 768px)" />
             <source srcset="./assets/images/slide_04.webp" type="image/webp" />
             <img src="./assets/images/slide_04.jpg" alt="肉刺しとホルモンTORAKO" width="" height="" />
           </picture>
         </div>
-        <div class="slider__prev swiper-button-prev"><img src="./assets/images/icon-arrow.svg" alt="" width=""
-            height="" /></div>
-        <div class="slider__next swiper-button-next"><img src="./assets/images/icon-arrow.svg" alt="" width=""
-            height="" /></div>
       </div>
+      <div class="thumbnail__prev swiper-button-prev"><img src="./assets/images/icon-swiper.svg" alt="" width=""
+          height="" /></div>
+      <div class="thumbnail__next swiper-button-next"><img src="./assets/images/icon-swiper.svg" alt="" width=""
+          height="" /></div>
     </div>
 
-    <section class="intro layout-common">
+    <section class="intro">
       <div class="intro__inner inner">
         <hgroup class="intro__title">
-          <p class="intro__title-sub"><span class="ruby">米沢牛焼肉 仔虎が手掛ける新業態</span>肉刺しとホルモン</p>
+          <p class="intro__title-sub"><span class="intro__title-ruby">米沢牛焼肉 仔虎が手掛ける新業態</span>肉刺しとホルモン</p>
           <h2 class="intro__title-main">
             <img src="./assets/images/torako.svg" alt="トラコ" width="" height="" loading="lazy" />
           </h2>
@@ -198,17 +190,16 @@
           </picture>
         </figure>
         <div class="intro__body">
-          <p class="intro__text">米沢牛焼肉仔虎（コトラ）の<br>
+          <p class="intro__text">米沢牛焼肉仔虎（コトラ）の<br class="sp">
             高い品質をそのままに、<br>
-            本物の肉刺しと<br>
-            上質なホルモンを、<br>
+            本物の肉刺しと<br class="sp">
+            上質なホルモンを、<br class="sp">
             もっと気軽に、気兼ねなく。</p>
-          <p class="intro__text">昭和レトロな面影を残す<br>
-            仙台文化横丁に佇む<br>
+          <p class="intro__text">昭和レトロな面影を残す<br class="sp">
+            仙台文化横丁に佇む<br class="sp">
             ノスタルジックな空間で、<br>
-            仕事帰りの一杯も、<br>
-            大切なあの人とひとときも、<br>
-            あんなときもこんなときも、<br>
+            仕事帰りの一杯も、<br class="sp">大切なあの人とひとときも、<br>
+            あんなときもこんなときも、<br class="sp">
             「トラコでカンパイ」を。</p>
         </div>
       </div>
@@ -243,38 +234,39 @@
       </svg>
     </figure>
 
-    <section class="food layout-food">
-      <div class="food__heading">
-        <hgroup class="section-head">
-          <p class="section-head__sub">food</p>
-          <h2 class="section-head__main">料理</h2>
-        </hgroup>
-      </div>
-      <div class="food__container">
-        <div class="food__content">
-          <div class="food-block">
-            <div class="food-block__inner inner">
+    <section id="food" class="food">
+      <div class="food__inner inner">
+
+        <p class="food__note note">※価格は全て税込価格です。</p>
+        <div class="food__heading">
+          <hgroup class="section-head">
+            <p class="section-head__sub">food</p>
+            <h2 class="section-head__main">料理</h2>
+          </hgroup>
+        </div>
+
+        <div class="food__container">
+          <div class="food__content">
+            <div class="food-block--reverse">
               <div class="food-block__head">
-                <div class="head">
-                  <p class="head__line"><span>全ての生肉好きに捧ぐ、</span></p>
-                  <p class="head__line"><span>牛刺しとユッケ。</span></p>
-                </div>
+                <p class="head">
+                  <span class="head__line"><span class="head__red">全</span>ての生肉好きに捧ぐ、</span><br class="sp"><span
+                    class="head__line"><span class="head__red">牛</span>刺しとユッケ。</span>
+                </p>
               </div>
               <div class="food-block__img">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
-                      <source srcset="./assets/images/pc/food_01.webp" type="image/webp" media="(min-width: 768px)" />
-                      <source srcset="./assets/images/pc/food_01.jpg" media="(min-width: 768px)" />
                       <source srcset="./assets/images/food_01.webp" type="image/webp" />
                       <img src="./assets/images/food_01.jpg" alt="" width="" height="" />
                     </picture>
                   </figure>
-                  <div class="food-photo__top-left">
+                  <div class="food-photo__position1">
                     <p class="food-photo__title">トラコ刺し</p>
                     <p class="food-photo__title--small">（牛刺し・ユッケ合盛り）</p>
                   </div>
-                  <div class="food-photo__bottom-right">
+                  <div class="food-photo__position2">
                     <p class="food-photo__amount">¥1,870</p>
                   </div>
                 </div>
@@ -288,24 +280,20 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="food__content">
-          <div class="food-block">
-            <div class="food-block__inner inner">
+          <div class="food__content">
+            <div class="food-block">
               <div class="food-block__img">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
-                      <source srcset="./assets/images/pc/food_02.webp" type="image/webp" media="(min-width: 768px)" />
-                      <source srcset="./assets/images/pc/food_02.jpg" media="(min-width: 768px)" />
                       <source srcset="./assets/images/food_02.webp" type="image/webp" />
                       <img src="./assets/images/food_02.jpg" alt="" width="" height="" />
                     </picture>
                   </figure>
-                  <div class="food-photo__top-left">
+                  <div class="food-photo__position1">
                     <p class="food-photo__title">センマイ刺し</p>
                   </div>
-                  <div class="food-photo__bottom-right">
+                  <div class="food-photo__position2">
                     <p class="food-photo__amount">¥770</p>
                   </div>
                 </div>
@@ -318,23 +306,20 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="food__container--black">
-        <div class="food__content">
-          <div class="food-block">
-            <div class="food-block__inner inner">
+
+        <div class="food__container-black">
+          <div class="food__content">
+            <div class="food-block--reverse">
               <div class="food-block__head">
-                <div class="head--white">
-                  <p class="head__line"><span>ホルモン好きが唸る、</span></p>
-                  <p class="head__line"><span>上質な和牛ホルモン。</span></p>
-                </div>
+                <p class="head--white1">
+                  <span class="head__line"><span class="head__red">ホ</span>ルモン好きが唸る、</span><br class="sp"><span
+                    class="head__line"><span class="head__red">上</span>質な和牛ホルモン。</span>
+                </p>
               </div>
               <div class="food-block__img">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
-                      <source srcset="./assets/images/pc/food_03.webp" type="image/webp" media="(min-width: 768px)" />
-                      <source srcset="./assets/images/pc/food_03.jpg" media="(min-width: 768px)" />
                       <source srcset="./assets/images/food_03.webp" type="image/webp" />
                       <img src="./assets/images/food_03.jpg" alt="" width="" height="" />
                     </picture>
@@ -349,9 +334,7 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="food__menu">
-          <div class="food__menu-inner inner">
+          <div class="food__menu">
             <div class="menu">
               <p class="menu__note">※価格は全て税込価格です。</p>
               <hgroup class="menu__head">
@@ -360,15 +343,11 @@
               </hgroup>
               <div class="menu__body">
                 <div class="menu__category">
-                  <p class="menu__taste text--white">こ っ て り</p>
-                  <figure class="menu__arrow">
-                    <img src="./assets/images/arrow.svg" alt="" width="" height="" loading="lazy" />
-                  </figure>
-                  <p class="menu__taste text--white">あ じ わ い</p>
-                  <figure class="menu__arrow--reverce">
-                    <img src="./assets/images/arrow.svg" alt="" width="" height="" loading="lazy" />
-                  </figure>
-                  <p class="menu__taste text--white">あ っ さ り</p>
+                  <p class="menu__taste">こってり</p>
+                  <div class="menu__arrow-prev"></div>
+                  <p class="menu__taste">あじわい</p>
+                  <div class="menu__arrow-next"></div>
+                  <p class="menu__taste">あっさり</p>
                 </div>
                 <dl class="menu__list">
                   <div class="menu__item">
@@ -428,30 +407,26 @@
               <p class="menu__note">※当日の仕入れ状況により、取扱いのない部位もあり</p>
             </div>
           </div>
-        </div>
-        <div class="food__content">
-          <div class="food-block">
-            <div class="food-block__inner inner">
+          <div class="food__content">
+            <div class="food-block">
               <div class="food-block__head">
-                <div class="head--white">
-                  <p class="head__line"><span>今日の気分はこってり？</span></p>
-                  <p class="head__line"><span>それともあっさり？</span></p>
-                </div>
+                <p class="head--white2">
+                  <span class="head__line"><span class="head__red">今</span>日の気分はこってり？</span><br class="sp"><span
+                    class="head__line"><span class="head__red">そ</span>れともあっさり？</span>
+                </p>
               </div>
               <div class="food-block__img">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
-                      <source srcset="./assets/images/pc/food_04.webp" type="image/webp" media="(min-width: 768px)" />
-                      <source srcset="./assets/images/pc/food_04.jpg" media="(min-width: 768px)" />
                       <source srcset="./assets/images/food_04.webp" type="image/webp" />
                       <img src="./assets/images/food_04.jpg" alt="" width="" height="" />
                     </picture>
                   </figure>
-                  <div class="food-photo__top-left">
+                  <div class="food-photo__position1">
                     <p class="food-photo__title">ごちゃまぜホルモン</p>
                   </div>
-                  <div class="food-photo__bottom-right">
+                  <div class="food-photo__position2">
                     <p class="food-photo__amount">¥1,430</p>
                   </div>
                 </div>
@@ -461,24 +436,23 @@
                   ホルモンの種類に迷ったら、料理長のイチオシホルモンをちょっとずつ食べ比べできる嬉しい盛合せプレート【ごちゃまぜホルモン】がおすすめ！<br>
                   今日の気分が決まれば、こってり・あじわい・あっさりのラインナップから気になる部位を注文してみて！
                 </p>
-              </div>
-              <div class="food-block__info">
-                <p class="food-block__note">※5種類2切れずつで種類はお任せ</p>
-                <p class="food-block__note">※部位によって1切れ、3切れずつのご用意も可能</p>
+                <div class="food-block__info">
+                  <p class="food-block__note">※5種類2切れずつで種類はお任せ</p>
+                  <p class="food-block__note">※部位によって1切れ、3切れずつのご用意も可能</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="food__container">
-        <div class="food__grid">
-          <div class="food__grid-inner inner">
+
+        <div class="food__container">
+          <div class="food__grid">
             <div class="grid-block">
               <div class="grid-block__head">
-                <div class="head--small">
-                  <p class="head__line"><span>ここでしか食べられない、</span></p>
-                  <p class="head__line"><span>トラコ流「韓国料理」</span></p>
-                </div>
+                <p class="head--delta1">
+                  <span class="head__line"><span class="head__red">こ</span>こでしか食べられない、</span><br class="sp"><span
+                    class="head__line"><span class="head__red">ト</span>ラコ流「韓国料理」</span>
+                </p>
               </div>
               <div class="grid-block__text">
                 <p class="text">トラコ流のアレンジ韓国メニューが大人気！<br>
@@ -490,51 +464,47 @@
                   <div class="food-photo">
                     <figure class="food-photo__img">
                       <picture>
-                        <source srcset="./assets/images/pc/food_05.webp" type="image/webp" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/pc/food_05.jpg" media="(min-width: 768px)" />
                         <source srcset="./assets/images/food_05.webp" type="image/webp" />
                         <img src="./assets/images/food_05.jpg" alt="" width="" height="" />
                       </picture>
                     </figure>
-                    <div class="food-photo__top-right">
+                    <div class="food-photo__position3">
                       <p class="food-photo__title">ひとくちヤンニョムチキン</p>
                       <p class="food-photo__amount">¥528</p>
                     </div>
-                    <div class="food-photo__bottom-left">
+                    <div class="food-photo__position4">
                       <p class="food-photo__title">アボカド生キムチ</p>
                       <p class="food-photo__amount">¥550</p>
                     </div>
                   </div>
                 </div>
-                <div class="grid-block__img2">
-                  <div class="food-photo">
-                    <figure class="food-photo__img">
-                      <picture>
-                        <source srcset="./assets/images/pc/food_06.webp" type="image/webp" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/pc/food_06.jpg" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/food_06.webp" type="image/webp" />
-                        <img src="./assets/images/food_06.jpg" alt="" width="" height="" />
-                      </picture>
-                    </figure>
-                    <div class="food-photo__bottom-left">
-                      <p class="food-photo__title">コムタンスープ</p>
-                      <p class="food-photo__amount">¥770</p>
+                <div class="grid-block__images2">
+                  <div class="grid-block__img2">
+                    <div class="food-photo">
+                      <figure class="food-photo__img">
+                        <picture>
+                          <source srcset="./assets/images/food_06.webp" type="image/webp" />
+                          <img src="./assets/images/food_06.jpg" alt="" width="" height="" />
+                        </picture>
+                      </figure>
+                      <div class="food-photo__position4">
+                        <p class="food-photo__title">コムタンスープ</p>
+                        <p class="food-photo__amount">¥770</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="grid-block__img3">
-                  <div class="food-photo">
-                    <figure class="food-photo__img">
-                      <picture>
-                        <source srcset="./assets/images/pc/food_07.webp" type="image/webp" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/pc/food_07.jpg" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/food_07.webp" type="image/webp" />
-                        <img src="./assets/images/food_07.jpg" alt="" width="" height="" />
-                      </picture>
-                    </figure>
-                    <div class="food-photo__bottom-left">
-                      <p class="food-photo__title">トラコキンパ</p>
-                      <p class="food-photo__amount">¥990</p>
+                  <div class="grid-block__img2">
+                    <div class="food-photo">
+                      <figure class="food-photo__img">
+                        <picture>
+                          <source srcset="./assets/images/food_07.webp" type="image/webp" />
+                          <img src="./assets/images/food_07.jpg" alt="" width="" height="" />
+                        </picture>
+                      </figure>
+                      <div class="food-photo__position4">
+                        <p class="food-photo__title">トラコキンパ</p>
+                        <p class="food-photo__amount">¥990</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -542,164 +512,165 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="food__container--black">
-        <div class="food__content">
-          <div class="food-block__head">
-            <div class="head-line">
-              <p class="head-line__text"><span>お</span>酒がススム、<span>逸</span>品が勢揃い！</p>
-            </div>
-          </div>
-          <div class="food-block__img">
-            <div class="food-photo">
-              <figure class="food-photo__img">
-                <picture>
-                  <source srcset="./assets/images/pc/food_08.webp" type="image/webp" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/pc/food_08.jpg" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/food_08.webp" type="image/webp" />
-                  <img src="./assets/images/food_08.jpg" alt="" width="" height="" />
-                </picture>
-              </figure>
-              <div class="food-photo__bottom-right">
-                <p class="food-photo__title">和牛塩もつ煮</p>
-              </div>
-              <div class="food-photo__bottom-left">
-                <p class="food-photo__amount">¥770</p>
-              </div>
-            </div>
-          </div>
-          <div class="food-block__img">
-            <div class="food-photo">
-              <figure class="food-photo__img">
-                <picture>
-                  <source srcset="./assets/images/pc/food_09.webp" type="image/webp" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/pc/food_09.jpg" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/food_09.webp" type="image/webp" />
-                  <img src="./assets/images/food_09.jpg" alt="" width="" height="" />
-                </picture>
-              </figure>
-              <div class="food-photo__bottom-right">
-                <p class="food-photo__title">貴族の海鮮</p>
-                <p class="food-photo__title">タルタル</p>
-              </div>
-              <div class="food-photo__bottom-left">
-                <p class="food-photo__amount">¥880</p>
-              </div>
-            </div>
-          </div>
-          <div class="food-block__img">
-            <div class="food-photo">
-              <figure class="food-photo__img">
-                <picture>
-                  <source srcset="./assets/images/pc/food_10.webp" type="image/webp" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/pc/food_10.jpg" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/food_10.webp" type="image/webp" />
-                  <img src="./assets/images/food_10.jpg" alt="" width="" height="" />
-                </picture>
-              </figure>
-              <div class="food-photo__bottom-right">
-                <p class="food-photo__title">新タン塩</p>
-              </div>
-              <div class="food-photo__bottom-left">
-                <p class="food-photo__amount">¥880</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="food__content">
-          <div class="food-block">
-            <div class="food-block__inner inner">
-              <div class="food-block__head">
-                <div class="head--white">
-                  <p class="head__line"><span>カンパイの余韻を</span></p>
-                  <p class="head__line"><span>倍増させる、最高の〆。</span></p>
-                </div>
-              </div>
-              <div class="food-block__text">
-                <p class="text--white">
-                  トラコではがっつりご飯・丼ものやさっぱりツルっと食べられる麺類、スープやおじやなど、豊富な〆メニューが勢揃い！最高の〆で締めくくれば、その日の感動の余韻が2倍にも3倍にも膨らみ、翌日にもまたトラコに来たくなることでしょう・・・
+
+        <div class="food__container-black2">
+          <div class="food__grid">
+            <div class="food-grid2">
+              <div class="food-grid2__head">
+                <p class="head--1line">
+                  <span class="head__line"><span class="head__red">お</span>酒がススム、</span><span
+                    class="head__line"><span class="head__red">逸</span>品が勢揃い！</span>
                 </p>
               </div>
-              <div class="food-block__images--square">
-                <div class="food-block__img">
-                  <div class="food-photo--square">
-                    <figure class="food-photo__img">
-                      <picture>
-                        <source srcset="./assets/images/pc/food_11.webp" type="image/webp" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/pc/food_11.jpg" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/food_11.webp" type="image/webp" />
-                        <img src="./assets/images/food_11.jpg" alt="" width="" height="" />
-                      </picture>
-                    </figure>
-                    <div class="food-photo__comment">
-                      <p class="text">しゃきしゃきもやしと<br>
-                        赤湯なんばん味噌の<br>
-                        最強組み合わせ！</p>
-                    </div>
-                    <div class="food-photo__bottom-left">
-                      <p class="food-photo__title">辛みそ冷麺</p>
-                    </div>
-                    <div class="food-photo__bottom-right">
-                      <p class="food-photo__amount">¥880</p>
-                    </div>
+              <div class="food-grid2__img">
+                <div class="food-photo">
+                  <figure class="food-photo__img">
+                    <picture>
+                      <source srcset="./assets/images/food_08.webp" type="image/webp" />
+                      <img src="./assets/images/food_08.jpg" alt="" width="" height="" />
+                    </picture>
+                  </figure>
+                  <div class="food-photo__position2">
+                    <p class="food-photo__title">和牛塩もつ煮</p>
                   </div>
-                </div>
-                <div class="food-block__img">
-                  <div class="food-photo--square">
-                    <figure class="food-photo__img">
-                      <picture>
-                        <source srcset="./assets/images/pc/food_12.webp" type="image/webp" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/pc/food_12.jpg" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/food_12.webp" type="image/webp" />
-                        <img src="./assets/images/food_12.jpg" alt="純正生ユッケ丼" width="" height="" />
-                      </picture>
-                    </figure>
-                    <div class="food-photo__comment">
-                      <p class="text">一度も冷凍しない<br>
-                        完全合法ユッケ。<br>
-                        お好みで海苔に巻いてどうぞ</p>
-                    </div>
-                    <div class="food-photo__bottom-left">
-                      <p class="food-photo__title">純正生ユッケ丼</p>
-                    </div>
-                    <div class="food-photo__bottom-right">
-                      <p class="food-photo__amount">¥1760</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="food-block__img">
-                  <div class="food-photo--square">
-                    <figure class="food-photo__img">
-                      <picture>
-                        <source srcset="./assets/images/pc/food_13.webp" type="image/webp" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/pc/food_13.jpg" media="(min-width: 768px)" />
-                        <source srcset="./assets/images/food_13.webp" type="image/webp" />
-                        <img src="./assets/images/food_13.jpg" alt="モツカレー" width="" height="" />
-                      </picture>
-                    </figure>
-                    <div class="food-photo__comment">
-                      <p class="text">まかないから生まれた、<br>
-                        とろけるもつ煮が<br>
-                        たっぷり入った芳醇カレー</p>
-                    </div>
-                    <div class="food-photo__bottom-left">
-                      <p class="food-photo__title">モツカレー</p>
-                    </div>
-                    <div class="food-photo__bottom-right">
-                      <p class="food-photo__amount">¥880</p>
-                    </div>
+                  <div class="food-photo__position4">
+                    <p class="food-photo__amount">¥770</p>
                   </div>
                 </div>
               </div>
-              <div class="food-block__button">
-                <a href="" class="menu-button">
-                  <p class="menu-button__text">料理メニュー<span class="text-block">を見る</span></p>
-                </a>
+              <div class="food-grid2__img">
+                <div class="food-photo">
+                  <figure class="food-photo__img">
+                    <picture>
+                      <source srcset="./assets/images/food_09.webp" type="image/webp" />
+                      <img src="./assets/images/food_09.jpg" alt="" width="" height="" />
+                    </picture>
+                  </figure>
+                  <div class="food-photo__position5">
+                    <p class="food-photo__title">貴族の海鮮</p>
+                    <p class="food-photo__title">タルタル</p>
+                  </div>
+                  <div class="food-photo__position4">
+                    <p class="food-photo__amount">¥880</p>
+                  </div>
+                </div>
+              </div>
+              <div class="food-grid2__img">
+                <div class="food-photo">
+                  <figure class="food-photo__img">
+                    <picture>
+                      <source srcset="./assets/images/food_10.webp" type="image/webp" />
+                      <img src="./assets/images/food_10.jpg" alt="" width="" height="" />
+                    </picture>
+                  </figure>
+                  <div class="food-photo__position2">
+                    <p class="food-photo__title">新タン塩</p>
+                  </div>
+                  <div class="food-photo__position4">
+                    <p class="food-photo__amount">¥880</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="food__content">
+            <div class="food-block">
+              <div class="food-block__inner inner">
+                <div class="food-block__head">
+                  <div class="head--white1">
+                    <p class="head__line"><span>カンパイの余韻を</span></p>
+                    <p class="head__line"><span>倍増させる、最高の〆。</span></p>
+                  </div>
+                </div>
+                <div class="food-block__text">
+                  <p class="text--white">
+                    トラコではがっつりご飯・丼ものやさっぱりツルっと食べられる麺類、スープやおじやなど、豊富な〆メニューが勢揃い！最高の〆で締めくくれば、その日の感動の余韻が2倍にも3倍にも膨らみ、翌日にもまたトラコに来たくなることでしょう・・・
+                  </p>
+                </div>
+                <div class="food-block__images--square">
+                  <div class="food-block__img">
+                    <div class="food-photo--square">
+                      <figure class="food-photo__img">
+                        <picture>
+                          <source srcset="./assets/images/pc/food_11.webp" type="image/webp"
+                            media="(min-width: 768px)" />
+                          <source srcset="./assets/images/pc/food_11.jpg" media="(min-width: 768px)" />
+                          <source srcset="./assets/images/food_11.webp" type="image/webp" />
+                          <img src="./assets/images/food_11.jpg" alt="" width="" height="" />
+                        </picture>
+                      </figure>
+                      <div class="food-photo__comment">
+                        <p class="text">しゃきしゃきもやしと<br>
+                          赤湯なんばん味噌の<br>
+                          最強組み合わせ！</p>
+                      </div>
+                      <div class="food-photo__position4">
+                        <p class="food-photo__title">辛みそ冷麺</p>
+                      </div>
+                      <div class="food-photo__position2">
+                        <p class="food-photo__amount">¥880</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="food-block__img">
+                    <div class="food-photo--square">
+                      <figure class="food-photo__img">
+                        <picture>
+                          <source srcset="./assets/images/pc/food_12.webp" type="image/webp"
+                            media="(min-width: 768px)" />
+                          <source srcset="./assets/images/pc/food_12.jpg" media="(min-width: 768px)" />
+                          <source srcset="./assets/images/food_12.webp" type="image/webp" />
+                          <img src="./assets/images/food_12.jpg" alt="純正生ユッケ丼" width="" height="" />
+                        </picture>
+                      </figure>
+                      <div class="food-photo__comment">
+                        <p class="text">一度も冷凍しない<br>
+                          完全合法ユッケ。<br>
+                          お好みで海苔に巻いてどうぞ</p>
+                      </div>
+                      <div class="food-photo__position4">
+                        <p class="food-photo__title">純正生ユッケ丼</p>
+                      </div>
+                      <div class="food-photo__position2">
+                        <p class="food-photo__amount">¥1760</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="food-block__img">
+                    <div class="food-photo--square">
+                      <figure class="food-photo__img">
+                        <picture>
+                          <source srcset="./assets/images/pc/food_13.webp" type="image/webp"
+                            media="(min-width: 768px)" />
+                          <source srcset="./assets/images/pc/food_13.jpg" media="(min-width: 768px)" />
+                          <source srcset="./assets/images/food_13.webp" type="image/webp" />
+                          <img src="./assets/images/food_13.jpg" alt="モツカレー" width="" height="" />
+                        </picture>
+                      </figure>
+                      <div class="food-photo__comment">
+                        <p class="text">まかないから生まれた、<br>
+                          とろけるもつ煮が<br>
+                          たっぷり入った芳醇カレー</p>
+                      </div>
+                      <div class="food-photo__position4">
+                        <p class="food-photo__title">モツカレー</p>
+                      </div>
+                      <div class="food-photo__position2">
+                        <p class="food-photo__amount">¥880</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-block__button">
+                  <a href="" class="menu-button">
+                    <p class="menu-button__text">料理メニュー<span class="text-block">を見る</span></p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <figure class="fire layout-fire">
@@ -791,7 +762,7 @@
                     <div class="food-photo__right">
                       <p class="food-photo__title">【三女】トラコジンソーダ</p>
                     </div>
-                    <div class="food-photo__bottom-right">
+                    <div class="food-photo__position2">
                       <p class="food-photo__amount">all¥638</p>
                     </div>
                   </div>
@@ -820,10 +791,10 @@
                       トラコオリジナルフルーツサワー！<br>
                       ノンアルもOK◎</p>
                   </div>
-                  <div class="food-photo__bottom-left">
+                  <div class="food-photo__position4">
                     <p class="food-photo__title">ミックスジュー酒</p>
                   </div>
-                  <div class="food-photo__bottom-right">
+                  <div class="food-photo__position2">
                     <p class="food-photo__amount">¥715</p>
                   </div>
                 </div>
@@ -843,10 +814,10 @@
                       炭酸ののど越し爽やかな<br>
                       切れのあるシャープな味わい。</p>
                   </div>
-                  <div class="food-photo__bottom-left">
+                  <div class="food-photo__position4">
                     <p class="food-photo__title">だいやめソーダ</p>
                   </div>
-                  <div class="food-photo__bottom-right">
+                  <div class="food-photo__position2">
                     <p class="food-photo__amount">¥637</p>
                   </div>
                 </div>
@@ -867,11 +838,11 @@
                       蒸留所で樽材から選定し<br>
                       仔虎限定レシピで貯蔵！</p>
                   </div>
-                  <div class="food-photo__bottom-left">
+                  <div class="food-photo__position4">
                     <p class="food-photo__title--small">仔虎オリジナルバーボン</p>
                     <p class="food-photo__title">コトラリザーブ</p>
                   </div>
-                  <div class="food-photo__bottom-right">
+                  <div class="food-photo__position2">
                     <p class="food-photo__amount">¥935</p>
                   </div>
                 </div>
@@ -1305,7 +1276,7 @@
       <div class="floor__inner inner">
         <div class="floor__container">
           <div class="floor__heading">
-            <hgroup class="section-head--white">
+            <hgroup class="section-head--white1">
               <p class="section-head__sub">floor</p>
               <h2 class="section-head__main">お席</h2>
             </hgroup>
@@ -1357,7 +1328,8 @@
                 </li>
               </ul>
               <ul class="floor__notes">
-                <li class="floor__note text--white">・ご宴会のご予算などはお電話にてお気軽にご相談ください。<br>TEL:022-797-1062（ご予約電話受付 XX:00~XX:00）
+                <li class="floor__note text--white">・ご宴会のご予算などはお電話にてお気軽にご相談ください。<br>TEL:022-797-1062（ご予約電話受付
+                  XX:00~XX:00）
                 </li>
                 <li class="floor__note text--white">・電子タバコのみ喫煙可能。</li>
                 <li class="floor__note text--white">・「個室Ⅱ」は完全禁煙室のため、お子様連れでご利用が可能。</li>
@@ -1456,13 +1428,13 @@
       <div class="access__inner inner">
         <div class="access__container">
           <div class="access__heading">
-            <hgroup class="section-head--white">
+            <hgroup class="section-head--white1">
               <p class="section-head__sub">access</p>
               <h2 class="section-head__main">店舗情報</h2>
             </hgroup>
           </div>
           <p class="access__read">サンモール一番町、<br>
-          仙台文化横丁の入口すぐ！</p>
+            仙台文化横丁の入口すぐ！</p>
           <figure class="access__img">
             <picture>
               <source srcset="./assets/images/access.webp" type="image/webp">

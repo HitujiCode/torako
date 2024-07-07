@@ -2,6 +2,12 @@
 
 .intro {
   background-color: $black;
+  padding-top: rem(80);
+  padding-bottom: rem(56);
+
+  @include mq("md") {
+    padding-block: rem(160);
+  }
 }
 
 .intro__inner {}
@@ -15,21 +21,49 @@
     "main location";
   place-items: center;
   place-content: center;
+
+  @include mq("md") {
+    display: flex;
+    gap: rem(36);
+  }
 }
 
 .intro__title-sub {
   width: fit-content;
-  font-size: rem(32);
+  font-size: rem(24);
   font-weight: $bold;
   color: $white;
-  line-height: 1;
+  line-height: calc(32/24);
   letter-spacing: 0.2em;
   grid-area: sub;
+
+  @include mq("md") {
+    line-height: calc(54/32);
+  }
+}
+
+.intro__title-ruby {
+  display: block;
+  font-size: rem(12);
+  font-weight: $regular;
+  line-height: calc(20/12);
+  letter-spacing: 0.25em;
+  margin-bottom: rem(4);
+
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(30/16);
+  }
 }
 
 .intro__title-main {
+  margin-top: rem(12);
   width: rem(158);
   grid-area: main;
+
+  @include mq("md") {
+    width: rem(248);
+  }
 }
 
 .intro__title-main img {
@@ -40,6 +74,9 @@
 }
 
 .intro__title-location {
+  position: relative;
+  top: rem(8);
+  margin-left: rem(16);
   width: fit-content;
   font-size: rem(20);
   font-weight: $bold;
@@ -47,10 +84,19 @@
   line-height: calc(32/20);
   letter-spacing: 0.2em;
   grid-area: location;
+
+  @include mq("md") {
+    font-size: rem(56);
+    line-height: calc(80/56);
+  }
 }
 
 .intro__img {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
 .intro__img {
@@ -62,6 +108,10 @@
 
 .intro__body {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
 .intro__text {
@@ -71,8 +121,13 @@
   line-height: calc(24/18);
   letter-spacing: 0.2em;
   text-align: center;
+
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: calc(32/24);
+  }
 }
 
 .intro__text+.intro__text {
-  margin-top: rem(20);
+  margin-top: rem(24);
 }

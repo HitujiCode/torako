@@ -1,6 +1,9 @@
 @use "global" as *;
 
 .fire {
+  @include mq("md") {
+    width: rem(520);
+  }
 }
 
 .fire svg {

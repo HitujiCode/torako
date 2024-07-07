@@ -2,28 +2,55 @@
 
 .food {
   overflow-x: clip;
+  padding-top: rem(3);
 }
 
-.food__heading {}
+.food__note {
+  text-align: right;
+}
+
+.food__heading {
+  margin-top: rem(52);
+
+  @include mq("md") {
+    margin-top: rem(54);
+  }
+}
 
 .food__container {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
-.food__container--black {
-  @extend .food__container;
+.food__container-black {
+  margin-top: rem(40);
+  margin-inline: calc(50% - 50vw);
+  padding-inline: calc(50vw - 50%);
+  padding-top: rem(40);
+  padding-bottom: rem(36);
   background-color: $black;
+}
+
+.food__container-black2 {
   margin-top: initial;
   padding-top: rem(40);
-  padding-bottom: rem(40);
+  padding-bottom: rem(36);
+  margin-inline: calc(50% - 50vw);
+  background-color: $black;
 }
 
 .food__container:has(.menu-button) {
-  padding-bottom: rem(80);
+  // margin-top: initial;
+  // padding-bottom: rem(80);
 }
 
-.food__content {
-  // padding-bottom: rem(40);
+.food__content {}
+
+.food__content+.food__content {
+  margin-top: rem(40);
 }
 
 .food__menu+.food__content {
@@ -31,6 +58,7 @@
 }
 
 .food__menu {
+  margin-top: rem(40);
 }
 
 .food__grid {}

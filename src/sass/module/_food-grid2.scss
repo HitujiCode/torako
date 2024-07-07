@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.food-grid2 {
+  position: relative;
+}
+
+.food-grid2__head {
+  position: absolute;
+  top: rem(24);
+  left: 0;
+  z-index: 1;
+}
+
+.food-grid2__img {}

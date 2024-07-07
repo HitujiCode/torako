@@ -1,30 +1,63 @@
 @use "global" as *;
 
-.slider {}
+.thumbnail {}
 
-.slider__wrapper {}
+.thumbnail::before,
+.thumbnail::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: calc((100% - (328/392*100%)) / 2);
+  background-color: rgb($white, 0.7);
+  z-index: 2;
+}
+
+.thumbnail::before {
+  left: 0;
+}
+
+.thumbnail::after {
+  right: 0;
+}
+
+.thumbnail__wrapper {}
 
 .swiper-wrapper {}
 
-.slider__slide {
+.thumbnail__slide {
   width: calc(328/392*100%);
+
+  @include mq("md") {
+    width: calc(480/1440*100%);
+  }
 }
 
-.slider__slide img {
+.thumbnail__slide img {
   aspect-ratio: 328/232;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.slider__prev {}
-
-.swiper-button-prev {
+%thumbnail-button {
   text-rendering: optimizespeed;
+  width: rem(15);
 }
 
-.slider__next {}
+%thumbnail-button img {
+  aspect-ratio: 15/31;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-.swiper-button-next {
-  text-rendering: optimizespeed;
+.thumbnail__prev {
+  @extend %thumbnail-button;
+  left: rem(8);
+}
+
+.thumbnail__next {
+  @extend %thumbnail-button;
+  right: rem(8);
+  transform: scale(-1, 1);
 }

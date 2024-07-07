@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .scene {
+  overflow-x: clip;
   padding-bottom: rem(100);
 }
 

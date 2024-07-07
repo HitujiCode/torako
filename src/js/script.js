@@ -37,15 +37,23 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loop: true,
     effect: 'fade',
     speed: 2000,
+
+    breakpoints: {
+      768: {
+      },
+    },
   });
 
   // スライダー
-  const swiper = new Swiper('.js-slider', {
+  const swiper = new Swiper('.js-thumbnail', {
     loop: true,
-    effect: 'fade',
-    speed: 2000,
-    slidePerView: "auto",
+    speed: 1500,
+    slidesPerView: "auto",
     centeredSlides: true,
+    // autoplay: { // 自動再生
+    //   delay: 1000, // 1秒後に次のスライド
+    //   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    // },
 
     navigation: {
       nextEl: '.swiper-button-next',

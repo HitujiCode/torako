@@ -3,20 +3,24 @@
 .mv {
   position: relative;
   height: 100dvh;
+  min-height: rem(760);
   background-color: $black;
 }
 
 .mv__swiper {
-  clip-path: polygon(0 0, 100% 0, 100% 64%, 63% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 64%, 12% 100%, 0 100%);
   height: inherit;
+  min-height: inherit;
 }
 
 .mv__wrapper {
   height: inherit;
+  min-height: inherit;
 }
 
 .mv__slide {
   height: inherit;
+  min-height: inherit;
 }
 
 .mv__slide img {
@@ -37,6 +41,11 @@
   overflow-wrap: anywhere;
   word-break: keep-all;
   padding-right: rem(68);
+
+  @include mq("md") {
+    top: rem(32);
+    left: rem(32);
+  }
 }
 
 .mv__logo {
@@ -44,7 +53,11 @@
   inset: 0;
   margin: auto;
   z-index: 1;
-  width: min(calc(240/392*100vw),rem(300));
+  width: min(calc(240/392*100vw), rem(300));
+
+  @include mq("md") {
+    width: rem(392);
+  }
 }
 
 .mv__logo img {
@@ -57,9 +70,13 @@
 .mv__catch {
   position: absolute;
   z-index: 1;
-  bottom: 0;
-  right: 0;
+  bottom: rem(26);
+  right: rem(44);
   width: rem(206);
+
+  @include mq("md") {
+    width: rem(230);
+  }
 }
 
 .mv__catch img {

@@ -1,39 +1,117 @@
 @use "global" as *;
 
-.head {}
+.head {
+  position: relative;
+  color: $white;
+  display: inline-block;
 
-.head--white,
-.head--small {
-  @extend .head;
+  @include mq("md") {}
+}
+
+.head::before {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $black;
+    // animation: line 1s infinite;
+  }
 }
 
 .head__line {
+  position: relative;
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc(32/20);
+  letter-spacing: 0.2em;
+  padding-inline: rem(16);
   display: inline-block;
-  background-color: $black;
-  color: $white;
+
+  @include mq("md") {
+    position: initial;
+  }
 }
 
-.head__line::first-letter {
+.head__line:nth-of-type(2) {
+  transform: translateX(70%);
+
+  @include mq("md") {
+    transform: initial;
+  }
+}
+
+.head__line::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: $black;
+  z-index: -1;
+  // animation: line 1s infinite;
+
+  @include mq("md") {
+    content: none;
+  }
+}
+
+.head__red {
   color: $red;
 }
 
-.head__line span {
-  font-size: rem(26);
-  font-weight: $bold;
-  line-height: calc(32/26);
-  letter-spacing: 0.2em;
+.head--delta1 {
+  @extend .head;
 }
 
-.head--small .head__line span {
-  font-size: rem(20);
-  line-height: calc(32/20);
+.head--delta1 .head__line:nth-of-type(2) {
+  transform: translateX(40%);
 }
 
-.head__line:nth-child(2) {
-  transform: translateX(50%);
+.head--1line {
+  @extend .head;
 }
 
-.head--white .head__line {
+.head--1line .head__line:nth-of-type(1) {
+  padding-right: initial;
+}
+
+.head--1line .head__line:nth-of-type(2) {
+  transform: initial;
+  padding-left: initial;
+  animation: line 1s infinite;
+}
+
+.head--1line ::before .head--white1,
+.head--white2 {
+  @extend .head;
+  color: initial;
+}
+
+.head--white1 .head__line:nth-of-type(2) {
+  transform: translateX(40%);
+
+  @include mq("md") {
+    transform: initial;
+  }
+}
+
+.head--white2 .head__line:nth-of-type(2) {
+  transform: translateX(53%);
+
+  @include mq("md") {
+    transform: initial;
+  }
+}
+
+.head--white1 .head__line::before,
+.head--white2 .head__line::before {
   background-color: $white;
-  color: $black;
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
 }

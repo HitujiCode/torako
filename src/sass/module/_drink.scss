@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .drink {
+  overflow-x: clip;
   padding-top: rem(30);
 }
 

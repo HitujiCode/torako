@@ -1,5 +1,10 @@
 @use "global" as *;
 
 .layout-fire {
-  margin-bottom: rem(-30);
+  margin-top: rem(-20);
+
+  @include mq("md") {
+    margin-left: auto;
+    margin-top: rem(-30);
+  }
 }

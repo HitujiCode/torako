@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .course {
+  overflow-x: clip;
   padding-top: rem(100);
 }
 

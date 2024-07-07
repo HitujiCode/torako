@@ -2,22 +2,60 @@
 
 .food-block {}
 
-.food-block__inner {}
+.food-block--reverse {
+  @extend .food-block;
+}
+
+.food-block__inner {
+  @include mq("md") {
+    display: flex;
+    position: relative;
+    gap: min(calc(120/1440*100vw), rem(120));
+  }
+}
+
+.food-block--reverse .food-block__inner {
+  @include mq("md") {
+    flex-direction: row-reverse;
+  }
+}
 
 .food-block__head {
-  // margin-top: rem(40);
+  position: relative;
+  z-index: 1;
+  margin-left: calc(50% - 50vw);
 }
 
 .food-block__img {
   margin-inline: calc(50% - 50vw);
+
+  @include mq("md") {
+    margin-right: initial;
+    flex: 1;
+  }
+}
+
+.food-block:has(.food-block__head) .food-block__img {
+  margin-top: rem(-14);
+
+  @include mq("md") {
+    margin-right: calc(50% - 50vw);
+    margin-left: initial;
+  }
 }
 
 .food-block__text {
   margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: initial;
+    padding-inline: rem(16);
+    width: calc(492/1224*100%);
+  }
 }
 
 .food-block__info {
-  margin-top: rem(20);
+  margin-top: rem(16);
 }
 
 .food-block__note {
