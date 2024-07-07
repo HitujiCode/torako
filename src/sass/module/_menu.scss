@@ -2,7 +2,15 @@
 
 .menu {
   background-color: $white;
-  padding: rem(16) rem(16) rem(48) rem(16);
+  padding-top: rem(16);
+  padding-bottom: rem(48);
+  padding-inline: rem(16);
+
+  @include mq("md") {
+    padding-top: rem(16);
+    padding-bottom: rem(48);
+    padding-inline: rem(108);
+  }
 }
 
 

@@ -2,11 +2,15 @@
 
 .food {
   overflow-x: clip;
-  padding-top: rem(3);
+  padding-top: rem(8);
 }
 
 .food__note {
   text-align: right;
+
+  @include mq("md") {
+    margin-right: rem(-102);
+  }
 }
 
 .food__heading {
@@ -32,6 +36,11 @@
   padding-top: rem(40);
   padding-bottom: rem(36);
   background-color: $black;
+
+  @include mq("md") {
+    margin-top: initial;
+    padding-top: initial;
+  }
 }
 
 .food__container-black2 {
@@ -53,6 +62,10 @@
 
 .food__content+.food__content {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: initial;
+  }
 }
 
 .food__menu+.food__content {
@@ -61,6 +74,11 @@
 
 .food__menu {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+    margin-inline: rem(-14);
+  }
 }
 
 .food__grid {}

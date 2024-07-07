@@ -49,7 +49,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     loop: true,
     speed: 1500,
     slidesPerView: "auto",
-    centeredSlides: true,
+    // centeredSlides: true,
     // autoplay: { // 自動再生
     //   delay: 1000, // 1秒後に次のスライド
     //   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない

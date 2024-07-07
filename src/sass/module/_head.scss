@@ -5,6 +5,10 @@
   color: $white;
   display: inline-block;
   width: fit-content;
+
+  @include mq("md") {
+    padding-inline: rem(40);
+  }
 }
 
 .head::before {
@@ -19,8 +23,7 @@
 
 .head__line {
   position: relative;
-  font-size: rem(20);
-  font-size: clamp(10px, calc(20/392*100vw),rem(24));
+  font-size: clamp(10px, calc(20/392*100vw), rem(24));
   font-weight: $bold;
   line-height: calc(32/20);
   letter-spacing: 0.2em;
@@ -29,7 +32,10 @@
   z-index: 1;
 
   @include mq("md") {
-    position: initial;
+    padding-block: rem(8);
+    padding-inline: initial;
+    font-size: rem(32);
+    line-height: calc(54/32);
   }
 }
 
@@ -38,6 +44,7 @@
 
   @include mq("md") {
     transform: initial;
+    padding-inline: initial;
   }
 }
 
@@ -76,6 +83,18 @@
 .head--white3 {
   @extend .head;
   color: initial;
+
+  @include mq("md") {
+    padding-inline: rem(36);
+  }
+}
+
+.head--white1::before,
+.head--white2::before,
+.head--white3::before {
+  @include mq("md") {
+    background-color: $white;
+  }
 }
 
 .head--white1 .head__line:nth-of-type(2) {

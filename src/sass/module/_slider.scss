@@ -1,15 +1,25 @@
 @use "global" as *;
 
-.thumbnail {}
+.thumbnail {
+  padding-inline: rem(32);
+
+  @include mq("md") {
+    padding-inline: rem(80);
+  }
+}
 
 .thumbnail::before,
 .thumbnail::after {
   content: "";
   position: absolute;
   inset-block: 0;
-  width: calc((100% - (328/392*100%)) / 2);
+  width: rem(32);
   background-color: rgb($white, 0.7);
   z-index: 2;
+
+  @include mq("md") {
+    width: rem(80);
+  }
 }
 
 .thumbnail::before {
@@ -25,10 +35,10 @@
 .swiper-wrapper {}
 
 .thumbnail__slide {
-  width: calc(328/392*100%);
+  width: 100%;
 
   @include mq("md") {
-    width: calc(480/1440*100%);
+    width: calc(480/1280*100%);
   }
 }
 
@@ -39,25 +49,45 @@
   object-fit: cover;
 }
 
-%thumbnail-button {
-  text-rendering: optimizespeed;
-  width: rem(15);
-}
-
-%thumbnail-button img {
-  aspect-ratio: 15/31;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .thumbnail__prev {
-  @extend %thumbnail-button;
-  left: rem(8);
+  left: 0;
+
+  @include mq("md") {
+    left: rem(26);
+  }
 }
 
 .thumbnail__next {
+  right: 0;
+
+  @include mq("md") {
+    right: rem(26);
+  }
+}
+
+%thumbnail-button {
+  text-rendering: optimizespeed;
+  width: rem(15);
+  height: rem(31);
+  content: "";
+  background-image: url(../images/icon-swiper.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+
+  @include mq("md") {
+    background-image: url(../images/pc/icon-swiper.svg);
+    width: rem(33);
+    height: rem(72);
+  }
+}
+
+.thumbnail__prev::after {
   @extend %thumbnail-button;
-  right: rem(8);
+}
+
+.thumbnail__next::after {
+  @extend %thumbnail-button;
   transform: scale(-1, 1);
 }

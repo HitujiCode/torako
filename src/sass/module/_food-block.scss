@@ -2,9 +2,19 @@
 
 .food-block {
   position: relative;
+
+  @include mq("md") {
+    display: flex;
+    gap: min(calc(108/1440*100vw), rem(108))
+  }
 }
 
 .food-block--reverse,
+.food-block--reverse2 {
+  @extend .food-block;
+  flex-direction: row-reverse;
+}
+
 .food-block--lunch {
   @extend .food-block;
 }
@@ -13,6 +23,23 @@
   position: relative;
   z-index: 1;
   margin-left: calc(50% - 50vw);
+
+  @include mq("md") {
+    position: absolute;
+    top: rem(40);
+    left: 0;
+  }
+}
+
+.food-block--reverse2 .food-block__head {
+  @include mq("md") {
+    position: absolute;
+    top: rem(60);
+    right: 0;
+    left: initial;
+    margin-left: initial;
+    margin-right: calc(50% - 50vw);
+  }
 }
 
 .food-block--lunch .food-block__head {
@@ -34,6 +61,7 @@
   margin-top: rem(-14);
 
   @include mq("md") {
+    margin-top: initial;
     margin-right: calc(50% - 50vw);
     margin-left: initial;
   }
@@ -44,8 +72,22 @@
 
   @include mq("md") {
     margin-top: initial;
-    padding-inline: rem(16);
-    width: calc(492/1224*100%);
+    padding-top: rem(150);
+    padding-bottom: rem(40);
+    padding-inline: rem(22);
+    width: calc(504/1224*100%);
+  }
+}
+
+.food-block--reverse .food-block__text {
+  @include mq("md") {
+    padding-top: rem(154);
+  }
+}
+
+.food-block--reverse2 .food-block__text {
+  @include mq("md") {
+    padding-top: rem(172);
   }
 }
 

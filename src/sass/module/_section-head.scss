@@ -10,7 +10,7 @@
   @include mq("md") {
     width: fit-content;
     grid-template-columns: repeat(2, auto);
-    gap: rem(108);
+    gap: rem(90);
     place-content: center;
     margin-inline: auto;
   }
@@ -28,6 +28,7 @@
   margin-top: rem(12);
 
   @include mq("md") {
+    margin-top: initial;
     background-image: url("../images/pc/icon-bone.svg");
     width: rem(28);
     height: rem(120);

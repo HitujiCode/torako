@@ -4,4 +4,9 @@
   font-size: rem(12);
   line-height: calc(20/12);
   letter-spacing: 0.25em;
+
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(30/16);
+  }
 }

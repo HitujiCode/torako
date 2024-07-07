@@ -6,7 +6,7 @@
   padding-bottom: rem(56);
 
   @include mq("md") {
-    padding-block: rem(160);
+    padding-block: rem(159);
   }
 }
 
@@ -24,7 +24,7 @@
 
   @include mq("md") {
     display: flex;
-    gap: rem(36);
+    padding-left: rem(10);
   }
 }
 
@@ -38,6 +38,7 @@
   grid-area: sub;
 
   @include mq("md") {
+    font-size: rem(32);
     line-height: calc(54/32);
   }
 }
@@ -51,6 +52,7 @@
   margin-bottom: rem(4);
 
   @include mq("md") {
+    margin-bottom: initial;
     font-size: rem(16);
     line-height: calc(30/16);
   }
@@ -63,6 +65,9 @@
 
   @include mq("md") {
     width: rem(248);
+    margin-top: initial;
+    margin-left: rem(36);
+    padding-top: rem(10);
   }
 }
 
@@ -88,6 +93,8 @@
   @include mq("md") {
     font-size: rem(56);
     line-height: calc(80/56);
+    margin-left: rem(40);
+    top: initial;
   }
 }
 
@@ -104,6 +111,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 1224/480;
+  }
 }
 
 .intro__body {
@@ -129,5 +140,5 @@
 }
 
 .intro__text+.intro__text {
-  margin-top: rem(24);
+  margin-top: rem(32);
 }

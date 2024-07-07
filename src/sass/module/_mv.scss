@@ -17,6 +17,10 @@
   aspect-ratio: 344/304;
   z-index: 1;
   clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 0);
+
+  @include mq("md") {
+    width: rem(384);
+  }
 }
 
 .mv__swiper {
@@ -80,6 +84,7 @@
 
   @include mq("md") {
     width: rem(392);
+    top: rem(35);
   }
 }
 
@@ -99,6 +104,8 @@
 
   @include mq("md") {
     width: rem(230);
+    bottom: rem(30);
+    right: rem(50);
   }
 }
 
