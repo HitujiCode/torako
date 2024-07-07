@@ -2,7 +2,6 @@
 
 .drink {
   overflow-x: clip;
-  padding-top: rem(30);
 }
 
 .layout-drink {}
@@ -13,7 +12,10 @@
 
 .drink__container-black {
   background-color: $black;
+  padding-top: rem(68);
   padding-bottom: rem(100);
+  padding-inline: calc(50vw - 50%);
+  margin-inline: calc(50% - 50vw);
 }
 
 .drink__note {
@@ -24,8 +26,15 @@
   margin-top: rem(52);
 }
 
-.drink__content {}
+.drink__content {
+  margin-top: rem(40);
+}
+
+.drink__grid {
+  margin-inline: calc(50% - 50vw);
+}
 
 .drink__button {
   margin-top: rem(40);
+  text-align: center;
 }

@@ -2,7 +2,7 @@
 
 .scene {
   overflow-x: clip;
-  padding-bottom: rem(100);
+  padding-block: rem(78);
 }
 
 .layout-scene {}
@@ -14,9 +14,12 @@
 .scene__heading {}
 
 .scene__content {
+  margin-top: rem(40);
 }
 
-.scene__head {}
+.scene__head {
+  margin-left: calc(50% - 50vw);
+}
 
 .scene__read {
   margin-top: rem(24);
@@ -27,7 +30,7 @@
   counter-reset: sceneNum;
   display: grid;
   grid-template-columns: 1fr;
-  gap: rem(16);
+  gap: rem(18);
 }
 
 .scene__item {
@@ -37,7 +40,7 @@
 
 .scene__label {
   position: absolute;
-  top: rem(-10);
+  top: rem(-18);
   left: 0;
   font-size: rem(20);
   font-family: $second-font;
@@ -46,9 +49,11 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  padding-left: rem(8);
 }
 
 .scene__label::after {
+  margin-left: rem(8);
   content: counter(sceneNum);
   font-size: rem(40);
   line-height: calc(58/40);
@@ -57,8 +62,15 @@
 
 .scene__img {}
 
-.scene__img img{
+.scene__img-small img {
   aspect-ratio: 360/244;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scene__img img {
+  aspect-ratio: 360/262;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -74,5 +86,9 @@
   line-height: calc(24/18);
   background-color: $black;
   width: fit-content;
-  padding: rem(8);
+  padding: rem(4) rem(16);
+}
+
+.scene__text[data-position="first"] {
+  bottom: rem(32);
 }

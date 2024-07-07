@@ -2,7 +2,7 @@
 
 .course {
   overflow-x: clip;
-  padding-top: rem(100);
+  padding-top: rem(80);
 }
 
 .layout-course {}
@@ -14,8 +14,10 @@
 .course__container-black {
   background-color: $black;
   margin-top: rem(40);
+  margin-inline: calc(50% - 50vw);
   padding-top: rem(16);
   padding-bottom: rem(70);
+  padding-inline: calc(50vw - 50%);
 }
 
 .course__heading {}

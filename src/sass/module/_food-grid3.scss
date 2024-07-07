@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.food-grid3 {}
+
+.food-grid3__head {
+  margin-left: calc(50% - 50vw);
+}
+
+.food-grid3__text {
+  margin-top: rem(40);
+}
+
+.food-grid3__images {
+  margin-top: rem(68);
+  margin-inline: calc(50% - 50vw);
+}
+
+.food-grid3__img+.food-grid3__img {
+  margin-top: rem(68);
+}
+
+.food-grid3__img+.food-grid3__img:has(.food-photo--square2) {
+  margin-top: rem(107);
+}

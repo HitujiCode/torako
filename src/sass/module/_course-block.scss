@@ -7,9 +7,9 @@
 
 .course-block__label {
   margin-left: rem(-16);
-  padding-block: rem(12);
+  padding-block: rem(11);
   padding-left: rem(25);
-  padding-right: rem(33);
+  padding-right: rem(30);
   background-color: $black;
   display: inline-block;
   font-size: rem(16);
@@ -17,7 +17,7 @@
   color: $white;
   line-height: calc(20/16);
   letter-spacing: 0.2em;
-  clip-path: polygon(100% 0, 95% 48%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 96% 48%, 100% 100%, 0 100%, 0 0);
 }
 
 .course-block__title {
@@ -32,6 +32,7 @@
 .course-block__title-main {
   font-size: rem(24);
   line-height: calc(32/24);
+  letter-spacing: 0.2em;
 }
 
 .course-block__title-sub {
@@ -61,6 +62,7 @@
   font-weight: $bold;
   color: $white;
   line-height: calc(32/24);
+  letter-spacing: 0.2em;
   text-align: center;
 }
 
@@ -69,11 +71,15 @@
 }
 
 .course-block__menu-small {
+  margin-top: rem(10);
+  display: inline-block;
   font-size: rem(18);
   line-height: calc(24/18);
 }
 
 .course-block__menu-amount {
+  margin-left: rem(2);
+  display: inline-block;
   font-size: rem(24);
   font-weight: $regular;
   font-family: $second-font;
@@ -86,16 +92,28 @@
 
 .course-block__menu-item {}
 
+.course-block__menu-item span {
+  display: inline-block;
+  padding-left: 0.5em;
+  white-space: nowrap;
+}
+
 .course-block__menu-white {
   margin-top: rem(16);
-  padding: rem(16) rem(14);
+  padding: rem(15) rem(13);
+  border: 1px solid;
+}
+
+.course-block__menu-white2 {
+  margin-top: rem(16);
+  padding: rem(15) rem(16);
   border: 1px solid;
 }
 
 .course-block__lineup {}
 
 .course-block__lineup+.course-block__menu-notes {
-  margin-top: rem(40);
+  margin-top: rem(30);
 }
 
 .course-block__menu-note {

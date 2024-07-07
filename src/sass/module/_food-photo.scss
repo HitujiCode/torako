@@ -6,7 +6,8 @@
 
 .food-photo--delta,
 .food-photo--square,
-.food-photo--square2 {
+.food-photo--square2,
+.food-photo--small {
   @extend .food-photo;
 }
 
@@ -19,6 +20,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center rem(-90);
 }
 
 %label-position {
@@ -64,6 +66,12 @@
   place-items: flex-end;
 }
 
+.food-photo__position6 {
+  @extend %label-position;
+  bottom: 0;
+  left: 0;
+  place-items: flex-end;
+}
 
 .food-photo__left {
   position: absolute;
@@ -84,7 +92,7 @@
 }
 
 .food-photo__title {
-  font-size: rem(20);
+  font-size: clamp(10px, calc(20/392*100vw), 22px);
   font-weight: $bold;
   line-height: calc(24/20);
   letter-spacing: 0.2em;
@@ -100,18 +108,29 @@
   left: rem(32);
 }
 
-.food-photo__title--small {
+.food-photo--small .food-photo__title {
   font-size: rem(16);
+  font-size: clamp(10px, calc(16/392*100vw), 22px);
+  line-height: calc(18/16);
+  letter-spacing: 0.12em;
+  padding-top: rem(10);
+  padding-bottom: rem(8);
+}
+
+.food-photo__title--small {
+  font-size: clamp(10px, calc(16/392*100vw), 18px);
   font-weight: $bold;
   line-height: calc(20/16);
   letter-spacing: 0.27em;
   writing-mode: vertical-rl;
   background-color: rgb($white, 0.7);
+  padding-top: rem(14);
+  padding-bottom: rem(12);
   padding-inline: rem(6);
 }
 
 .food-photo__amount {
-  font-size: rem(20);
+  font-size: clamp(10px, calc(20/392*100vw), 22px);
   font-family: $second-font;
   line-height: calc(28/20);
   letter-spacing: 0.2em;
@@ -120,37 +139,33 @@
   text-transform: uppercase;
 }
 
-.food-photo__comment {
+.food-photo__comment-wrap {
   position: absolute;
-  top: rem(-20);
+  top: rem(-28);
   inset-inline: 0;
-  margin: auto;
-  width: rem(360);
-  z-index: 1;
-  text-align: center;
-  padding-block: rem(24);
-  min-height: rem(154);
 }
 
-.food-photo__comment::before {
-  content: "";
+.food-photo__bubble {
+  width: min(calc(360/392*100vw), rem(500));
+  margin-inline: auto;
+}
+
+.food-photo__comment {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/comment_01.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
+  inset: rem(-8) 0 0 0;
+  display: grid;
+  place-content: center;
+  font-size: clamp(10px, calc(16/392*100vw), 18px);
+  line-height: calc(30/16);
+  letter-spacing: 0.25em;
+  text-align: center;
+  padding-inline: rem(32);
+}
+
+.food-photo--square2 .food-photo__comment-wrap {
+  top: rem(-65);
 }
 
 .food-photo--square2 .food-photo__comment {
-  min-height: rem(193);
-}
-
-.food-photo--square2 .food-photo__comment::before {
-  background-image: url(../images/comment_02.svg);
+  top: rem(-12);
 }

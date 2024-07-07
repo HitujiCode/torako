@@ -18,6 +18,7 @@
   font-size: rem(20);
   font-weight: $bold;
   line-height: calc(32/20);
+  letter-spacing: 0.2em;
   text-align: center;
 }
 
@@ -54,7 +55,8 @@
   margin-top: rem(40);
   display: grid;
   grid-template-columns: 1fr;
-  gap: rem(16);
+  gap: rem(12);
+  text-align: center;
 }
 
 .access__button {}
@@ -72,6 +74,7 @@
   font-size: rem(20);
   font-weight: $bold;
   line-height: calc(32/20);
+  letter-spacing: 0.2em;
 }
 
 .access__guide-text {

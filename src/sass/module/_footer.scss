@@ -2,7 +2,8 @@
 
 .footer {
   background-color: $black;
-  padding-block: rem(40);
+  padding-top: rem(40);
+  padding-bottom: rem(22);
 }
 
 .footer__inner {}
@@ -22,15 +23,15 @@
 }
 
 .footer__nav {
-  margin-top: rem(40);
+  margin-top: rem(50);
 }
 
-.footer__copylight {
-  margin-top: rem(68);
+.footer__copyright {
+  margin-top: rem(35);
   text-align: center;
 }
 
-.footer__copylight small {
+.footer__copyright small {
   font-size: 10px;
   color: $white;
   line-height: 2;

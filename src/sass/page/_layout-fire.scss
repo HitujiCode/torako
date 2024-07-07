@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .layout-fire {
-  margin-top: rem(-20);
+  margin-top: calc(-20/392*100vw);
 
   @include mq("md") {
     margin-left: auto;

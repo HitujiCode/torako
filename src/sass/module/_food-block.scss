@@ -1,29 +1,24 @@
 @use "global" as *;
 
-.food-block {}
+.food-block {
+  position: relative;
+}
 
-.food-block--reverse {
+.food-block--reverse,
+.food-block--lunch {
   @extend .food-block;
-}
-
-.food-block__inner {
-  @include mq("md") {
-    display: flex;
-    position: relative;
-    gap: min(calc(120/1440*100vw), rem(120));
-  }
-}
-
-.food-block--reverse .food-block__inner {
-  @include mq("md") {
-    flex-direction: row-reverse;
-  }
 }
 
 .food-block__head {
   position: relative;
   z-index: 1;
   margin-left: calc(50% - 50vw);
+}
+
+.food-block--lunch .food-block__head {
+  position: absolute;
+  top: rem(-48);
+  left: 0;
 }
 
 .food-block__img {

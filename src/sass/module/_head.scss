@@ -4,8 +4,7 @@
   position: relative;
   color: $white;
   display: inline-block;
-
-  @include mq("md") {}
+  width: fit-content;
 }
 
 .head::before {
@@ -21,11 +20,13 @@
 .head__line {
   position: relative;
   font-size: rem(20);
+  font-size: clamp(10px, calc(20/392*100vw),rem(24));
   font-weight: $bold;
   line-height: calc(32/20);
   letter-spacing: 0.2em;
   padding-inline: rem(16);
   display: inline-block;
+  z-index: 1;
 
   @include mq("md") {
     position: initial;
@@ -57,7 +58,8 @@
   color: $red;
 }
 
-.head--delta1 {
+.head--delta1,
+.head--delta2 {
   @extend .head;
 }
 
@@ -65,22 +67,13 @@
   transform: translateX(40%);
 }
 
-.head--1line {
-  @extend .head;
+.head--delta2 .head__line:nth-of-type(2) {
+  transform: translateX(90%);
 }
 
-.head--1line .head__line:nth-of-type(1) {
-  padding-right: initial;
-}
-
-.head--1line .head__line:nth-of-type(2) {
-  transform: initial;
-  padding-left: initial;
-  animation: line 1s infinite;
-}
-
-.head--1line ::before .head--white1,
-.head--white2 {
+.head--white1,
+.head--white2,
+.head--white3 {
   @extend .head;
   color: initial;
 }
@@ -101,8 +94,17 @@
   }
 }
 
+.head--white3 .head__line:nth-of-type(2) {
+  transform: translateX(28%);
+
+  @include mq("md") {
+    transform: initial;
+  }
+}
+
 .head--white1 .head__line::before,
-.head--white2 .head__line::before {
+.head--white2 .head__line::before,
+.head--white3 .head__line::before {
   background-color: $white;
 }
 

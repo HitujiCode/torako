@@ -37,14 +37,16 @@
 .food__container-black2 {
   margin-top: initial;
   padding-top: rem(40);
-  padding-bottom: rem(36);
   margin-inline: calc(50% - 50vw);
   background-color: $black;
 }
 
-.food__container:has(.menu-button) {
-  // margin-top: initial;
-  // padding-bottom: rem(80);
+.food__container-black3 {
+  padding-top: rem(40);
+  padding-bottom: rem(100);
+  padding-inline: calc(50vw - 50%);
+  margin-inline: calc(50% - 50vw);
+  background-color: $black;
 }
 
 .food__content {}
@@ -62,3 +64,12 @@
 }
 
 .food__grid {}
+
+.food__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

@@ -3,18 +3,19 @@
 .menu-button {
   display: inline-grid;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   background-color: $white;
-  padding-block: rem(16);
+  padding-top: rem(17);
+  padding-bottom: rem(15);
   padding-right: rem(60);
   padding-left: rem(46);
   font-size: rem(18);
   font-weight: $bold;
   line-height: calc(24/18);
   letter-spacing: 0.2em;
-  width: 100%;
-  transition: background-color 0.3, color 0.3;
+  width: min(100%, rem(360));
+  transition: background-color 0.3;
 
   @include mq("md") {
     font-size: rem(32);
@@ -61,8 +62,8 @@
 .menu-button__text::before {
   mask-image: url(../images/icon-meat.svg);
   left: 0;
-  width: rem(52);
-  height: rem(52);
+  width: rem(54);
+  height: rem(54);
   transform: rotate(-36deg);
 }
 
@@ -77,7 +78,7 @@
 .menu-button--drink {
   @extend .menu-button;
   padding-right: rem(60);
-  padding-left: rem(46);
+  padding-left: rem(32);
 }
 
 .menu-button--drink .menu-button__text {
@@ -104,7 +105,7 @@
 .menu-button--lunch {
   @extend .menu-button;
   padding-right: rem(60);
-  padding-left: rem(46);
+  padding-left: rem(56);
 }
 
 .menu-button--lunch .menu-button__text {

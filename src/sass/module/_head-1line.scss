@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.head-1line {
+  position: relative;
+  color: $white;
+  display: inline-block;
+  padding-inline: rem(16);
+}
+
+.head-1line::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: $black;
+  z-index: 1;
+  // animation: line 1s infinite;
+}
+
+.head-1line__line {
+  position: relative;
+  font-size: clamp(10px, calc(20/392*100vw),rem(28));
+  font-weight: $bold;
+  line-height: calc(32/20);
+  letter-spacing: 0.2em;
+  display: inline-block;
+  z-index: 2;
+
+  @include mq("md") {
+    position: initial;
+  }
+}
+
+.head-1line__red {
+  color: $red;
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

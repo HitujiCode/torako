@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .infomation {
-  padding-block: rem(100);
+  padding-block: rem(78);
 }
 
 .infomation__inner {}
@@ -14,7 +14,7 @@
 }
 
 .infomation__item {
-  padding-block: rem(24);
+  padding-block: rem(23);
   border-bottom: 1px solid;
 }
 
@@ -22,6 +22,7 @@
   font-size: rem(24);
   font-family: $second-font;
   line-height: calc(28/24);
+  letter-spacing: 0.2em;
 }
 
 .infomation__text {
