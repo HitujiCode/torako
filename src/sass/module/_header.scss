@@ -195,40 +195,6 @@
   }
 }
 
-.grobal-nav__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: rem(24);
-
-  @include mq("md") {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: calc(68/1440*100vw);
-  }
-}
-
-.grobal-nav__item {}
-
-.grobal-nav__item a {
-  display: inline-block;
-  width: 100%;
-  font-size: rem(23);
-  font-family: $second-font;
-  color: $white;
-  line-height: 1;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.grobal-nav__item span {
-  margin-top: rem(4);
-  display: block;
-  font-size: 10px;
-  font-family: $base-font;
-  line-height: calc(16/10);
-  letter-spacing: 0.25em;
-}
-
 .header__buttons {
   margin-top: rem(40);
   display: grid;

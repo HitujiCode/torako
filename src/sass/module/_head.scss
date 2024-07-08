@@ -5,6 +5,7 @@
   color: $white;
   display: inline-block;
   width: fit-content;
+  z-index: 1;
 
   @include mq("md") {
     padding-inline: rem(40);
@@ -17,7 +18,6 @@
     position: absolute;
     inset: 0;
     background-color: $black;
-    // animation: line 1s infinite;
   }
 }
 
@@ -29,7 +29,7 @@
   letter-spacing: 0.2em;
   padding-inline: rem(16);
   display: inline-block;
-  z-index: 1;
+  // z-index: 1;
 
   @include mq("md") {
     padding-block: rem(8);
@@ -72,10 +72,18 @@
 
 .head--delta1 .head__line:nth-of-type(2) {
   transform: translateX(40%);
+
+  @include mq("md") {
+    transform: initial;
+  }
 }
 
 .head--delta2 .head__line:nth-of-type(2) {
   transform: translateX(90%);
+
+  @include mq("md") {
+    transform: initial;
+  }
 }
 
 .head--white1,

@@ -1,29 +1,16 @@
 @use "global" as *;
 
-.course-block {
+.course-block2 {
   background-color: $white;
   padding: rem(16);
 
   @include mq("md") {
-    padding-top: rem(120);
+    padding-block: rem(120);
     padding-inline: rem(104);
-    padding-bottom: rem(90);
   }
 }
 
-.course-block__wrap {
-  display: contents;
-
-  @include mq("md") {
-    display: grid;
-    grid-template-columns: fit-content(100%) 1fr;
-    gap: rem(32);
-    width: fit-content;
-    margin-inline: auto;
-  }
-}
-
-.course-block__label {
+.course-block2__label {
   margin-left: rem(-16);
   padding-block: rem(11);
   padding-left: rem(25);
@@ -50,7 +37,7 @@
   }
 }
 
-.course-block__title {
+.course-block2__title {
   margin-top: rem(24);
   text-align: center;
   font-weight: $bold;
@@ -64,7 +51,7 @@
 
 }
 
-.course-block__title-main {
+.course-block2__title-main {
   font-size: rem(24);
   line-height: calc(32/24);
   letter-spacing: 0.2em;
@@ -75,7 +62,7 @@
   }
 }
 
-.course-block__title-sub {
+.course-block2__title-sub {
   margin-top: rem(8);
   font-size: rem(18);
   line-height: calc(24/18);
@@ -89,7 +76,7 @@
   }
 }
 
-.course-block__note {
+.course-block2__note {
   margin-top: rem(25);
   text-align: right;
 
@@ -98,24 +85,31 @@
   }
 }
 
-.course-block__menu {
+.course-block2__menu-wrap {
+  display: contents;
+
+  @include mq("md") {
+    margin-top: rem(8);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(40);
+  }
+}
+
+.course-block2__menu {
   margin-top: rem(8);
   padding: rem(32);
   background-color: $black;
 
   @include mq("md") {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: rem(58);
-    align-items: center;
-    padding-top: rem(53);
-    padding-bottom: rem(45);
-    padding-inline: min(calc(104/1440*100vw), rem(104));
+    margin-top: initial;
+    padding-block: rem(40);
+    padding-inline: rem(80);
   }
 }
 
-.course-block__menu--delta {
-  @extend .course-block__menu;
+.course-block2__menu--delta {
+  @extend .course-block2__menu;
 
   @include mq("md") {
     padding-top: rem(45);
@@ -123,15 +117,15 @@
   }
 }
 
-.course-block__menu+.course-block__menu {
+.course-block2__menu+.course-block2__menu {
   margin-top: rem(16);
 
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: initial;
   }
 }
 
-.course-block__menu-title {
+.course-block2__menu-title {
   font-size: rem(24);
   font-weight: $bold;
   color: $white;
@@ -141,28 +135,26 @@
 
   @include mq("md") {
     font-size: rem(32);
-    line-height: calc(54/32);
+    line-height: calc(50/32);
     text-align: left;
+    padding-inline: rem(8);
   }
 }
 
-.course-block__menu-red {
-  color: $red;
-}
-
-.course-block__menu-small {
+.course-block2__menu-small {
   margin-top: rem(10);
   display: inline-block;
   font-size: rem(18);
   line-height: calc(24/18);
 
   @include mq("md") {
+    margin-top: initial;
     font-size: rem(24);
     line-height: calc(32/24);
   }
 }
 
-.course-block__menu-amount {
+.course-block2__menu-amount {
   margin-left: rem(2);
   display: inline-block;
   font-size: rem(24);
@@ -177,36 +169,21 @@
   }
 }
 
-.course-block__menu-list {
+.course-block2__menu-list {
   margin-top: rem(24);
-
-  @include mq("md") {
-    margin-top: initial;
-    display: grid;
-    grid-template-columns: repeat(2, fit-content(100%));
-    justify-content: space-between;
-  }
 }
 
-.course-block__menu-wrap {
-  display: contents;
+.course-block2__menu-item {}
 
-  @include mq("md") {
-    display: block;
-  }
-}
-
-.course-block__menu-item {}
-
-.course-block__menu-item span {
+.course-block2__menu-item span {
   display: inline-block;
   padding-left: 0.5em;
   white-space: nowrap;
 }
 
-.course-block__menu-white {
+.course-block2__menu-white {
   margin-top: rem(16);
-  padding: rem(15) rem(13);
+  padding: rem(15) rem(16);
   border: 1px solid;
 
   @include mq("md") {
@@ -216,19 +193,7 @@
   }
 }
 
-.course-block__menu-white2 {
-  margin-top: rem(16);
-  padding: rem(15) rem(16);
-  border: 1px solid;
-}
-
-.course-block__lineup {}
-
-.course-block__lineup+.course-block__menu-notes {
-  margin-top: rem(30);
-}
-
-.course-block__menu-note {
+.course-block2__menu-note {
   text-align: left;
   text-indent: -1.25em;
   padding-left: 1.25em;

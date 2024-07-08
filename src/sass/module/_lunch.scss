@@ -3,9 +3,11 @@
 .lunch {
   overflow-x: clip;
   padding-top: rem(70);
-}
 
-.layout-lunch {}
+  @include mq("md") {
+    padding-top: rem(128);
+  }
+}
 
 .lunch__inner {}
 
@@ -19,6 +21,11 @@
   padding-inline: calc(50vw - 50%);
   padding-bottom: rem(100);
   // position: relative;
+
+  @include mq("md") {
+    margin-top: rem(80);
+    padding-bottom: rem(120);
+  }
 }
 
 .lunch__content {
@@ -32,4 +39,8 @@
 .lunch__button {
   margin-top: rem(40);
   text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }

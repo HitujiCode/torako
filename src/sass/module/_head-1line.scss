@@ -5,6 +5,12 @@
   color: $white;
   display: inline-block;
   padding-inline: rem(16);
+  z-index: 1;
+
+  @include mq("md") {
+    padding-block: rem(8);
+    padding-inline: rem(40);
+  }
 }
 
 .head-1line::before {
@@ -12,21 +18,22 @@
   position: absolute;
   inset: 0;
   background-color: $black;
-  z-index: 1;
+  z-index: -1;
   // animation: line 1s infinite;
 }
 
 .head-1line__line {
   position: relative;
-  font-size: clamp(10px, calc(20/392*100vw),rem(28));
+  font-size: clamp(10px, calc(20/392*100vw), rem(28));
   font-weight: $bold;
   line-height: calc(32/20);
   letter-spacing: 0.2em;
   display: inline-block;
-  z-index: 2;
 
   @include mq("md") {
     position: initial;
+    font-size: rem(32);
+    line-height: calc(54/32);
   }
 }
 

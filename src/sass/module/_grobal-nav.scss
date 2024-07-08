@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.grobal-nav {}
+
+.grobal-nav--footer {
+  @extend .grobal-nav;
+}
+
+.grobal-nav__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(24);
+
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: calc(68/1440*100vw);
+  }
+}
+
+.grobal-nav--footer .grobal-nav__list {
+  @include mq("md") {
+    column-gap: calc(120/1440*100vw);
+  }
+}
+
+.grobal-nav__item {}
+
+
+.grobal-nav__item a {
+  display: inline-block;
+  width: 100%;
+  font-size: rem(23);
+  font-family: $second-font;
+  color: $white;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.grobal-nav--footer .grobal-nav__item a {
+  @include mq("md") {
+    min-width: rem(140);
+  }
+}
+
+.grobal-nav__item span {
+  margin-top: rem(4);
+  display: block;
+  font-size: 10px;
+  font-family: $base-font;
+  line-height: calc(16/10);
+  letter-spacing: 0.25em;
+}
+
+@media (any-hover: hover) {
+  .grobal-nav__item a:hover {
+    opacity: 0.5;
+  }
+}

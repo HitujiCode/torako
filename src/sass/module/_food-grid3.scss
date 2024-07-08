@@ -13,10 +13,20 @@
 .food-grid3__images {
   margin-top: rem(68);
   margin-inline: calc(50% - 50vw);
+
+  @include mq("md") {
+    margin-top: rem(40);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .food-grid3__img+.food-grid3__img {
   margin-top: rem(68);
+
+  @include mq("md") {
+    margin-top: initial;
+  }
 }
 
 .food-grid3__img+.food-grid3__img:has(.food-photo--square2) {

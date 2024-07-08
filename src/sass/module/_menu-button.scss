@@ -21,6 +21,8 @@
     font-size: rem(32);
     line-height: calc(54/32);
     padding: rem(33) rem(112);
+    width: min(100%, rem(1016));
+    justify-content: center;
   }
 }
 
@@ -36,6 +38,11 @@
   mask-position: center;
   mask-size: contain;
   transition: background-color 0.3s;
+
+  @include mq("md") {
+    width: rem(80);
+    right: rem(32);
+  }
 }
 
 .menu-button__text {
@@ -46,6 +53,10 @@
   padding-right: rem(24);
   transition: color 0.3s;
   position: relative;
+
+  @include mq("md") {
+    padding-inline: rem(119);
+  }
 }
 
 .menu-button__text::before,
@@ -65,6 +76,11 @@
   width: rem(54);
   height: rem(54);
   transform: rotate(-36deg);
+
+  @include mq("md") {
+    width: rem(82);
+    height: rem(82);
+  }
 }
 
 .menu-button__text::after {
@@ -73,6 +89,12 @@
   width: rem(16);
   height: rem(52);
   transform: rotate(15deg);
+
+  @include mq("md") {
+    width: rem(25);
+    height: rem(83);
+    right: rem(58);
+  }
 }
 
 .menu-button--drink {
@@ -84,12 +106,21 @@
 .menu-button--drink .menu-button__text {
   padding-left: rem(44);
   padding-right: rem(28);
+
+  @include mq("md") {
+    padding-inline: rem(72);
+  }
 }
 
 .menu-button--drink .menu-button__text::before,
 .menu-button--drink .menu-button__text::after {
   width: rem(19);
   height: rem(47);
+
+  @include mq("md") {
+    width: rem(35);
+    height: rem(87);
+  }
 }
 
 .menu-button--drink .menu-button__text::before {
@@ -100,6 +131,10 @@
 .menu-button--drink .menu-button__text::after {
   mask-image: url(../images/icon-glass.svg);
   transform: rotate(20deg);
+
+  @include mq("md") {
+    right: 0;
+  }
 }
 
 .menu-button--lunch {
@@ -110,22 +145,35 @@
 
 .menu-button--lunch .menu-button__text {
   padding-inline: rem(28);
-}
 
-.menu-button--lunch .menu-button__text::before,
-.menu-button--lunch .menu-button__text::after {
-  width: rem(19);
-  height: rem(60);
+  @include mq("md") {
+    padding-inline: rem(74);
+  }
 }
 
 .menu-button--lunch .menu-button__text::before {
   mask-image: url(../images/icon-fork.svg);
   transform: rotate(-20deg);
+  width: rem(19);
+  height: rem(60);
+
+  @include mq("md") {
+    width: rem(21);
+    height: rem(87);
+  }
 }
 
 .menu-button--lunch .menu-button__text::after {
   mask-image: url(../images/icon-spoon.svg);
   transform: rotate(20deg);
+  width: rem(19);
+  height: rem(60);
+
+  @include mq("md") {
+    width: rem(26);
+    height: rem(87);
+    right: 0;
+  }
 }
 
 @media (any-hover: hover) {

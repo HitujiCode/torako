@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.grid-block3 {}
+
+.grid-block3__head {
+  margin-left: calc(50% - 50vw);
+}
+
+.grid-block3__images {
+  display: contents;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-block3__img+.grid-block3__img {
+  margin-top: rem(68);
+
+  @include mq("md") {
+    margin-top: initial;
+  }
+}
+
+.grid-block3__img+.grid-block3__img:has(.food-photo--square2) {
+  margin-top: rem(107);
+
+  @include mq("md") {
+    margin-top: initial;
+  }
+}

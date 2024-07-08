@@ -17,6 +17,12 @@
   width: rem(360);
   max-width: 100%;
   transition: background-color 0.3s, color 0.3s;
+
+  @include mq("md") {
+    font-size: rem(32);
+    line-height: calc(54/32);
+    width: rem(480);
+  }
 }
 
 .button::before {
@@ -31,6 +37,12 @@
   mask-position: center;
   mask-size: contain;
   transition: background-color 0.3s;
+
+  @include mq("md") {
+    width: rem(38);
+    height: rem(67);
+    left: rem(44);
+  }
 }
 
 .button::after {
@@ -44,6 +56,10 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
+
+  @include mq("md") {
+    right: rem(32);
+  }
 }
 
 .button span {
@@ -51,6 +67,9 @@
 
   @include mq("md") {
     display: block;
+    font-size: rem(24);
+    line-height: calc(32/24);
+    letter-spacing: 0.25em;
   }
 }
 
@@ -73,6 +92,12 @@
   width: rem(50);
   height: rem(48);
   transition: background-image 0.3s;
+
+  @include mq("md") {
+    width: rem(72);
+    height: rem(70);
+    left: rem(75);
+  }
 }
 
 .button--instagram::before {

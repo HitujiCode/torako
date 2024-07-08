@@ -16,18 +16,36 @@
   padding-bottom: rem(100);
   padding-inline: calc(50vw - 50%);
   margin-inline: calc(50% - 50vw);
+
+  @include mq("md") {
+    padding-top: initial;
+    padding-bottom: rem(120);
+  }
 }
 
 .drink__note {
   text-align: right;
+
+  @include mq("md") {
+    margin-top: rem(-22);
+    margin-right: rem(-102);
+  }
 }
 
 .drink__heading {
   margin-top: rem(52);
+
+  @include mq("md") {
+    margin-top: rem(122);
+  }
 }
 
 .drink__content {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
 .drink__grid {
@@ -37,4 +55,8 @@
 .drink__button {
   margin-top: rem(40);
   text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }

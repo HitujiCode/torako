@@ -5,9 +5,13 @@
   color: $white;
   padding-top: rem(100);
   overflow-x: clip;
+
+  @include mq("md") {
+    padding-top: rem(160);
+  }
 }
 
-.access__inner {}
+.access__inner.inner {}
 
 .access__container {}
 
@@ -20,16 +24,54 @@
   line-height: calc(32/20);
   letter-spacing: 0.2em;
   text-align: center;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+
+  @include mq("md") {
+    font-size: rem(32);
+    line-height: calc(54/32);
+  }
+}
+
+.access__content {
+  display: contents;
+
+  @include mq("md") {
+    display: flex;
+    gap: min(calc(120/1440*100vw), rem(120));
+    margin-top: rem(80);
+  }
 }
 
 .access__img {
   margin-top: rem(40);
   margin-inline: calc(50% - 50vw);
+
+  @include mq("md") {
+    margin-top: initial;
+    margin-right: initial;
+    width: 50%;
+  }
+}
+
+.access__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 600/720;
+  }
 }
 
 .access__info {
   margin-top: rem(40);
-  border-top: 1px solid;
+
+  @include mq("md") {
+    margin-top: initial;
+    padding-top: rem(68);
+    flex: 1;
+  }
 }
 
 .access__wrap {
@@ -38,6 +80,17 @@
   font-size: rem(14);
   line-height: calc(20/14);
   letter-spacing: 0.25em;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: auto calc(382/568*100%);
+    gap: rem(40);
+    padding-inline: rem(16);
+  }
+}
+
+.access__wrap:first-child {
+  border-top: 1px solid;
 }
 
 .access__term {}
@@ -57,6 +110,14 @@
   grid-template-columns: 1fr;
   gap: rem(12);
   text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(72);
+    width: fit-content;
+    margin-inline: auto;
+  }
 }
 
 .access__button {}
@@ -68,6 +129,26 @@
   padding-bottom: rem(8);
   border: 1px solid;
   text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+    margin-inline: auto;
+    max-width: rem(1014);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: rem(24);
+    align-items: center;
+    padding-top: rem(48);
+    padding-bottom: rem(55);
+    padding-inline: rem(77);
+  }
+}
+
+.access__guide-wrap {
+  @include mq("md") {
+    text-align: left;
+    padding-top: rem(8);
+  }
 }
 
 .access__guide-head {
@@ -75,6 +156,11 @@
   font-weight: $bold;
   line-height: calc(32/20);
   letter-spacing: 0.2em;
+
+  @include mq("md") {
+    font-size: rem(26);
+    line-height: calc(48/26);
+  }
 }
 
 .access__guide-text {
@@ -82,15 +168,35 @@
   font-size: rem(14);
   line-height: calc(20/14);
   letter-spacing: 0.25em;
+
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(30/16);
+  }
 }
 
 .access__guide-logo {
   margin-top: rem(8);
 }
 
-.access__map {
+.accesss__fire {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(132);
+    margin-left: auto;
+    margin-right: calc(50% - 50vw);
+    position: relative;
+  }
+}
+
+.access__map {
+  margin-top: calc(-25/392*100vw);
   margin-inline: calc(50% - 50vw);
+
+  @include mq("md") {
+    margin-top: rem(-30);
+  }
 }
 
 .access__map iframe {
@@ -99,4 +205,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 1440/520;
+  }
 }

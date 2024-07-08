@@ -7,9 +7,9 @@
   padding-inline: rem(16);
 
   @include mq("md") {
-    padding-top: rem(16);
-    padding-bottom: rem(48);
-    padding-inline: rem(108);
+    padding-block: rem(80);
+    padding-inline: rem(118);
+    display: grid;
   }
 }
 
@@ -19,15 +19,31 @@
   line-height: calc(20/10);
   letter-spacing: 0.25em;
   text-align: right;
+
+  @include mq("md") {
+    margin-top: rem(10);
+    order: 2;
+    font-size: 12px;
+  }
 }
 
 .menu__note:not(:first-child) {
   margin-top: rem(40);
+
+  @include mq("md") {
+    order: 4;
+    margin-top: rem(60);
+  }
 }
 
 .menu__head {
   margin-top: rem(12);
   text-align: center;
+
+  @include mq("md") {
+    margin-top: initial;
+    order: 1;
+  }
 }
 
 .menu__head-sub {
@@ -36,6 +52,11 @@
   line-height: calc(41/28);
   letter-spacing: 0.25em;
   text-transform: uppercase;
+
+  @include mq("md") {
+    font-size: rem(32);
+    line-height: calc(46/32);
+  }
 }
 
 .menu__head-main {
@@ -43,6 +64,10 @@
   font-size: rem(14);
   line-height: calc(20/14);
   letter-spacing: 0.25em;
+
+  @include mq("md") {
+    margin-top: initial;
+  }
 }
 
 .menu__body {
@@ -51,7 +76,9 @@
   gap: rem(40);
 
   @include mq("md") {
+    margin-top: rem(6);
     display: block;
+    order: 3;
   }
 }
 
@@ -124,6 +151,10 @@
 
   @include mq("md") {
     writing-mode: initial;
+    letter-spacing: 0.25em;
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    padding-inline: rem(12);
   }
 }
 
@@ -134,6 +165,8 @@
   gap: rem(8);
 
   @include mq("md") {
+    margin-top: rem(70);
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -143,11 +176,20 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     writing-mode: vertical-rl;
+    align-items: center;
+    gap: rem(6);
   }
 }
 
 .menu__name {
-  @include mq("md") {}
+  font-size: rem(16);
+  line-height: calc(30/16);
+  letter-spacing: 0.25em;
+
+  @include mq("md") {
+    line-height: 1;
+    letter-spacing: 0.5em;
+  }
 }
 
 .menu__amount {
@@ -159,5 +201,7 @@
 
   @include mq("md") {
     text-orientation: upright;
+    font-size: rem(24);
+    line-height: 1;
   }
 }

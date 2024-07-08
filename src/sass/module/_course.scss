@@ -3,6 +3,10 @@
 .course {
   overflow-x: clip;
   padding-top: rem(80);
+
+  @include mq("md") {
+    padding-top: rem(132);
+  }
 }
 
 .layout-course {}
@@ -18,12 +22,21 @@
   padding-top: rem(16);
   padding-bottom: rem(70);
   padding-inline: calc(50vw - 50%);
+
+  @include mq("md") {
+    padding-top: rem(80);
+    padding-bottom: rem(120);
+  }
 }
 
 .course__heading {}
 
 .course__content {
   margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
 .course__list {}
@@ -32,4 +45,8 @@
 
 .course__block+.course__block {
   margin-top: rem(16);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }

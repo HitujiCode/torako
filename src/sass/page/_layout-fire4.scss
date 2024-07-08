@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.layout-fire2 {
-  margin-bottom: rem(-25);
+.layout-fire4 {
+  margin-bottom: calc(-25/392*100vw);
 
   @include mq("md") {
     margin-bottom: rem(-30);

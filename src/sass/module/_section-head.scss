@@ -9,8 +9,8 @@
 
   @include mq("md") {
     width: fit-content;
-    grid-template-columns: repeat(2, auto);
-    gap: rem(90);
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "sub bone main";
     place-content: center;
     margin-inline: auto;
   }
@@ -29,10 +29,11 @@
 
   @include mq("md") {
     margin-top: initial;
+    margin-left: rem(-12);
     background-image: url("../images/pc/icon-bone.svg");
     width: rem(28);
     height: rem(120);
-    left: rem(342);
+    grid-area: bone;
   }
 }
 
@@ -46,6 +47,7 @@
   @include mq("md") {
     font-size: rem(80);
     line-height: calc(116/80);
+    grid-area: sub;
   }
 }
 
@@ -58,6 +60,7 @@
   @include mq("md") {
     font-size: rem(56);
     line-height: calc(80/56);
+    grid-area: main;
   }
 }
 

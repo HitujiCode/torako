@@ -1,0 +1,87 @@
+@use "global" as *;
+
+@use "global" as *;
+
+.food-block {
+  position: relative;
+
+  @include mq("md") {
+    display: flex;
+    gap: min(calc(108/1440*100vw), rem(108))
+  }
+}
+
+.food-block--lunch {
+  @extend .food-block;
+}
+
+.food-block__head {
+  position: relative;
+  z-index: 1;
+  margin-left: calc(50% - 50vw);
+
+  @include mq("md") {
+    position: absolute;
+    top: rem(40);
+    left: 0;
+  }
+}
+
+.food-block__img {
+  margin-inline: calc(50% - 50vw);
+
+  @include mq("md") {
+    margin-right: initial;
+    flex: 1;
+  }
+}
+
+.food-block__text {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: initial;
+    padding-top: rem(150);
+    padding-bottom: rem(40);
+    padding-inline: rem(22);
+    width: calc(504/1224*100%);
+  }
+}
+
+.food-block__info {
+  margin-top: rem(16);
+}
+
+
+.food-block__drink {
+  background-color: $white;
+  margin-inline: calc(50% - 50vw);
+  padding-top: rem(68);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(68);
+}
+
+.food-block__button {
+  margin-top: rem(40);
+}
+
+.food-block--4 {
+  @extend .food-block;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.food-block--4 .food-block__img {
+  @include mq("md") {
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+.food-block--4 .food-block__img img {
+  @include mq("md") {
+    aspect-ratio: 1440/520;
+  }
+}
