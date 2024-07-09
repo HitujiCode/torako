@@ -1,41 +1,53 @@
 @use "global" as *;
 
 .food-grid2 {
-  position: relative;
+  background-color: $black;
+  padding-top: rem(40);
+  padding-bottom: rem(100);
 
   @include mq("md") {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    padding-top: rem(80);
+    padding-bottom: rem(120);
   }
 }
 
 .food-grid2__head {
-  position: absolute;
-  top: rem(24);
-  left: 0;
-  z-index: 1;
+  // margin-left: calc(50% - 50vw);
+}
+
+.food-grid2__text {
+  margin-top: rem(40);
+  padding-inline: calc(16/392*100vw);
+}
+
+.food-grid2__images {
+  margin-top: rem(68);
+  // margin-inline: calc(50% - 50vw);
 
   @include mq("md") {
-    top: rem(48);
-    left: initial;
-    right: 0;
+    margin-top: rem(40);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.food-grid2__img:nth-of-type(1) {
+.food-grid2__img+.food-grid2__img {
+  margin-top: rem(68);
+
   @include mq("md") {
-    grid-area: 2 / 1 / 3 / 2;
+    margin-top: initial;
   }
 }
 
-.food-grid2__img:nth-of-type(2) {
-  @include mq("md") {
-    grid-area: 1 / 2 / 3 / 3;
-  }
+.food-grid2__img+.food-grid2__img:has(.food-photo--square2) {
+  margin-top: rem(107);
 }
 
-.food-grid2__img:nth-of-type(3) {
+.food-grid2__button {
+  margin-top: rem(40);
+  text-align: center;
+
   @include mq("md") {
-    grid-area: 1 / 1 / 2 / 2;
+    margin-top: rem(80);
   }
 }

@@ -4,31 +4,30 @@
   overflow-x: clip;
 }
 
-.layout-drink {}
-
 .drink__inner {}
 
 .drink__container {}
 
 .drink__container-black {
-  background-color: $black;
-  padding-top: rem(68);
-  padding-bottom: rem(100);
-  padding-inline: calc(50vw - 50%);
-  margin-inline: calc(50% - 50vw);
+  // background-color: $black;
+  // padding-top: rem(68);
+  // padding-bottom: rem(100);
+  // padding-inline: calc(50vw - 50%);
+  // margin-inline: calc(50% - 50vw);
 
-  @include mq("md") {
-    padding-top: initial;
-    padding-bottom: rem(120);
-  }
+  // @include mq("md") {
+  //   padding-top: initial;
+  //   padding-bottom: rem(120);
+  // }
 }
 
 .drink__note {
   text-align: right;
+  padding-inline: rem(16);
 
   @include mq("md") {
     margin-top: rem(-22);
-    margin-right: rem(-102);
+    padding-inline: rem(8);
   }
 }
 

@@ -23,7 +23,7 @@
   @include mq("md") {
     margin-top: rem(10);
     order: 2;
-    font-size: 12px;
+    font-size: clamp(10px, calc(12 / 1440 * 100vw), 12px);
   }
 }
 

@@ -3,13 +3,34 @@
 .food {
   overflow-x: clip;
   padding-top: rem(8);
+  padding-bottom: rem(40);
+
+  @include mq("md") {
+    padding-bottom: initial;
+  }
+}
+
+.food--black {
+  @extend .food;
+  background-color: $black;
+  padding-top: initial;
+
+  @include mq("md") {
+    padding-bottom: rem(80);
+  }
+}
+
+.food--grid {
+  @extend .food;
+  padding-top: rem(40);
 }
 
 .food__note {
   text-align: right;
+  padding-inline: rem(16);
 
   @include mq("md") {
-    margin-right: rem(-102);
+    padding-inline: rem(8);
   }
 }
 
@@ -30,11 +51,11 @@
 }
 
 .food__container2 {
-  margin-top: rem(40);
+  // margin-top: rem(40);
 
-  @include mq("md") {
-    margin-top: initial;
-  }
+  // @include mq("md") {
+  //   margin-top: initial;
+  // }
 }
 
 .food__container-black {
@@ -53,30 +74,42 @@
 }
 
 .food__container-black2 {
-  margin-top: initial;
-  padding-top: rem(40);
-  margin-inline: calc(50% - 50vw);
-  background-color: $black;
+  // margin-top: initial;
+  // padding-top: rem(40);
+  // margin-inline: calc(50% - 50vw);
+  // background-color: $black;
 
-  @include mq("md") {
-    padding-top: rem(80);
-  }
+  // @include mq("md") {
+  //   padding-top: rem(80);
+  // }
 }
 
 .food__container-black3 {
-  padding-top: rem(40);
-  padding-bottom: rem(100);
-  padding-inline: calc(50vw - 50%);
-  margin-inline: calc(50% - 50vw);
-  background-color: $black;
+  // padding-top: rem(40);
+  // padding-bottom: rem(100);
+  // padding-inline: calc(50vw - 50%);
+  // margin-inline: calc(50% - 50vw);
+  // background-color: $black;
+
+  // @include mq("md") {
+  //   padding-top: rem(80);
+  //   padding-bottom: rem(120);
+  // }
+}
+
+.food__content {
+  margin-top: rem(40);
 
   @include mq("md") {
-    padding-top: rem(80);
-    padding-bottom: rem(120);
+    margin-top: rem(80);
   }
 }
 
-.food__content {}
+.food--black .food__content {
+  @include mq("md") {
+    margin-top: initial;
+  }
+}
 
 .food__content+.food__content {
   margin-top: rem(40);
@@ -96,10 +129,13 @@
 
 .food__menu {
   margin-top: rem(40);
+  padding-inline: calc(16/392*100vw);
 
   @include mq("md") {
     margin-top: rem(80);
-    margin-inline: rem(-14);
+    margin-inline: auto;
+    padding-inline: $padding-pc;
+    max-width: 1302px;
   }
 }
 

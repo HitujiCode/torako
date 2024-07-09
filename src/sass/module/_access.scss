@@ -11,7 +11,7 @@
   }
 }
 
-.access__inner.inner {}
+.access__inner {}
 
 .access__container {}
 
@@ -33,12 +33,21 @@
   }
 }
 
+.access__wrapper {
+  padding-inline: $padding-sp;
+
+  @include mq("md") {
+    display: contents;
+  }
+}
+
 .access__content {
   display: contents;
 
   @include mq("md") {
-    display: flex;
-    gap: min(calc(120/1440*100vw), rem(120));
+    display: grid;
+    grid-template-columns: calc(600/1440*100%) 1fr;
+    align-items: center;
     margin-top: rem(80);
   }
 }
@@ -48,9 +57,7 @@
   margin-inline: calc(50% - 50vw);
 
   @include mq("md") {
-    margin-top: initial;
-    margin-right: initial;
-    width: 50%;
+    margin: initial;
   }
 }
 
@@ -69,8 +76,8 @@
 
   @include mq("md") {
     margin-top: initial;
-    padding-top: rem(68);
-    flex: 1;
+    padding-top: rem(32);
+    padding-inline: min(calc(120/1440*100vw), rem(120));
   }
 }
 
@@ -179,23 +186,12 @@
   margin-top: rem(8);
 }
 
-.accesss__fire {
+.access__map {
   margin-top: rem(40);
 
   @include mq("md") {
-    margin-top: rem(132);
-    margin-left: auto;
-    margin-right: calc(50% - 50vw);
+    margin-top: rem(160);
     position: relative;
-  }
-}
-
-.access__map {
-  margin-top: calc(-25/392*100vw);
-  margin-inline: calc(50% - 50vw);
-
-  @include mq("md") {
-    margin-top: rem(-30);
   }
 }
 
@@ -208,5 +204,17 @@
 
   @include mq("md") {
     aspect-ratio: 1440/520;
+  }
+}
+
+.access__fire {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    top: rem(-30);
+    right: 0;
+    z-index: 1;
   }
 }

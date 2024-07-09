@@ -9,6 +9,7 @@
 
   @include mq("md") {
     padding-inline: rem(40);
+    white-space: nowrap;
   }
 }
 

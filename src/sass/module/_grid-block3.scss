@@ -1,9 +1,18 @@
 @use "global" as *;
 
-.grid-block3 {}
+.grid-block3 {
+  padding-top: rem(67);
+  padding-bottom: rem(100);
+  background-color: $black;
+
+  @include mq("md") {
+    padding-top: initial;
+    padding-bottom: rem(120);
+  }
+}
 
 .grid-block3__head {
-  margin-left: calc(50% - 50vw);
+  // margin-left: calc(50% - 50vw);
 }
 
 .grid-block3__images {
