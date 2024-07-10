@@ -19,9 +19,9 @@
   transition: background-color 0.3s, color 0.3s;
 
   @include mq("md") {
-    font-size: rem(32);
-    line-height: calc(54/32);
-    width: rem(480);
+    padding-left: min(calc(64/1440*100vw), rem(64));
+    padding-right: min(calc(52/1440*100vw), rem(52));
+    font-size: clamp(rem(18), calc(24/1440*100vw), rem(24));
   }
 }
 
@@ -39,9 +39,9 @@
   transition: background-color 0.3s;
 
   @include mq("md") {
-    width: rem(38);
-    height: rem(67);
-    left: rem(44);
+    width: rem(24);
+    height: rem(45);
+    left: min(calc(35/1440*100vw), rem(35));
   }
 }
 
@@ -58,7 +58,7 @@
   mask-size: contain;
 
   @include mq("md") {
-    right: rem(32);
+    right: min(calc(32/1440*100vw), rem(32));
   }
 }
 
@@ -94,9 +94,9 @@
   transition: background-image 0.3s;
 
   @include mq("md") {
-    width: rem(72);
-    height: rem(70);
-    left: rem(75);
+    width: rem(50);
+    height: rem(48);
+    left: rem(24);
   }
 }
 
@@ -104,6 +104,67 @@
   mask-image: url(../images/icon-instagram.svg);
   width: rem(40);
   height: rem(40);
+
+  @include mq("md") {
+    width: rem(38);
+    height: rem(38);
+    left: rem(24)
+  }
+}
+
+.button--large {
+  @extend .button;
+
+  @include mq("md") {
+    font-size: rem(32);
+    line-height: calc(54/32);
+    width: rem(480);
+  }
+}
+
+
+.button--reservation-large {
+  @extend .button--reservation;
+
+  @include mq("md") {
+    font-size: rem(32);
+    line-height: calc(54/32);
+    width: rem(480);
+  }
+}
+
+.button--large::before,
+.button--reservation-large::before {
+  @include mq("md") {
+    width: rem(38);
+    height: rem(67);
+    left: rem(44);
+  }
+}
+
+.button--large::after,
+.button--reservation-large::after {
+  @include mq("md") {
+    right: rem(32);
+  }
+}
+
+.button--large span,
+.button--reservation-large span {
+  @include mq("md") {
+    display: block;
+    font-size: rem(24);
+    line-height: calc(32/24);
+    letter-spacing: 0.25em;
+  }
+}
+
+.button--reservation-large::before {
+  @include mq("md") {
+    width: rem(72);
+    height: rem(70);
+    left: rem(75);
+  }
 }
 
 @media (any-hover: hover) {

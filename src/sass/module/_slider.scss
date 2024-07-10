@@ -75,6 +75,7 @@
   background-position: center;
   background-size: contain;
   position: absolute;
+  transition: opacity 0.3s;
 
   @include mq("md") {
     background-image: url(../images/pc/icon-swiper.svg);
@@ -90,4 +91,12 @@
 .thumbnail__next::after {
   @extend %thumbnail-button;
   transform: scale(-1, 1);
+}
+
+@media (any-hover: hover) {
+
+  .thumbnail__prev:hover::after,
+  .thumbnail__next:hover::after {
+    opacity: 0.5;
+  }
 }

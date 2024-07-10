@@ -14,6 +14,7 @@
   @extend .food;
   background-color: $black;
   padding-top: initial;
+  padding-top: rem(40);
 
   @include mq("md") {
     padding-bottom: rem(80);
@@ -98,7 +99,7 @@
 }
 
 .food__content {
-  margin-top: rem(40);
+  // margin-top: rem(40);
 
   @include mq("md") {
     margin-top: rem(80);

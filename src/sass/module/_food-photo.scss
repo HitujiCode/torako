@@ -11,7 +11,8 @@
 }
 
 .food-photo--square,
-.food-photo--square2 {
+.food-photo--square2,
+.food-photo--square3 {
   @extend .food-photo;
 
   @include mq("md") {
@@ -34,13 +35,37 @@
   object-fit: cover;
 }
 
-.food-photo--square .food-photo__img img,
+.food-photo--square .food-photo__img img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 480/600;
+    object-position: initial;
+  }
+}
+
 .food-photo--square2 .food-photo__img img {
   aspect-ratio: 1/1;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center rem(-90);
+
+  @include mq("md") {
+    aspect-ratio: 480/600;
+    object-position: initial;
+  }
+}
+
+.food-photo--square3 .food-photo__img img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center rem(-60);
 
   @include mq("md") {
     aspect-ratio: 480/600;

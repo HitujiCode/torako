@@ -17,26 +17,30 @@
   @include mq("md") {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: 0 100% 0 0;
     background-color: $black;
   }
 }
 
 .head__line {
   position: relative;
-  font-size: clamp(10px, calc(20/392*100vw), rem(24));
-  font-weight: $bold;
-  line-height: calc(32/20);
-  letter-spacing: 0.2em;
   padding-inline: rem(16);
   display: inline-block;
-  // z-index: 1;
 
   @include mq("md") {
     padding-block: rem(8);
     padding-inline: initial;
-    font-size: rem(32);
-    line-height: calc(54/32);
+  }
+}
+
+.head__line::before {
+  content: "";
+  position: absolute;
+  inset: 0 100% 0 0;
+  background-color: $black;
+
+  @include mq("md") {
+    content: none;
   }
 }
 
@@ -49,16 +53,17 @@
   }
 }
 
-.head__line::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: $black;
-  z-index: -1;
-  // animation: line 1s infinite;
+.head__text {
+  font-size: clamp(10px, calc(20/392*100vw), rem(24));
+  font-weight: $bold;
+  line-height: calc(32/20);
+  letter-spacing: 0.2em;
+  opacity: 0;
+  position: relative;
 
   @include mq("md") {
-    content: none;
+    font-size: rem(32);
+    line-height: calc(54/32);
   }
 }
 
@@ -136,12 +141,33 @@
   background-color: $white;
 }
 
-@keyframes line {
-  0% {
-    width: 0;
+.head.js-slideIn::before {
+  @include mq("md") {
+    animation: slideLine 1s forwards;
   }
+}
 
+.head__line.js-slideIn::before {
+  animation: slideLine 1s forwards;
+
+  @include mq("md") {
+    animation: none;
+  }
+}
+
+@keyframes slideLine {
   100% {
-    width: 100%;
+    inset: 0;
+  }
+}
+
+.head__text.js-slideIn {
+  animation: slideText 1s forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes slideText {
+  100% {
+    opacity: 1;
   }
 }

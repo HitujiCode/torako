@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .footer {
+  position: relative;
   background-color: $black;
   padding-top: rem(40);
   padding-bottom: rem(22);
@@ -8,6 +9,17 @@
   @include mq("md") {
     padding-block: rem(74);
   }
+}
+
+.footer__page-top {
+  position: absolute;
+  top: rem(16);
+  right: rem(16);
+  z-index: 300;
+  display: block;
+  width: rem(40);
+  aspect-ratio: 1/1;
+  filter: invert(1);
 }
 
 .footer__inner {}

@@ -114,6 +114,10 @@
   }
 }
 
+.food-block--4 {
+  @extend .food-block;
+}
+
 .food-block--4 .food-block__head {
   position: absolute;
   top: rem(-48);

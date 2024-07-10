@@ -2,6 +2,7 @@
 
 .grid-block {
   padding-top: rem(40);
+  overflow-x: clip;
 
   @include mq("md") {
     padding-top: initial;

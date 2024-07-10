@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.loading {
+  position: fixed;
+  inset: 0;
+  background-color: $white;
+  z-index: 9999;
+}
+
+.loading__logo {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(calc(240/392*100vw), rem(300));
+  opacity: 0;
+
+  @include mq("md") {
+    width: rem(392);
+  }
+}
+
+.loading__logo img {
+  aspect-ratio: 171/175;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
