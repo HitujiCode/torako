@@ -1,6 +1,4 @@
-
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-
 
   // ローディング
   $(window).on('load', function () {
@@ -61,12 +59,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-
   // ctaボタン
   $(document).ready(function () {
     const cta = $(".js-cta");
-    const mv = $(".mv"); // mv要素を指定
-    const thumbnail = $(".thumbnail"); // サムネイル要素を指定
+    const mv = $(".mv");
+    const thumbnail = $(".thumbnail");
     cta.hide();
 
     function ctaPosition() {
@@ -74,7 +71,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       const windowHeight = $(window).height();
       const mvBottom = mv.offset().top + mv.outerHeight();
       const thumbnailBottom = thumbnail.offset().top + thumbnail.outerHeight();
-      const combinedBottom = Math.max(mvBottom, thumbnailBottom); // 両方の下端の位置を取得
+      const combinedBottom = Math.max(mvBottom, thumbnailBottom);
 
       if (scrollPosition + windowHeight > combinedBottom) {
         cta.fadeIn();
@@ -94,6 +91,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(this).toggleClass("is-open");
       $(".js-drawer").toggleClass("is-open");
       $("body").toggleClass("is-noscroll");
+      $(".outer").toggleClass("is-noscroll");
       if ($(".js-drawer").hasClass("is-open")) {
         setTimeout(function () {
           $(".js-logo").addClass("is-open");
@@ -109,6 +107,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".js-drawer").removeClass("is-open");
       $(".js-logo").removeClass("is-open");
       $("body").removeClass("is-noscroll");
+      $(".outer").removeClass("is-noscroll");
     });
   });
 
@@ -116,15 +115,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   const mv_swiper = new Swiper('.js-mv-swiper', {
     loop: true,
     effect: 'fade',
-    speed: 2000,
-
-    breakpoints: {
-      768: {
-      },
-    },
+    speed: 3000,
+    autoplay: {
+      delay: 1500,
+    }
   });
 
-  // スライダー
+  // サムネイルスライダー
   const swiper = new Swiper('.js-thumbnail', {
     loop: true,
     speed: 1500,
@@ -132,17 +129,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     autoplay: {
       delay: 1500,
     },
-
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   });
-
 });
 
-
-// スライドイン
+// アニメーション
 document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -179,5 +173,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     );
+  });
+
+  // フェードイン2の処理
+  let fadeInElements2 = gsap.utils.toArray('.js-fadeIn2');
+  fadeInElements2.forEach((fadeInElement2, index) => {
+    gsap.fromTo(
+      fadeInElement2,
+      {
+        autoAlpha: 0,
+        y: 20,
+        opacity: 0,
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        delay: index * 0.2,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: fadeInElement2,
+          start: 'top bottom',
+        }
+      }
+    );
+  });
+
+  // フェードイン3の処理
+  let fadeIn3 = document.querySelectorAll(".js-fadeIn3");
+  fadeIn3.forEach((fadeInParent) => {
+    let fadeInItems = fadeInParent.querySelectorAll("li");
+    fadeInItems.forEach((fadeInItem, index) => {
+      gsap.fromTo(
+        fadeInItem,
+        {
+          y: 20,
+          autoAlpha: 0,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          autoAlpha: 1,
+          opacity: 1,
+          duration: 0.7,
+          delay: index * 0.3,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: fadeInItem,
+            start: "top bottom",
+          },
+        }
+      );
+    });
   });
 });

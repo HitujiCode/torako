@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.outer.is-noscroll {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}

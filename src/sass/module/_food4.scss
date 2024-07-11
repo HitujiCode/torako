@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.grid-block3 {
+.food4 {
   padding-top: rem(67);
   padding-bottom: rem(100);
   background-color: $black;
@@ -11,11 +11,11 @@
   }
 }
 
-.grid-block3__head {
+.food4__head {
   // margin-left: calc(50% - 50vw);
 }
 
-.grid-block3__images {
+.food4__images {
   display: contents;
 
   @include mq("md") {
@@ -24,7 +24,7 @@
   }
 }
 
-.grid-block3__img+.grid-block3__img {
+.food4__img+.food4__img {
   margin-top: rem(68);
 
   @include mq("md") {
@@ -32,7 +32,7 @@
   }
 }
 
-.grid-block3__img+.grid-block3__img:has(.food-photo--square2) {
+.food4__img+.food4__img:has(.food-photo--square2) {
   margin-top: rem(107);
 
   @include mq("md") {

@@ -39,7 +39,7 @@
 
 .food-block__text {
   margin-top: rem(24);
-  padding-inline: calc(16/392*100vw);
+  padding-inline: $padding-sp;
 
   @include mq("md") {
     margin-top: initial;
@@ -129,27 +129,25 @@
 }
 
 .food-block--5 .food-block__head {
-  position: absolute;
-  top: rem(-48);
-  left: 0;
+  // position: absolute;
+  // top: rem(-48);
+  // left: 0;
 
-  @include mq("md") {
-    top: rem(65);
-    left: initial;
-    right: 0;
-  }
+  // @include mq("md") {
+  //   top: rem(65);
+  //   left: initial;
+  //   right: 0;
+  // }
 }
 
 .food-block--1 .food-block__img,
 .food-block--2 .food-block__img,
 .food-block--3 .food-block__img,
-.food-block--4 .food-block__img,
-.food-block--5 .food-block__img {
+.food-block--4 .food-block__img {
   margin-top: rem(-14);
 
   @include mq("md") {
     margin-top: initial;
-    // margin-right: calc(50% - 50vw);
     margin-left: initial;
   }
 }
@@ -206,18 +204,13 @@
 
 .food-block--4 .food-block__img {
   @include mq("md") {
-    // margin-right: calc(50% - 50vw);
+    // はみ出す場合
+    margin-inline: calc(50% - 50vw);
+    height: clamp(rem(520), calc(520/1440*100vw), rem(720));
   }
 }
 
-.food-block--4 .food-block__img img {
-  @include mq("md") {
-    aspect-ratio: 1440/520;
-  }
-}
-
-.food-block--4 .food-block__text,
-.food-block--5 .food-block__text {
+.food-block--4 .food-block__text {
   @include mq("md") {
     margin-top: clamp(rem(40), calc(40/1440*100vw), rem(80));
     margin-inline: auto;
@@ -228,8 +221,7 @@
   }
 }
 
-.food-block--4 .food-block__text .text,
-.food-block--5 .food-block__text .text--white {
+.food-block--4 .food-block__text .text {
   @include mq("md") {
     max-width: 100%;
   }

@@ -40,14 +40,15 @@ body {
   color: $black;
   letter-spacing: 0.2em;
   position: relative;
+  overflow-y: scroll;
 }
 
 body.is-fixed {
   position: fixed;
   inset: 0;
-  overflow-y: scroll;
 }
 
 body.is-noscroll {
   overflow: hidden;
+  scrollbar-gutter: stable;
 }

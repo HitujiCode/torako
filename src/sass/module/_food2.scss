@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.grid-block {
+.food2 {
   padding-top: rem(40);
   overflow-x: clip;
 
@@ -9,7 +9,7 @@
   }
 }
 
-.grid-block__container {
+.food2__container {
   @include mq("md") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -21,7 +21,7 @@
   }
 }
 
-.grid-block__head {
+.food2__head {
   @include mq("md") {
     position: absolute;
     top: clamp(rem(55), calc(55/1440*100vw), rem(80));
@@ -29,9 +29,9 @@
   }
 }
 
-.grid-block__text {
+.food2__text {
   margin-top: rem(24);
-  padding-inline: calc(16/392*100vw);
+  padding-inline: $padding-sp;
 
   @include mq("md") {
     margin-top: initial;
@@ -44,13 +44,13 @@
   }
 }
 
-.grid-block__text .text {
+.food2__text .text {
   @include mq("md") {
     max-width: rem(460);
   }
 }
 
-.grid-block__images {
+.food2__images {
   margin-top: rem(40);
   // margin-inline: calc(50% - 50vw);
   display: flex;
@@ -61,13 +61,13 @@
   }
 }
 
-.grid-block__img1 {
+.food2__img1 {
   @include mq("md") {
     grid-area: img1;
   }
 }
 
-.grid-block__images2 {
+.food2__images2 {
   display: flex;
 
   @include mq("md") {
@@ -75,13 +75,13 @@
   }
 }
 
-.grid-block__img2 {
+.food2__img2 {
   width: 100%;
 }
 
-.grid-block__img1 img,
-.grid-block__img2 img,
-.grid-block__img3 img {
+.food2__img1 img,
+.food2__img2 img,
+.food2__img3 img {
   aspect-ratio: 196/283;
   width: 100%;
   height: 100%;

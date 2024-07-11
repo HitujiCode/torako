@@ -42,6 +42,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.mv__slide--delta {
+  @extend .mv__slide;
+}
+
+.mv__slide--delta img {
   object-position: 29%;
 
   @include mq("sm") {
@@ -49,9 +56,12 @@
   }
 
   @include mq("md") {
-    object-position: initial;
+    object-position: 66%;
   }
 
+  @include mq("lg") {
+    object-position: initial;
+  }
 }
 
 .mv__title {

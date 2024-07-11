@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.grid-block2 {
+.food3 {
   @include mq("md") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,7 +12,7 @@
   }
 }
 
-.grid-block2__head {
+.food3__head {
   @include mq("md") {
     position: absolute;
     top: min(calc(115/1440*100vw), rem(115));
@@ -20,9 +20,9 @@
   }
 }
 
-.grid-block2__text {
+.food3__text {
   margin-top: rem(24);
-  padding-inline: calc(16/392*100vw);
+  padding-inline: $padding-sp;
 
   @include mq("md") {
     margin-top: initial;
@@ -35,13 +35,13 @@
   }
 }
 
-.grid-block2__text .text {
+.food3__text .text {
   @include mq("md") {
     max-width: rem(460);
   }
 }
 
-.grid-block2__images {
+.food3__images {
   margin-top: rem(40);
 
   @include mq("md") {
@@ -49,7 +49,7 @@
   }
 }
 
-.grid-block2__img {
+.food3__img {
   margin-inline: calc(50% - 50vw);
 
   @include mq("md") {
@@ -58,7 +58,7 @@
   }
 }
 
-.grid-block2__img:nth-child(2) {
+.food3__img:nth-child(2) {
   @include mq("md") {
     grid-area: img2;
   }

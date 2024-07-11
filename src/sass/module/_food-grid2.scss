@@ -18,7 +18,7 @@
 
 .food-grid2__text {
   margin-top: rem(40);
-  padding-inline: calc(16/392*100vw);
+  padding-inline: $padding-sp;
 
   @include mq("md") {
     padding-inline: $padding-pc;
