@@ -78,3 +78,9 @@
   line-height: 2;
   letter-spacing: 0.25em;
 }
+
+@media (any-hover: hover) {
+  .footer__page-top:hover {
+    opacity: 0.5;
+  }
+}

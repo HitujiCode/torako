@@ -2,7 +2,7 @@
 
 .course {
   overflow-x: clip;
-  padding-top: rem(80);
+  padding-top: rem(75);
 
   @include mq("md") {
     padding-top: rem(132);
@@ -22,6 +22,7 @@
   padding-bottom: rem(70);
 
   @include mq("md") {
+    margin-top: clamp(rem(40), calc(40/1440*100vw), rem(80));
     padding-top: rem(80);
     padding-bottom: rem(120);
   }
@@ -30,7 +31,7 @@
 .course__heading {}
 
 .course__content {
-  margin-top: rem(88);
+  margin-top: rem(102);
 
   @include mq("md") {
     margin-top: rem(80);

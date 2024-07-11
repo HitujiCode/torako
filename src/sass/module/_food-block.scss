@@ -56,7 +56,7 @@
 .food-block__text .text,
 .food-block__text .text--white {
   @include mq("md") {
-    max-width: rem(460);
+    max-width: clamp(rem(460), calc(460/1440*100vw), rem(480));
   }
 }
 
@@ -168,7 +168,7 @@
 
 .food-block--2 .food-block__text {
   @include mq("md") {
-    padding-top: clamp(rem(172), calc(172/1440*100vw), rem(230));
+    padding-top: clamp(rem(168), calc(168/1440*100vw), rem(230));
   }
 }
 
@@ -191,7 +191,7 @@
 
 .food-block--3 .food-block__text {
   @include mq("md") {
-    padding-top: rem(197);
+    padding-top: rem(194);
   }
 }
 
@@ -219,7 +219,7 @@
 .food-block--4 .food-block__text,
 .food-block--5 .food-block__text {
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: clamp(rem(40), calc(40/1440*100vw), rem(80));
     margin-inline: auto;
     padding-block: initial;
     padding-inline: $padding-pc;

@@ -2,10 +2,11 @@
 
 .food {
   overflow-x: clip;
-  padding-top: rem(8);
+  padding-top: rem(3);
   padding-bottom: rem(40);
 
   @include mq("md") {
+    padding-top: rem(6);
     padding-bottom: initial;
   }
 }
@@ -13,8 +14,8 @@
 .food--black {
   @extend .food;
   background-color: $black;
-  padding-top: initial;
   padding-top: rem(40);
+  padding-bottom: rem(36);
 
   @include mq("md") {
     padding-bottom: rem(80);
@@ -99,6 +100,14 @@
 }
 
 .food__content {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.foode__content--2 {
   // margin-top: rem(40);
 
   @include mq("md") {
@@ -107,6 +116,8 @@
 }
 
 .food--black .food__content {
+  margin-top: initial;
+
   @include mq("md") {
     margin-top: initial;
   }
@@ -137,6 +148,10 @@
     margin-inline: auto;
     padding-inline: $padding-pc;
     max-width: 1302px;
+  }
+
+  @include mq("lg") {
+    max-width: min(calc(1302/1440*100vw), 1690px);
   }
 }
 

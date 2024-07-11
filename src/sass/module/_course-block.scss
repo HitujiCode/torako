@@ -11,6 +11,13 @@
   }
 }
 
+.course-block__content {
+  @include mq("md") {
+    // max-width: rem(1300);
+    margin-inline: auto;
+  }
+}
+
 .course-block__wrap {
   display: contents;
 
@@ -105,21 +112,18 @@
 
   @include mq("md") {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: rem(58);
+    grid-template-columns: rem(280) minmax(0, rem(600));
+    gap: min(calc(38/1440*100vw), rem(38));
     align-items: center;
-    padding-top: rem(53);
-    padding-bottom: rem(45);
-    padding-inline: min(calc(104/1440*100vw), rem(104));
+    justify-content: space-around;
+    padding-bottom: rem(32);
+    padding-inline: rem(60);
+    min-height: rem(260)
   }
-}
 
-.course-block__menu--delta {
-  @extend .course-block__menu;
-
-  @include mq("md") {
-    padding-top: rem(45);
-    padding-bottom: rem(35);
+  @include mq("lg") {
+    padding-left: min(calc(104/1440*100vw), rem(104));
+    padding-right: min(calc(100/1440*100vw), rem(100));
   }
 }
 
@@ -141,7 +145,7 @@
 
   @include mq("md") {
     font-size: rem(32);
-    line-height: calc(54/32);
+    line-height: 1.63;
     text-align: left;
   }
 }

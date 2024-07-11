@@ -111,7 +111,7 @@
 
 .floor__notes {
   margin-top: rem(24);
-  padding: rem(16);
+  padding: rem(16) rem(18);
   border: 1px solid $white;
 
   @include mq("md") {

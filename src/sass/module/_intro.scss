@@ -140,5 +140,9 @@
 }
 
 .intro__text+.intro__text {
-  margin-top: rem(32);
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(32);
+  }
 }

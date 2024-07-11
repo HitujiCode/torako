@@ -24,7 +24,7 @@
 .grid-block__head {
   @include mq("md") {
     position: absolute;
-    top: rem(55);
+    top: clamp(rem(55), calc(55/1440*100vw), rem(80));
     left: calc(50% - min(50vw, rem(780)));
   }
 }
@@ -36,7 +36,7 @@
   @include mq("md") {
     margin-top: initial;
     grid-area: text;
-    padding-top: min(calc(165/1440*100vw), rem(165));
+    padding-top: clamp(rem(162), calc(162/1440*100vw), rem(200));
     padding-bottom: rem(40);
     padding-inline: $padding-pc;
     display: grid;

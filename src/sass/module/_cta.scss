@@ -7,7 +7,7 @@
   width: fit-content;
   display: flex;
   gap: rem(4);
-  z-index: 1500;
+  z-index: 800;
 
   @include mq("md") {
     bottom: rem(16);
@@ -31,7 +31,9 @@
 
   @include mq("md") {
     width: rem(56);
-    padding-block: rem(44);
+    padding-top: rem(42);
+    padding-bottom: rem(36);
+    letter-spacing: 0.4em;
   }
 }
 
@@ -42,7 +44,7 @@
   place-items: center;
 
   @include mq("md") {
-    padding-top: rem(52);
+    padding-top: rem(60);
     padding-left: initial;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -80,4 +82,14 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media (any-hover: hover) {
+  .cta__reservation:hover {
+    opacity: 0.5;
+  }
+
+  .cta__instagram:hover {
+    opacity: 0.5;
+  }
 }

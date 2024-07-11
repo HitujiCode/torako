@@ -26,7 +26,7 @@
   z-index: 1;
 
   @include mq("md") {
-    top: rem(48);
+    top: clamp(rem(48),calc(48/1440*100vw),rem(80));
     left: initial;
     right: 0;
   }

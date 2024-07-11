@@ -8,7 +8,8 @@
   z-index: 1;
 
   @include mq("md") {
-    padding-inline: rem(40);
+    padding-left: rem(48);
+    padding-right: rem(36);
     white-space: nowrap;
   }
 }
@@ -24,7 +25,8 @@
 
 .head__line {
   position: relative;
-  padding-inline: rem(16);
+  padding-left: rem(16);
+  padding-right: rem(14);
   display: inline-block;
 
   @include mq("md") {
@@ -67,12 +69,19 @@
   }
 }
 
+.head__text {
+  @include mq("md") {
+    margin-left: rem(-8);
+  }
+}
+
 .head__red {
   color: $red;
 }
 
 .head--delta1,
-.head--delta2 {
+.head--delta2,
+.head--delta3 {
   @extend .head;
 }
 
@@ -85,7 +94,15 @@
 }
 
 .head--delta2 .head__line:nth-of-type(2) {
-  transform: translateX(90%);
+  transform: translateX(92%);
+
+  @include mq("md") {
+    transform: initial;
+  }
+}
+
+.head--delta3 .head__line:nth-of-type(2) {
+  transform: translateX(30%);
 
   @include mq("md") {
     transform: initial;
@@ -99,7 +116,6 @@
   color: initial;
 
   @include mq("md") {
-    padding-inline: rem(36);
   }
 }
 

@@ -2,7 +2,7 @@
 
 .scene {
   overflow-x: clip;
-  padding-block: rem(78);
+  padding-block: rem(74);
 
   @include mq("md") {
     padding-top: rem(132);

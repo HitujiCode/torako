@@ -19,7 +19,7 @@
   transition: background-color 0.3s, color 0.3s;
 
   @include mq("md") {
-    padding-left: min(calc(64/1440*100vw), rem(64));
+    padding-left: min(calc(70/1440*100vw), rem(70));
     padding-right: min(calc(52/1440*100vw), rem(52));
     font-size: clamp(rem(18), calc(24/1440*100vw), rem(24));
   }
@@ -58,7 +58,7 @@
   mask-size: contain;
 
   @include mq("md") {
-    right: min(calc(32/1440*100vw), rem(32));
+    right: min(calc(20/1440*100vw), rem(20));
   }
 }
 
@@ -80,6 +80,10 @@
 
 .button--reservation {
   padding-right: rem(34);
+
+  @include mq("md") {
+    padding-left: rem(90);
+  }
 }
 
 .button--reservation::before {
@@ -98,6 +102,10 @@
     height: rem(48);
     left: rem(24);
   }
+}
+
+.button--reservation::after {
+  @include mq("md") {}
 }
 
 .button--instagram::before {

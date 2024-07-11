@@ -1,18 +1,19 @@
 @use "global" as *;
 
-.infomation {
-  padding-block: rem(78);
+.information {
+  padding-top: rem(72);
+  padding-bottom: rem(78);
 
   @include mq("md") {
     padding-block: rem(132);
   }
 }
 
-.infomation__inner {}
+.information__inner {}
 
-.infomation__heading {}
+.information__heading {}
 
-.infomation__list {
+.information__list {
   margin-top: rem(40);
   border-top: 1px solid;
 
@@ -21,8 +22,8 @@
   }
 }
 
-.infomation__item {
-  padding-block: rem(23);
+.information__item {
+  padding-block: rem(24);
   border-bottom: 1px solid;
 
   @include mq("md") {
@@ -33,14 +34,14 @@
   }
 }
 
-.infomation__date {
+.information__date {
   font-size: rem(24);
   font-family: $second-font;
   line-height: calc(28/24);
   letter-spacing: 0.2em;
 }
 
-.infomation__text {
+.information__text {
   margin-top: rem(8);
 
   @include mq("md") {

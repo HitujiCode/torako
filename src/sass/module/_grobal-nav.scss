@@ -9,7 +9,7 @@
 .grobal-nav__list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: rem(24);
+  gap: rem(25);
 
   @include mq("md") {
     grid-template-columns: repeat(3, 1fr);
@@ -18,6 +18,7 @@
 }
 
 .grobal-nav--footer .grobal-nav__list {
+
   @include mq("md") {
     column-gap: calc(120/1440*100vw);
   }

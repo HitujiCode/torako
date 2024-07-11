@@ -19,6 +19,13 @@
 .food-grid2__text {
   margin-top: rem(40);
   padding-inline: calc(16/392*100vw);
+
+  @include mq("md") {
+    padding-inline: $padding-pc;
+    width: 100%;
+    max-width: rem(1274);
+    margin-inline: auto;
+  }
 }
 
 .food-grid2__images {

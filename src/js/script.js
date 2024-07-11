@@ -1,22 +1,82 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  // // ローディング
-  // logoの表示
-  // $(window).on('load', function () {
-  //   $(".js-loading").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-  //   $(".loading__logo").delay(1300).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
-  // });
+
+  // ローディング
+  $(window).on('load', function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const hasVisited = sessionStorage.getItem('access');
+
+    if (!hasVisited) {
+      sessionStorage.setItem('access', '0');
+      $("body").addClass("is-fixed");
+
+      const tl = gsap.timeline({
+        onComplete: function () {
+          $(".js-loading").remove();
+          $("body").removeClass("is-fixed");
+        }
+      });
+
+      // ローディングロゴのフェードインアニメーション
+      tl.fromTo(".loading__logo",
+        { opacity: 0, y: 100 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power1.inOut" }
+      );
+
+      // ローディング画面全体のフェードアウト
+      tl.to(".js-loading", {
+        delay: 0.3,
+        duration: 1,
+        autoAlpha: 0
+      });
+
+      // js-catch要素のアニメーション
+      tl.to(".js-catch", {
+        duration: 1,
+        delay: -0.2,
+        ease: "power1.inOut",
+        keyframes: [
+          { rotate: 0 },
+          { rotate: 10, duration: 0.5 },
+          { rotate: -10, duration: 0.5 },
+          { rotate: 0, duration: 0.5 }
+        ]
+      });
+    } else {
+      // 初回以外の処理
+      $(".js-loading").remove();
+      $(".loading__logo").remove();
+      gsap.to(".js-catch", {
+        duration: 1,
+        ease: "power1.inOut",
+        keyframes: [
+          { rotate: 0 },
+          { rotate: 10, duration: 0.5 },
+          { rotate: -10, duration: 0.5 },
+          { rotate: 0, duration: 0.5 }
+        ]
+      });
+    }
+  });
+
 
   // ctaボタン
   $(document).ready(function () {
     const cta = $(".js-cta");
+    const mv = $(".mv"); // mv要素を指定
+    const thumbnail = $(".thumbnail"); // サムネイル要素を指定
     cta.hide();
 
     function ctaPosition() {
       const scrollPosition = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      const mvBottom = mv.offset().top + mv.outerHeight();
+      const thumbnailBottom = thumbnail.offset().top + thumbnail.outerHeight();
+      const combinedBottom = Math.max(mvBottom, thumbnailBottom); // 両方の下端の位置を取得
 
-      if (scrollPosition > 70) {
+      if (scrollPosition + windowHeight > combinedBottom) {
         cta.fadeIn();
       } else {
         cta.fadeOut();
@@ -24,14 +84,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
 
     $(window).on('scroll', ctaPosition);
+    // 初期状態のチェック
+    ctaPosition();
   });
-
 
   // ハンバーガーメニュー
   $(function () {
     $(".js-hamburger").click(function () {
       $(this).toggleClass("is-open");
       $(".js-drawer").toggleClass("is-open");
+      $("body").toggleClass("is-noscroll");
       if ($(".js-drawer").hasClass("is-open")) {
         setTimeout(function () {
           $(".js-logo").addClass("is-open");
@@ -42,19 +104,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
     // ドロワーナビのaタグをクリックで閉じる
-    $(".js-drawer a[href]").on("click", function () {
+    $(".js-drawer, .js-drawer a[href]").on("click", function () {
       $(".js-hamburger").removeClass("is-open");
       $(".js-drawer").removeClass("is-open");
       $(".js-logo").removeClass("is-open");
-    });
-
-    // resizeイベント
-    $(window).on('resize', function () {
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        $(".js-hamburger").removeClass("is-open");
-        $(".js-drawer").removeClass("is-open");
-        $(".js-logo").removeClass("is-open");
-      }
+      $("body").removeClass("is-noscroll");
     });
   });
 
@@ -92,99 +146,38 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  // .head要素に対する処理
-  document.querySelectorAll('.head, [class*="head--"]').forEach(head => {
+  // スライドインの処理
+  document.querySelectorAll('.head, .head-1line, [class*="head--"], .head__line, .head__text, .head-1line__text').forEach(element => {
     ScrollTrigger.create({
-      trigger: head,
+      trigger: element,
       start: 'top bottom',
       onEnter: () => {
-        head.classList.add('js-slideIn');
+        element.classList.add('js-slideIn');
       }
     });
   });
 
-  // .head__line要素に対する処理
-  document.querySelectorAll('.head__line').forEach(line => {
-    ScrollTrigger.create({
-      trigger: line,
-      start: 'top bottom',
-      onEnter: () => {
-        line.classList.add('js-slideIn');
+  // フェードインの処理
+  let fadeInElements = gsap.utils.toArray('.js-fadeIn');
+  fadeInElements.forEach((fadeInElement) => {
+    gsap.fromTo(
+      fadeInElement,
+      {
+        autoAlpha: 0,
+        y: 20,
+        opacity: 0,
+      },
+      {
+        autoAlpha: 1,
+        y: 0,
+        opacity: 1,
+        duration: 0.7,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: fadeInElement,
+          start: 'top bottom',
+        }
       }
-    });
-  });
-
-  // .head__text要素に対する処理
-  document.querySelectorAll('.head__text').forEach(text => {
-    ScrollTrigger.create({
-      trigger: text,
-      start: 'top bottom',
-      onEnter: () => {
-        text.classList.add('js-slideIn');
-      }
-    });
-  });
-});
-
-
-// ローディング
-$(window).on('load', function () {
-  gsap.registerPlugin(ScrollTrigger);
-
-  // セッションストレージをチェック
-  const hasVisited = sessionStorage.getItem('hasVisited');
-
-  if (!hasVisited) {
-    // 初回訪問時の処理
-    sessionStorage.setItem('hasVisited', 'true');
-
-    // .js-loadingと.loading__logoを表示する
-    $(".js-loading").css('display', 'block');
-
-    const tl = gsap.timeline({
-      onComplete: function () {
-        $(".js-loading").remove();
-      }
-    });
-
-    // ローディングロゴのフェードインアニメーション
-    tl.fromTo(".loading__logo",
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power1.inOut" }
     );
-
-    // ローディング画面全体のフェードアウト
-    tl.to(".js-loading", {
-      delay: 0.3,
-      duration: 1,
-      autoAlpha: 0
-    });
-
-    // js-catch要素のアニメーション
-    tl.to(".js-catch", {
-      duration: 1,
-      delay: -0.2,
-      ease: "power1.inOut",
-      keyframes: [
-        { rotate: 0 },
-        { rotate: 10, duration: 0.5 },
-        { rotate: -10, duration: 0.5 },
-        { rotate: 0, duration: 0.5 }
-      ]
-    });
-  } else {
-    // 初回以外の処理
-    $(".js-loading").remove();
-    $(".loading__logo").remove();
-    gsap.to(".js-catch", {
-      duration: 1,
-      ease: "power1.inOut",
-      keyframes: [
-        { rotate: 0 },
-        { rotate: 10, duration: 0.5 },
-        { rotate: -10, duration: 0.5 },
-        { rotate: 0, duration: 0.5 }
-      ]
-    });
-  }
+  });
 });

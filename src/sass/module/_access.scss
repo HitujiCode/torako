@@ -76,13 +76,13 @@
 
   @include mq("md") {
     margin-top: initial;
-    padding-top: rem(32);
+    padding-top: rem(24);
     padding-inline: min(calc(120/1440*100vw), rem(120));
   }
 }
 
 .access__wrap {
-  padding-block: rem(8);
+  padding-block: rem(7);
   border-bottom: 1px solid;
   font-size: rem(14);
   line-height: calc(20/14);
@@ -92,6 +92,7 @@
     display: grid;
     grid-template-columns: auto calc(382/568*100%);
     gap: rem(40);
+    padding-block: rem(8);
     padding-inline: rem(16);
   }
 }
@@ -191,6 +192,7 @@
 
   @include mq("md") {
     margin-top: rem(160);
+    margin-inline: calc(50% - 50vw);
     position: relative;
   }
 }

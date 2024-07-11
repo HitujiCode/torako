@@ -52,7 +52,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center rem(-90);
 
   @include mq("md") {
     aspect-ratio: 480/600;
@@ -65,7 +64,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center rem(-60);
+  object-position: center rem(-63);
 
   @include mq("md") {
     aspect-ratio: 480/600;
@@ -83,6 +82,7 @@
   @extend %label-position;
   top: 0;
   left: 0;
+  align-items: flex-start;
 
   @include mq("md") {
     left: initial;
@@ -264,7 +264,7 @@
   letter-spacing: 0.2em;
   writing-mode: vertical-rl;
   background-color: rgb($white, 0.7);
-  height: fit-content;
+  // height: fit-content;
   padding-top: rem(18);
   padding-bottom: rem(14);
   padding-inline: rem(6);
@@ -275,7 +275,7 @@
     padding-top: rem(24);
     padding-bottom: rem(20);
     padding-inline: rem(4);
-    letter-spacing: 0.27em;
+    letter-spacing: 0.26em;
   }
 }
 
@@ -307,8 +307,9 @@
   letter-spacing: 0.27em;
   writing-mode: vertical-rl;
   background-color: rgb($white, 0.7);
-  padding-top: rem(14);
-  padding-bottom: rem(12);
+  // padding-top: rem(14);
+  padding-top: rem(2);
+  // padding-bottom: rem(12);
   padding-inline: rem(6);
 
   @include mq("md") {
@@ -318,6 +319,15 @@
     padding-bottom: initial;
     padding-inline: rem(8);
     letter-spacing: 0.3em;
+  }
+}
+
+.food-photo--square2 .food-photo__title--small {
+  padding-top: rem(14);
+  padding-bottom: rem(12);
+
+  @include mq("md") {
+    padding-top: rem(24);
   }
 }
 
@@ -373,23 +383,25 @@
   }
 }
 
-.food-photo--square[data-position="center"] {
-  padding-top: rem(24);
-
+.food-photo--square[data-position="center"],
+.food-photo--square3[data-position="center"] {
   @include mq("md") {
+    padding-top: rem(24);
     display: flex;
     flex-direction: column-reverse;
     padding-bottom: initial;
   }
 }
 
-.food-photo--square[data-position="center"] .food-photo__comment-wrap {
+.food-photo--square[data-position="center"] .food-photo__comment-wrap,
+.food-photo--square3[data-position="center"] .food-photo__comment-wrap {
   @include mq("md") {
     padding-top: initial;
   }
 }
 
-.food-photo--square[data-position="center"] .food-photo__comment-wrap::before {
+.food-photo--square[data-position="center"] .food-photo__comment-wrap::before,
+.food-photo--square3[data-position="center"] .food-photo__comment-wrap::before {
   @include mq("md") {
     background-image: url(../images/pc/comment_01_reverse.svg);
   }
@@ -418,6 +430,7 @@
   padding-top: rem(42);
 
   @include mq("md") {
+    min-height: rem(201);
     top: 0;
     padding-bottom: initial;
   }

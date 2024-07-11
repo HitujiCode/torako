@@ -18,7 +18,7 @@
   clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 0);
 
   @include mq("md") {
-    width: rem(384);
+    width: clamp(rem(384), calc(384/1440*100vw), rem(500));
   }
 }
 
@@ -77,7 +77,7 @@
 
 .mv__logo {
   position: absolute;
-  top: 52%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -85,6 +85,7 @@
 
   @include mq("md") {
     width: rem(392);
+    top: 52%;
   }
 }
 
@@ -103,9 +104,9 @@
   width: rem(206);
 
   @include mq("md") {
-    width: rem(230);
-    bottom: rem(30);
-    right: rem(50);
+    width: clamp(rem(230), calc(230/1440*100vw), rem(300));
+    bottom: clamp(rem(30), calc(30/1024*100vh), rem(40));
+    right: clamp(rem(50), calc(50/1440*100vw), rem(65));
   }
 }
 
