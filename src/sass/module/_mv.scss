@@ -12,8 +12,8 @@
   bottom: 0;
   right: 0;
   background-color: $black;
-  width: rem(344);
-  aspect-ratio: 344/304;
+  width: min(min(344/392*100vw, 344/852*100vh), rem(344));
+  height: min(304/852*100vh, rem(304));
   z-index: 1;
   clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 0);
 

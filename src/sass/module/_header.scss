@@ -100,7 +100,8 @@
   background-color: $black;
   overflow-y: scroll;
   scrollbar-width: none;
-  transition: top 0.5s;
+  opacity: 0;
+  transition: top 0.5s, opacity 0.5s;
 
   @include mq("md") {
     height: initial;
@@ -140,6 +141,7 @@
 
 .header__wrapper.is-open {
   top: 0;
+  opacity: 1;
 }
 
 .header__logo {

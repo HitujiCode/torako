@@ -30,12 +30,16 @@
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- preload -->
+  <link rel="preload" href="./assets/images/slide_01.webp" as="image">
+  <link rel="preload" href="./assets/images/slide_02.webp" as="image">
+  <link rel="preload" href="./assets/images/slide_03.webp" as="image">
+  <link rel="preload" href="./assets/images/slide_04.webp" as="image">
   <!-- Gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <!-- JavaScript -->
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./assets/js/loading.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
@@ -173,25 +177,25 @@
           <div class="thumbnail__slide swiper-slide">
             <picture>
               <source srcset="./assets/images/slide_01.webp" type="image/webp" />
-              <img src="./assets/images/slide_01.jpg" alt="ごちゃまぜホルモン" width="960" height="680" />
+              <img src="./assets/images/slide_01.jpg" alt="ごちゃまぜホルモン" width="960" height="680" loading="lazy" />
             </picture>
           </div>
           <div class="thumbnail__slide swiper-slide">
             <picture>
               <source srcset="./assets/images/slide_02.webp" type="image/webp" />
-              <img src="./assets/images/slide_02.jpg" alt="センマイ刺し" width="960" height="680" />
+              <img src="./assets/images/slide_02.jpg" alt="センマイ刺し" width="960" height="680" loading="lazy" />
             </picture>
           </div>
           <div class="thumbnail__slide swiper-slide">
             <picture>
               <source srcset="./assets/images/slide_03.webp" type="image/webp" />
-              <img src="./assets/images/slide_03.jpg" alt="トラコ刺し" width="960" height="680" />
+              <img src="./assets/images/slide_03.jpg" alt="トラコ刺し" width="960" height="680" loading="lazy" />
             </picture>
           </div>
           <div class="thumbnail__slide swiper-slide">
             <picture>
               <source srcset="./assets/images/slide_04.webp" type="image/webp" />
-              <img src="./assets/images/slide_04.jpg" alt="ひとくちヤンニョムチキン" width="960" height="680" />
+              <img src="./assets/images/slide_04.jpg" alt="ひとくちヤンニョムチキン" width="960" height="680" loading="lazy" />
             </picture>
           </div>
         </div>
@@ -213,7 +217,7 @@
               <source srcset="./assets/images/pc/intro.webp" type="image/webp" media="(min-width: 768px)" />
               <source srcset="./assets/images/pc/intro.jpg" media="(min-width: 768px)" />
               <source srcset="./assets/images/intro.webp" type="image/webp" />
-              <img src="./assets/images/intro.jpg" alt="オープンキッチンの店内" width="720" height="320" loading="lazy" />
+              <img src="./assets/images/intro.jpg" alt="オープンキッチンの店内" width="360" height="160" loading="lazy" />
             </picture>
           </figure>
           <div class="intro__body js-fadeIn">
