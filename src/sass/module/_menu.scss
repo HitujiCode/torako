@@ -144,18 +144,35 @@
   background-color: $black;
   padding-top: rem(10);
   padding-bottom: rem(4);
-  writing-mode: vertical-rl;
   font-size: rem(16);
   color: $white;
-  line-height: calc(30/16);
+  line-height: 1;
   letter-spacing: 0.56em;
+  // width: rem(32);
+  padding-inline: rem(8);
+  height: fit-content;
+  display: grid;
 
   @include mq("md") {
+    width: initial;
     writing-mode: initial;
     letter-spacing: 0.25em;
     padding-top: rem(8);
     padding-bottom: rem(8);
     padding-inline: rem(12);
+  }
+}
+
+.menu__taste span {
+  writing-mode: vertical-lr;
+  white-space: pre;
+  display: inline-block;
+  width: 100%;
+
+  @include mq("md") {
+    writing-mode: initial;
+    display: flex;
+    align-items: center;
   }
 }
 

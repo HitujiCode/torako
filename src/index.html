@@ -22,16 +22,21 @@
     content="肉刺しとホルモンTORAKO（トラコ）の公式サイト。仙台の焼肉人気店「仔虎」の姉妹店として地元仙台はもちろん、観光客にも人気のエリア「文化横丁」に2024年３月にオープン。極上の焼肉はもちろん、ホルモン、肉刺し、ユッケ、韓国料理をリーズナブルな価格で提供しています。飲み放題コースもあり、気軽に居酒屋使いができるお店です。店内はオープンキッチンのライブ感のある程よい活気と、くつろげる内装や温かみのある居心地のいい雰囲気。仙台でも数少ない生肉の提供店として厚生労働省および農林水産省の厳しい基準を満たし、安全でおいしい牛刺、ユッケを提供しております。" />
   <!-- ファビコン -->
   <link rel="icon" href="./assets/images/favicon.ico" />
+  <!-- GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- Gsap -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <!-- JavaScript -->
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script defer src="./assets/js/loading.js"></script>
+  <script src="./assets/js/loading.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -258,7 +263,7 @@
               <h2 class="section-head__main">料理</h2>
             </hgroup>
           </div>
-          <div class="food__content js-fadeIn">
+          <div class="food__content">
             <div class="food-block--1">
               <div class="food-block__head">
                 <div class="head">
@@ -267,7 +272,7 @@
                   <p class="head__line"><span class="head__text"><span class="head__red">牛</span>刺しとユッケ。</span></p>
                 </div>
               </div>
-              <div class="food-block__img">
+              <div class="food-block__img js-fadeIn">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
@@ -277,15 +282,15 @@
                     </picture>
                   </figure>
                   <div class="food-photo__position1">
-                    <p class="food-photo__title">トラコ刺し</p>
-                    <p class="food-photo__title--small">（牛刺し・ユッケ合盛り）</p>
+                    <p class="food-photo__title"><span>トラコ刺し</span></p>
+                    <p class="food-photo__title-note"><span>（牛刺し・ユッケ合盛り）</span></p>
                   </div>
                   <div class="food-photo__position12">
                     <p class="food-photo__amount">¥1,870</p>
                   </div>
                 </div>
               </div>
-              <div class="food-block__text">
+              <div class="food-block__text js-fadeIn">
                 <p class="text">
                   人気No.1のトラコ名物【トラコ刺し】は、牛刺しもユッケも楽しめる贅沢な合盛りの肉刺しプレート。特製タレと卵黄、生肉のとろける共演に舌鼓を打つことまちがいなし。<br>
                   トラコの生肉は、一度も冷凍することなく完全生肉加工を行った完全合法の“本物”の肉刺し。生肉ならではのとろ～りとろける食感と上質な霜降り和牛の凝縮した旨味がたまりません！<br>
@@ -294,9 +299,9 @@
               </div>
             </div>
           </div>
-          <div class="food__content js-fadeIn">
+          <div class="food__content">
             <div class="food-block">
-              <div class="food-block__img">
+              <div class="food-block__img js-fadeIn">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
@@ -305,14 +310,14 @@
                     </picture>
                   </figure>
                   <div class="food-photo__position7">
-                    <p class="food-photo__title">センマイ刺し</p>
+                    <p class="food-photo__title"><span>センマイ刺し</span></p>
                   </div>
                   <div class="food-photo__position2">
                     <p class="food-photo__amount">¥770</p>
                   </div>
                 </div>
               </div>
-              <div class="food-block__text">
+              <div class="food-block__text js-fadeIn">
                 <p class="text">「トラコでカンパイ」に欠かせないのが、仔虎仕込みの料理人が丁寧に仕上げた、絶品ホルモン肉刺し。<br>
                   シャキシャキで鮮度抜群のセンマイ刺し、プリっとした食感がクセになるコブクロ刺し、むっちりモチモチで上品な旨みのハチノス刺しなど、あなたのお気に入りがきっと見つかるはず！
                 </p>
@@ -324,7 +329,7 @@
 
       <section class="food--black">
         <div class="food__inner large-inner">
-          <div class="food__content js-fadeIn">
+          <div class="food__content">
             <div class="food-block--2">
               <div class="food-block__head">
                 <div class="head--white1">
@@ -333,7 +338,7 @@
                   <p class="head__line"><span class="head__text"><span class="head__red">上</span>質な和牛ホルモン。</span></p>
                 </div>
               </div>
-              <div class="food-block__img">
+              <div class="food-block__img js-fadeIn">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
@@ -344,7 +349,7 @@
                   </figure>
                 </div>
               </div>
-              <div class="food-block__text">
+              <div class="food-block__text js-fadeIn">
                 <p class="text--white">
                   米沢牛を中心に、山形牛、仙台牛など「焼肉仔虎」が厳選した銘柄牛の新鮮で上質なホルモンを、<span
                     class="text-block">ちょっと</span>手頃な価格で食べられるのが姉妹店トラコの特権。<br>
@@ -362,11 +367,11 @@
               </hgroup>
               <div class="menu__body">
                 <div class="menu__category">
-                  <p class="menu__taste">こってり</p>
+                  <p class="menu__taste"><span>こってり</span></p>
                   <div class="menu__arrow-prev"></div>
-                  <p class="menu__taste">あじわい</p>
+                  <p class="menu__taste"><span>あじわい</span></p>
                   <div class="menu__arrow-next"></div>
-                  <p class="menu__taste">あっさり</p>
+                  <p class="menu__taste"><span>あっさり</span></p>
                 </div>
                 <dl class="menu__list">
                   <div class="menu__item">
@@ -426,7 +431,7 @@
               <p class="menu__note">※当日の仕入れ状況により、取扱いのない部位もあり</p>
             </div>
           </div>
-          <div class="food__content js-fadeIn">
+          <div class="food__content">
             <div class="food-block--3">
               <div class="food-block__head">
                 <div class="head--white2">
@@ -436,7 +441,7 @@
                   </p>
                 </div>
               </div>
-              <div class="food-block__img">
+              <div class="food-block__img js-fadeIn">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
@@ -446,14 +451,14 @@
                     </picture>
                   </figure>
                   <div class="food-photo__position7">
-                    <p class="food-photo__title">ごちゃまぜホルモン</p>
+                    <p class="food-photo__title"><span>ごちゃまぜホルモン</span></p>
                   </div>
                   <div class="food-photo__position2">
                     <p class="food-photo__amount">¥1,430</p>
                   </div>
                 </div>
               </div>
-              <div class="food-block__text">
+              <div class="food-block__text js-fadeIn">
                 <p class="text--white">
                   ホルモンの種類に迷ったら、料理長のイチオシホルモンをちょっとずつ食べ比べできる嬉しい盛合せプレート【ごちゃまぜホルモン】がおすすめ！<br>
                   今日の気分が決まれば、こってり・あじわい・あっさりのラインナップから気になる部位を注文してみて！
@@ -470,7 +475,7 @@
 
       <div class="food2">
         <div class="food2__inner large-inner">
-          <div class="food2__container js-fadeIn">
+          <div class="food2__container">
             <div class="food2__head">
               <div class="head--delta1">
                 <p class="head__line"><span class="head__text"><span class="head__red">こ</span>こでしか食べられない、</span></p><br
@@ -478,11 +483,13 @@
                 <p class="head__line"><span class="head__text"><span class="head__red">ト</span>ラコ流「韓国料理」</span></p>
               </div>
             </div>
-            <div class="food2__text">
-              <p class="text">トラコ流のアレンジ韓国メニューが大人気！<br>クリーミーなアボカドを特製キムチダレで絡めた【アボカド生キムチ】、甘辛ヤンニョムとアクセントのアーモンドスライスの食感が楽しい【ひとくちヤンニョムチキン】、生肉ユッケととろ～り卵黄が乗った【トラコキンパ】、牛肉の旨味とコラーゲンがたっぷり溶け込んだ【コムタンスープ】など、一から手作りにこだわった韓国料理の数々…<br>料理に合うマッコリや焼酎なども取り揃えていて、お酒もどんどん進んじゃう！</p>
+            <div class="food2__text js-fadeIn">
+              <p class="text">
+                トラコ流のアレンジ韓国メニューが大人気！<br>クリーミーなアボカドを特製キムチダレで絡めた【アボカド生キムチ】、甘辛ヤンニョムとアクセントのアーモンドスライスの食感が楽しい【ひとくちヤンニョムチキン】、生肉ユッケととろ～り卵黄が乗った【トラコキンパ】、牛肉の旨味とコラーゲンがたっぷり溶け込んだ【コムタンスープ】など、一から手作りにこだわった韓国料理の数々…<br>料理に合うマッコリや焼酎なども取り揃えていて、お酒もどんどん進んじゃう！
+              </p>
             </div>
             <div class="food2__images">
-              <div class="food2__img1">
+              <div class="food2__img1 js-fadeIn">
                 <div class="food-photo">
                   <figure class="food-photo__img">
                     <picture>
@@ -492,16 +499,16 @@
                     </picture>
                   </figure>
                   <div class="food-photo__position3">
-                    <p class="food-photo__title">ひとくちヤンニョムチキン</p>
+                    <p class="food-photo__title"><span>ひとくちヤンニョムチキン</span></p>
                     <p class="food-photo__amount">¥528</p>
                   </div>
                   <div class="food-photo__position8">
-                    <p class="food-photo__title">アボカド生キムチ</p>
+                    <p class="food-photo__title"><span>アボカド生キムチ</span></p>
                     <p class="food-photo__amount">¥550</p>
                   </div>
                 </div>
               </div>
-              <div class="food2__images2">
+              <div class="food2__images2 js-fadeIn">
                 <div class="food2__img2">
                   <div class="food-photo">
                     <figure class="food-photo__img">
@@ -511,7 +518,7 @@
                       </picture>
                     </figure>
                     <div class="food-photo__position4">
-                      <p class="food-photo__title">コムタンスープ</p>
+                      <p class="food-photo__title"><span>コムタンスープ</span></p>
                       <p class="food-photo__amount">¥770</p>
                     </div>
                   </div>
@@ -525,7 +532,7 @@
                       </picture>
                     </figure>
                     <div class="food-photo__position4">
-                      <p class="food-photo__title">トラコキンパ</p>
+                      <p class="food-photo__title"><span>トラコキンパ</span></p>
                       <p class="food-photo__amount">¥990</p>
                     </div>
                   </div>
@@ -538,14 +545,14 @@
 
       <div class="food-grid">
         <div class="food-grid__inner large-inner">
-          <div class="food-grid__container js-fadeIn">
+          <div class="food-grid__container">
             <div class="food-grid__head">
               <div class="head-1line">
                 <p class="head-1line__text"><span class="head-1line__red">お</span>酒がススム、<span
                     class="head-1line__red">逸</span>品が勢揃い！</p>
               </div>
             </div>
-            <div class="food-grid__img">
+            <div class="food-grid__img js-fadeIn">
               <div class="food-photo">
                 <figure class="food-photo__img">
                   <picture>
@@ -555,7 +562,7 @@
                     <img src="./assets/images/food_08.jpg" alt="和牛塩もつ煮" width="784" height="868" loading="lazy" />
                   </picture>
                   <div class="food-photo__position9">
-                    <p class="food-photo__title">和牛塩もつ煮</p>
+                    <p class="food-photo__title"><span>和牛塩もつ煮</span></p>
                   </div>
                   <div class="food-photo__position10">
                     <p class="food-photo__amount">¥770</p>
@@ -563,7 +570,7 @@
                 </figure>
               </div>
             </div>
-            <div class="food-grid__img">
+            <div class="food-grid__img js-fadeIn">
               <div class="food-photo">
                 <figure class="food-photo__img">
                   <picture>
@@ -571,8 +578,8 @@
                     <img src="./assets/images/food_09.jpg" alt="貴族の海鮮タルタル" width="1440" height="800" loading="lazy" />
                   </picture>
                   <div class="food-photo__position5">
-                    <p class="food-photo__title">貴族の海鮮</p>
-                    <p class="food-photo__title">タルタル</p>
+                    <p class="food-photo__title"><span>貴族の海鮮</span></p>
+                    <p class="food-photo__title"><span>タルタル</span></p>
                   </div>
                   <div class="food-photo__position6">
                     <p class="food-photo__amount">¥880</p>
@@ -580,7 +587,7 @@
                 </figure>
               </div>
             </div>
-            <div class="food-grid__img">
+            <div class="food-grid__img js-fadeIn">
               <div class="food-photo">
                 <figure class="food-photo__img">
                   <picture>
@@ -588,7 +595,7 @@
                     <img src="./assets/images/food_10.jpg" alt="新タン塩" width="1440" height="800" loading="lazy" />
                   </picture>
                   <div class="food-photo__position11">
-                    <p class="food-photo__title">新タン塩</p>
+                    <p class="food-photo__title"><span>新タン塩</span></p>
                   </div>
                   <div class="food-photo__position6">
                     <p class="food-photo__amount">¥880</p>
@@ -629,7 +636,7 @@
                       <img src="./assets/images/food_11.jpg" alt="辛みそ冷麺" width="784" height="784" loading="lazy" />
                     </picture>
                     <div class="food-photo__position4">
-                      <p class="food-photo__title">辛みそ冷麺</p>
+                      <p class="food-photo__title"><span>辛みそ冷麺</span></p>
                     </div>
                     <div class="food-photo__position2">
                       <p class="food-photo__amount">¥880</p>
@@ -650,7 +657,7 @@
                       <img src="./assets/images/food_12.jpg" alt="純生ユッケ丼" width="960" height="1200" loading="lazy" />
                     </picture>
                     <div class="food-photo__position4">
-                      <p class="food-photo__title">純生ユッケ丼</p>
+                      <p class="food-photo__title"><span>純生ユッケ丼</span></p>
                     </div>
                     <div class="food-photo__position2">
                       <p class="food-photo__amount">¥1,760</p>
@@ -671,7 +678,7 @@
                       <img src="./assets/images/food_13.jpg" alt="モツカレー" width="960" height="1200" loading="lazy" />
                     </picture>
                     <div class="food-photo__position4">
-                      <p class="food-photo__title">モツカレー</p>
+                      <p class="food-photo__title"><span>モツカレー</span></p>
                     </div>
                     <div class="food-photo__position2">
                       <p class="food-photo__amount">¥880</p>
@@ -734,7 +741,7 @@
               <h2 class="section-head__main">お飲み物</h2>
             </hgroup>
           </div>
-          <div class="drink__content js-fadeIn">
+          <div class="drink__content">
             <div class="food3">
               <div class="food3__head">
                 <div class="head--delta1">
@@ -744,14 +751,14 @@
                   </p>
                 </div>
               </div>
-              <div class="food3__text">
+              <div class="food3__text js-fadeIn">
                 <p class="text">
                   定番のビールやハイボールはもちろん、トラコオリジナルサワー「トラコサワー3姉妹」、季節のフルーツを使用した「ミックスジュー酒」など、その日の気分やお料理に合わせて選べるのが嬉しい♪<br>
                   トラコロゴがプリントされたこだわりのグラスで写真映えも！
                 </p>
               </div>
               <div class="food3__images">
-                <div class="food3__img">
+                <div class="food3__img js-fadeIn">
                   <div class="food-photo">
                     <figure class="food-photo__img">
                       <picture>
@@ -760,13 +767,13 @@
                           loading="lazy" />
                       </picture>
                       <div class="food-photo__position3">
-                        <p class="food-photo__title">トラコサワー３姉妹</p>
+                        <p class="food-photo__title"><span>トラコサワー３姉妹</span></p>
                       </div>
                     </figure>
                   </div>
                 </div>
-                <div class="food3__img">
-                  <div class="food-photo--small">
+                <div class="food3__img js-fadeIn">
+                  <div class="food-photo">
                     <figure class="food-photo__img">
                       <picture>
                         <source srcset="./assets/images/drink_02.webp" type="image/webp" />
@@ -774,13 +781,13 @@
                           width="1440" height="1040" loading="lazy" />
                       </picture>
                       <div class="food-photo__left">
-                        <p class="food-photo__title">【長女】トラコレモンサワー</p>
+                        <p class="food-photo__title--small"><span>【長女】トラコレモンサワー</span></p>
                       </div>
                       <div class="food-photo__center">
-                        <p class="food-photo__title">【次女】トラコタコハイ</p>
+                        <p class="food-photo__title--small"><span>【次女】トラコタコハイ</span></p>
                       </div>
                       <div class="food-photo__right">
-                        <p class="food-photo__title">【三女】トラコジンソーダ</p>
+                        <p class="food-photo__title--small"><span>【三女】トラコジンソーダ</span></p>
                       </div>
                       <div class="food-photo__position12">
                         <p class="food-photo__amount">all ¥638</p>
@@ -805,7 +812,7 @@
                     <img src="./assets/images/drink_03.jpg" alt="ミックスジュー酒" width="960" height="1200" loading="lazy" />
                   </picture>
                   <div class="food-photo__position4">
-                    <p class="food-photo__title">ミックスジュー酒</p>
+                    <p class="food-photo__title"><span>ミックスジュー酒</span></p>
                   </div>
                   <div class="food-photo__position2">
                     <p class="food-photo__amount">¥715</p>
@@ -826,7 +833,7 @@
                     <img src="./assets/images/drink_04.jpg" alt="だいやめソーダ" width="960" height="1200" loading="lazy" />
                   </picture>
                   <div class="food-photo__position4">
-                    <p class="food-photo__title">だいやめソーダ</p>
+                    <p class="food-photo__title"><span>だいやめソーダ</span></p>
                   </div>
                   <div class="food-photo__position2">
                     <p class="food-photo__amount">¥637</p>
@@ -850,8 +857,8 @@
                       loading="lazy" />
                   </picture>
                   <div class="food-photo__position13">
-                    <p class="food-photo__title--small">仔虎オリジナルバーボン</p>
-                    <p class="food-photo__title">コトラリザーブ</p>
+                    <p class="food-photo__title-note"><span>仔虎オリジナルバーボン</span></p>
+                    <p class="food-photo__title"><span>コトラリザーブ</span></p>
                   </div>
                   <div class="food-photo__position2">
                     <p class="food-photo__amount">¥935</p>
@@ -1615,9 +1622,9 @@
     </main>
 
     <footer class="footer">
-      <a href="#" class="footer__page-top">
+      <button class="footer__page-top js-pageTop">
         <img src="./assets/images/page_top.svg" alt="トップに戻る" width="40" height="40" loading="lazy" />
-      </a>
+      </button>
       <div class="footer__inner inner">
         <div class="footer__container">
           <figure class="footer__logo">

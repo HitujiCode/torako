@@ -1,5 +1,15 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+  // ページトップへ戻る
+  const topBtn = $('.js-pageTop');
+
+  topBtn.click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 300, 'swing');
+    return false;
+  });
+
   // ctaボタン
   $(document).ready(function () {
     const cta = $(".js-cta");
@@ -114,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
       fadeInElement,
       {
         autoAlpha: 0,
-        y: 20,
+        y: 30,
         opacity: 0,
       },
       {
@@ -138,14 +148,14 @@ document.addEventListener('DOMContentLoaded', function () {
       fadeInElement2,
       {
         autoAlpha: 0,
-        y: 20,
+        y: 30,
         opacity: 0,
       },
       {
         autoAlpha: 1,
         y: 0,
         opacity: 1,
-        duration: 0.7,
+        duration: 0.6,
         delay: index * 0.2,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -164,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
       gsap.fromTo(
         fadeInItem,
         {
-          y: 20,
+          y: 30,
           autoAlpha: 0,
           opacity: 0,
         },
@@ -172,8 +182,8 @@ document.addEventListener('DOMContentLoaded', function () {
           y: 0,
           autoAlpha: 1,
           opacity: 1,
-          duration: 0.7,
-          delay: index * 0.3,
+          duration: 0.6,
+          delay: index * 0.2,
           ease: "power2.out",
           scrollTrigger: {
             trigger: fadeInItem,

@@ -13,38 +13,6 @@ $padding-sp: calc(16/392*100vw);
 // フォント設定
 ////////////////////
 
-@font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../font/NotoSansJP-Regular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../font/NotoSansJP-Medium.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../font/NotoSansJP-Bold.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Aoboshi One";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../font/AoboshiOne.woff") format("woff");
-  font-display: swap;
-}
-
 $base-font: "Noto Sans JP", sans-serif;
 $second-font: "Aoboshi One", serif;
 // ※検証ツールでしっかり反映されているか確認する

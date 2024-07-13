@@ -50,10 +50,7 @@
 }
 
 .food3__img {
-  margin-inline: calc(50% - 50vw);
-
   @include mq("md") {
-    margin-inline: initial;
     grid-area: img1;
   }
 }
