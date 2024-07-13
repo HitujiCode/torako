@@ -41,10 +41,10 @@
 }
 
 .head-1line.js-slideIn::before {
-  animation: slideLine 1s forwards;
+  animation: slideLine 0.7s forwards;
 }
 
 .head-1line.js-slideIn .head-1line__text {
   animation: slideText 1s forwards;
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }

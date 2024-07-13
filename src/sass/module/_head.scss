@@ -159,12 +159,12 @@
 
 .head.js-slideIn::before {
   @include mq("md") {
-    animation: slideLine 1s forwards;
+    animation: slideLine 0.7s forwards;
   }
 }
 
 .head__line.js-slideIn::before {
-  animation: slideLine 1s forwards;
+  animation: slideLine 0.7s forwards;
 
   @include mq("md") {
     animation: none;
@@ -178,7 +178,7 @@
 }
 
 .head__text.js-slideIn {
-  animation: slideText 1s forwards;
+  animation: slideText 0.7s forwards;
   animation-delay: 0.6s;
 }
 

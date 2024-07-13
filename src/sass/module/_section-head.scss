@@ -45,7 +45,7 @@
   text-transform: uppercase;
 
   @include mq("md") {
-    font-size: rem(80);
+    font-size: min(calc(80/1440*100vw), rem(80));
     line-height: calc(116/80);
     grid-area: sub;
   }
@@ -58,7 +58,7 @@
   letter-spacing: 0.2em;
 
   @include mq("md") {
-    font-size: rem(56);
+    font-size: min(calc(56/1440*100vw), rem(56));
     line-height: calc(80/56);
     grid-area: main;
   }

@@ -55,10 +55,11 @@ img {
   max-width: 100%;
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 

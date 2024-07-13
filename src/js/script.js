@@ -1,64 +1,5 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  // ローディング
-  $(window).on('load', function () {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const hasVisited = sessionStorage.getItem('access');
-
-    if (!hasVisited) {
-      sessionStorage.setItem('access', '0');
-      $("body").addClass("is-fixed");
-
-      const tl = gsap.timeline({
-        onComplete: function () {
-          $(".js-loading").remove();
-          $("body").removeClass("is-fixed");
-        }
-      });
-
-      // ローディングロゴのフェードインアニメーション
-      tl.fromTo(".loading__logo",
-        { opacity: 0, y: 100 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power1.inOut" }
-      );
-
-      // ローディング画面全体のフェードアウト
-      tl.to(".js-loading", {
-        delay: 0.3,
-        duration: 1,
-        autoAlpha: 0
-      });
-
-      // js-catch要素のアニメーション
-      tl.to(".js-catch", {
-        duration: 1,
-        delay: -0.2,
-        ease: "power1.inOut",
-        keyframes: [
-          { rotate: 0 },
-          { rotate: 10, duration: 0.5 },
-          { rotate: -10, duration: 0.5 },
-          { rotate: 0, duration: 0.5 }
-        ]
-      });
-    } else {
-      // 初回以外の処理
-      $(".js-loading").remove();
-      $(".loading__logo").remove();
-      gsap.to(".js-catch", {
-        duration: 1,
-        ease: "power1.inOut",
-        keyframes: [
-          { rotate: 0 },
-          { rotate: 10, duration: 0.5 },
-          { rotate: -10, duration: 0.5 },
-          { rotate: 0, duration: 0.5 }
-        ]
-      });
-    }
-  });
-
   // ctaボタン
   $(document).ready(function () {
     const cta = $(".js-cta");
@@ -88,26 +29,40 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // ハンバーガーメニュー
   $(function () {
     $(".js-hamburger").click(function () {
-      $(this).toggleClass("is-open");
-      $(".js-drawer").toggleClass("is-open");
-      $("body").toggleClass("is-noscroll");
-      $(".outer").toggleClass("is-noscroll");
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+
       if ($(".js-drawer").hasClass("is-open")) {
+        // ドロワーメニューが開かれている場合
+        $(".js-header").css("width", "");
+        $(".js-drawer").css("width", "");
+        $("body").removeClass("is-noscroll");
+        $(".outer").removeClass("is-noscroll");
+        $(".js-logo").removeClass("is-open");
+      } else {
+        // ドロワーメニューが閉じられている場合
+        const headerWidth = $(".js-header").outerWidth();
+        $(".js-header").css("width", `calc(100% - ${scrollBarWidth}px)`);
+        $(".js-drawer").css("width", `calc(100% - ${scrollBarWidth}px)`);
+        $("body").addClass("is-noscroll");
+        $(".outer").addClass("is-noscroll");
         setTimeout(function () {
           $(".js-logo").addClass("is-open");
         }, 500); // 0.5秒後にクラスを追加
-      } else {
-        $(".js-logo").removeClass("is-open");
       }
+
+      $(this).toggleClass("is-open");
+      $(".js-drawer").toggleClass("is-open");
     });
 
     // ドロワーナビのaタグをクリックで閉じる
     $(".js-drawer, .js-drawer a[href]").on("click", function () {
+      $("body").removeClass("is-noscroll");
+      $(".outer").removeClass("is-noscroll");
+      $(".js-header").css("width", "");
+      $(".js-drawer").css("width", "");
       $(".js-hamburger").removeClass("is-open");
       $(".js-drawer").removeClass("is-open");
       $(".js-logo").removeClass("is-open");
-      $("body").removeClass("is-noscroll");
-      $(".outer").removeClass("is-noscroll");
     });
   });
 
@@ -128,6 +83,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     slidesPerView: "auto",
     autoplay: {
       delay: 1500,
+      disableOnInteraction: false,
     },
     navigation: {
       nextEl: '.swiper-button-next',

@@ -125,6 +125,8 @@
 
   @include mq("md") {
     top: rem(48);
+    //画面いっぱいの場合
+    left: calc(50% - 50vw);
   }
 }
 

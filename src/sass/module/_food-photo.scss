@@ -264,7 +264,6 @@
   letter-spacing: 0.2em;
   writing-mode: vertical-rl;
   background-color: rgb($white, 0.7);
-  // height: fit-content;
   padding-top: rem(18);
   padding-bottom: rem(14);
   padding-inline: rem(6);
@@ -292,11 +291,11 @@
   padding-bottom: rem(8);
 
   @include mq("md") {
-    font-size: rem(26);
+    font-size: clamp(14px, calc(26/1440*100vw), 26px);
     line-height: calc(42/26);
     letter-spacing: 0.3em;
-    padding-top: rem(20);
-    padding-bottom: rem(14);
+    padding-top: min(calc(20/1440*100vw), 20px);
+    padding-bottom: min(calc(14/1440*100vw), 14px);
   }
 }
 
@@ -341,7 +340,7 @@
   text-transform: uppercase;
 
   @include mq("md") {
-    font-size: rem(32);
+    font-size: min(calc(32/1440*100vw), rem(32));
     line-height: calc(46/32);
     padding-inline: rem(23);
     letter-spacing: 0.1em;

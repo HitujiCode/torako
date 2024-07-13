@@ -15,7 +15,7 @@
   line-height: calc(24/18);
   letter-spacing: 0.2em;
   width: min(100%, rem(360));
-  transition: background-color 0.3;
+  transition: background-color 0.3s;
 
   @include mq("md") {
     font-size: rem(32);

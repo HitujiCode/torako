@@ -52,6 +52,9 @@
     top: rem(65);
     left: initial;
     right: 0;
+
+    // 画面いっぱいの場合
+    right: calc(50% - 50vw);
   }
 }
 

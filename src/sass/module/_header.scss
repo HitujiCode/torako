@@ -3,7 +3,8 @@
 .header {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
+  width: 100%;
   z-index: 900;
 }
 
@@ -13,8 +14,6 @@
 
 .header__hamburger {
   position: relative;
-  top: 0;
-  right: 0;
   z-index: 1200;
   width: rem(68);
   aspect-ratio: 1/1;
