@@ -146,11 +146,19 @@
   display: inline-block;
   font-size: rem(18);
   line-height: calc(24/18);
+  letter-spacing: 0.2em;
 
   @include mq("md") {
     margin-top: initial;
     font-size: clamp(14px, calc(24/1440*100vw), 24px);
     line-height: calc(32/24);
+  }
+}
+
+.course-block2__menu-small--delta {
+  @extend .course-block2__menu-small;
+  @include mq("md") {
+    padding-left: 0.4em;
   }
 }
 
@@ -166,6 +174,7 @@
     font-size: clamp(18px, calc(32/1440*100vw), 32px);
     line-height: calc(46/32);
     letter-spacing: 0.1em;
+    margin-left: 0.3em;
   }
 }
 
