@@ -25,8 +25,13 @@
   <!-- GoogleFonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Noto+Sans+JP:wght@100..900&display=swap"
-    rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet"> -->
+  <link rel="preload" as="style" fetchpriority="high"
+    href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Noto+Sans+JP:wght@100..900&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Noto+Sans+JP:wght@100..900&display=swap"
+    media="all" onload="this.media='all'" />
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -36,19 +41,18 @@
   <link rel="preload" href="./assets/images/slide_03.webp" as="image">
   <link rel="preload" href="./assets/images/slide_04.webp" as="image">
   <!-- Gsap -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="./assets/js/loading.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <!-- JavaScript -->
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./assets/js/loading.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
-
 
 <body>
   <div class="loading js-loading">
     <figure class="loading__logo">
-      <img src="./assets/images/logo_mv.svg" alt="TORAKO" width="240" height="223" />
+      <img src="./assets/images/logo_mv.svg" alt="TORAKO" width="240" height="223" fetchpriority="high" />
     </figure>
   </div>
 
@@ -165,10 +169,10 @@
         </div>
         <p class="mv__title">仙台でホルモン・ユッケ・肉刺し・<wbr>焼肉を堪能するなら【トラコ文化横丁店】</p>
         <h1 class="mv__logo">
-          <img src="./assets/images/logo_mv_white.svg" alt="TORAKO" width="240" height="223" />
+          <img src="./assets/images/logo_mv_white.svg" alt="TORAKO" width="240" height="223" fetchpriority="high" />
         </h1>
         <figure class="mv__catch js-catch">
-          <img src="./assets/images/catch.svg" alt="トラコでカンパイ！！" width="231" height="152" />
+          <img src="./assets/images/catch.svg" alt="トラコでカンパイ！！" width="231" height="152" fetchpriority="high" />
         </figure>
       </section>
 

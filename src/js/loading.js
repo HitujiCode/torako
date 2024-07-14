@@ -3,8 +3,8 @@ window.addEventListener('load', function () {
 
   const hasVisited = sessionStorage.getItem('access');
 
-  if (!hasVisited) {
-    sessionStorage.setItem('access', '0');
+  // if (!hasVisited) {
+  //   sessionStorage.setItem('access', '0');
     document.body.classList.add("is-fixed");
 
     const tl = gsap.timeline({
@@ -18,13 +18,13 @@ window.addEventListener('load', function () {
     // ローディングロゴのフェードインアニメーション
     tl.fromTo(".loading__logo",
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 0.5, ease: "power1.inOut" }
+      { opacity: 1, y: 0, duration: 0.8 }
     );
 
     // ローディング画面全体のフェードアウト
     tl.to(".js-loading", {
-      delay: 0.3,
-      duration: 1,
+      delay: 0.4,
+      duration: 0.8,
       autoAlpha: 0
     });
 
@@ -40,21 +40,23 @@ window.addEventListener('load', function () {
         { rotate: 0, duration: 0.5 }
       ]
     });
-  } else {
-    // 初回以外の処理
-    const loadingElement = document.querySelector(".js-loading");
-    const loadingLogoElement = document.querySelector(".loading__logo");
-    if (loadingElement) loadingElement.remove();
-    if (loadingLogoElement) loadingLogoElement.remove();
-    gsap.to(".js-catch", {
-      duration: 1,
-      ease: "power1.inOut",
-      keyframes: [
-        { rotate: 0 },
-        { rotate: 10, duration: 0.5 },
-        { rotate: -10, duration: 0.5 },
-        { rotate: 0, duration: 0.5 }
-      ]
-    });
   }
-});
+  // else {
+    // 初回以外の処理
+    // const loadingElement = document.querySelector(".js-loading");
+    // const loadingLogoElement = document.querySelector(".loading__logo");
+    // if (loadingElement) loadingElement.remove();
+    // if (loadingLogoElement) loadingLogoElement.remove();
+    // gsap.to(".js-catch", {
+    //   duration: 1,
+    //   ease: "power1.inOut",
+    //   keyframes: [
+    //     { rotate: 0 },
+    //     { rotate: 10, duration: 0.5 },
+    //     { rotate: -10, duration: 0.5 },
+    //     { rotate: 0, duration: 0.5 }
+    //   ]
+    // });
+  // }
+// }
+);

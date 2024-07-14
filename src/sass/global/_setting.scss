@@ -40,6 +40,7 @@ body {
   letter-spacing: 0.2em;
   position: relative;
   overflow-y: scroll;
+  min-height: 100dvh;
 }
 
 body.is-fixed {
