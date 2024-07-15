@@ -13,7 +13,6 @@
 
 .course-block__content {
   @include mq("md") {
-    // max-width: rem(1300);
     margin-inline: auto;
   }
 }

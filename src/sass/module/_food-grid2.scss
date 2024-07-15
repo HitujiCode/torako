@@ -13,7 +13,6 @@
 }
 
 .food-grid2__head {
-  // margin-left: calc(50% - 50vw);
 }
 
 .food-grid2__text {
@@ -30,7 +29,6 @@
 
 .food-grid2__images {
   margin-top: rem(68);
-  // margin-inline: calc(50% - 50vw);
 
   @include mq("md") {
     margin-top: rem(40);

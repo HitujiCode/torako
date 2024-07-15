@@ -2,23 +2,11 @@
 
 .thumbnail {
   padding-inline: rem(32);
+  width: 100%;
+  height: 100%;
 
   @include mq("md") {
     padding-inline: rem(80);
-  }
-}
-
-.thumbnail::before,
-.thumbnail::after {
-  content: "";
-  position: absolute;
-  inset-block: 0;
-  width: rem(32);
-  background-color: rgb($white, 0.7);
-  z-index: 2;
-
-  @include mq("md") {
-    width: rem(80);
   }
 }
 
@@ -49,23 +37,35 @@
   object-fit: cover;
 }
 
-.thumbnail__prev {
-  left: 0;
+%thumbnail-button {
+  margin-top: initial;
+  width: rem(32);
+  height: 100%;
+  background-color: rgb($white, 0.7);
+  top: 0;
+  transition: background-color 0.3s;
 
   @include mq("md") {
-    left: rem(26);
+    width: rem(80);
+  }
+}
+
+.thumbnail__prev {
+  @extend %thumbnail-button;
+  left: 0;
+
+
+  @include mq("md") {
+    width: rem(80);
   }
 }
 
 .thumbnail__next {
+  @extend %thumbnail-button;
   right: 0;
-
-  @include mq("md") {
-    right: rem(26);
-  }
 }
 
-%thumbnail-button {
+%thumbnail-arrow {
   text-rendering: optimizespeed;
   width: rem(15);
   height: rem(31);
@@ -85,18 +85,18 @@
 }
 
 .thumbnail__prev::after {
-  @extend %thumbnail-button;
+  @extend %thumbnail-arrow;
 }
 
 .thumbnail__next::after {
-  @extend %thumbnail-button;
+  @extend %thumbnail-arrow;
   transform: scale(-1, 1);
 }
 
 @media (any-hover: hover) {
 
-  .thumbnail__prev:hover::after,
-  .thumbnail__next:hover::after {
-    opacity: 0.5;
+  .thumbnail__prev:hover,
+  .thumbnail__next:hover {
+    background-color: rgb($white, 0.5);
   }
 }

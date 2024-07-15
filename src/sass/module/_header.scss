@@ -130,7 +130,6 @@
     grid-template-areas:
       "logo nav button"
       "logo address button";
-    // column-gap: min(calc(56/1440*100vw), rem(56));
     justify-content: space-between;
     height: initial;
     margin-inline: auto;

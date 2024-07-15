@@ -95,17 +95,13 @@
   mask-size: contain;
   width: rem(50);
   height: rem(48);
-  transition: background-image 0.3s;
+  transition: background-color 0.3s;
 
   @include mq("md") {
     width: rem(50);
     height: rem(48);
     left: rem(24);
   }
-}
-
-.button--reservation::after {
-  @include mq("md") {}
 }
 
 .button--instagram::before {

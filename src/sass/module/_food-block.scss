@@ -29,10 +29,7 @@
 }
 
 .food-block__img {
-  // margin-inline: calc(50% - 50vw);
-
   @include mq("md") {
-    // margin-right: initial;
     flex: 1;
   }
 }
@@ -104,44 +101,6 @@
   flex-direction: row-reverse;
 }
 
-
-.food-block--2 .food-block__head {
-  @include mq("md") {
-    position: absolute;
-    top: rem(60);
-    right: 0;
-    left: initial;
-  }
-}
-
-.food-block--4 {
-  @extend .food-block;
-}
-
-.food-block--4 .food-block__head {
-  position: absolute;
-  top: rem(-48);
-  left: 0;
-
-  @include mq("md") {
-    top: rem(48);
-    //画面いっぱいの場合
-    left: calc(50% - 50vw);
-  }
-}
-
-.food-block--5 .food-block__head {
-  // position: absolute;
-  // top: rem(-48);
-  // left: 0;
-
-  // @include mq("md") {
-  //   top: rem(65);
-  //   left: initial;
-  //   right: 0;
-  // }
-}
-
 .food-block--1 .food-block__img,
 .food-block--2 .food-block__img,
 .food-block--3 .food-block__img,
@@ -154,15 +113,18 @@
   }
 }
 
-.food-block--lunch .food-block__head {
-  position: absolute;
-  top: rem(-48);
-  left: 0;
-}
-
 .food-block--1 .food-block__text {
   @include mq("md") {
     padding-top: rem(150);
+  }
+}
+
+.food-block--2 .food-block__head {
+  @include mq("md") {
+    position: absolute;
+    top: rem(60);
+    right: 0;
+    left: initial;
   }
 }
 
@@ -171,7 +133,6 @@
     padding-top: clamp(rem(168), calc(168/1440*100vw), rem(230));
   }
 }
-
 
 .food-block--3 {
   @extend .food-block;
@@ -185,18 +146,13 @@
   }
 }
 
-.food-block--3 .food-block__img {
-  @include mq("md") {}
-}
-
 .food-block--3 .food-block__text {
   @include mq("md") {
     padding-top: rem(194);
   }
 }
 
-.food-block--4,
-.food-block--5 {
+.food-block--4 {
   @extend .food-block;
 
   @include mq("md") {
@@ -204,9 +160,19 @@
   }
 }
 
+.food-block--4 .food-block__head {
+  position: absolute;
+  top: rem(-48);
+  left: 0;
+
+  @include mq("md") {
+    top: rem(48);
+    left: calc(50% - 50vw);
+  }
+}
+
 .food-block--4 .food-block__img {
   @include mq("md") {
-    // はみ出す場合
     margin-inline: calc(50% - 50vw);
     height: clamp(rem(520), calc(520/1440*100vw), rem(720));
   }

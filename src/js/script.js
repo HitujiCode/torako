@@ -98,14 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // MVスライダー
-  new Swiper('.js-mv-swiper', {
-    loop: true,
-    effect: 'fade',
-    speed: 3000,
-    autoplay: {
-      delay: 1500,
-    }
-  });
+  setTimeout(() => {
+    new Swiper('.js-mv-swiper', {
+      loop: true,
+      effect: 'fade',
+      speed: 3000,
+      autoplay: {
+        delay: 1500,
+      },
+    });
+  }, 1000);
 
   // サムネイルスライダー
   new Swiper('.js-thumbnail', {
@@ -119,6 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    lazy: {
+      loadPrevNext: true,
     },
   });
 

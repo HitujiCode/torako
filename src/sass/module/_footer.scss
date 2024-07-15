@@ -4,7 +4,7 @@
   position: relative;
   background-color: $black;
   padding-top: rem(40);
-  padding-bottom: rem(22);
+  padding-bottom: rem(88);
 
   @include mq("md") {
     padding-block: rem(74);
@@ -22,6 +22,7 @@
   filter: invert(1);
   padding: initial;
   margin: initial;
+  transition: opacity 0.3s;
 }
 
 .footer__page-top img {

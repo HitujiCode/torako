@@ -53,11 +53,6 @@
 }
 
 .food__container2 {
-  // margin-top: rem(40);
-
-  // @include mq("md") {
-  //   margin-top: initial;
-  // }
 }
 
 .food__container-black {
@@ -75,30 +70,6 @@
   }
 }
 
-.food__container-black2 {
-  // margin-top: initial;
-  // padding-top: rem(40);
-  // margin-inline: calc(50% - 50vw);
-  // background-color: $black;
-
-  // @include mq("md") {
-  //   padding-top: rem(80);
-  // }
-}
-
-.food__container-black3 {
-  // padding-top: rem(40);
-  // padding-bottom: rem(100);
-  // padding-inline: calc(50vw - 50%);
-  // margin-inline: calc(50% - 50vw);
-  // background-color: $black;
-
-  // @include mq("md") {
-  //   padding-top: rem(80);
-  //   padding-bottom: rem(120);
-  // }
-}
-
 .food__content {
   margin-top: rem(40);
 
@@ -108,8 +79,6 @@
 }
 
 .foode__content--2 {
-  // margin-top: rem(40);
-
   @include mq("md") {
     margin-top: rem(80);
   }
