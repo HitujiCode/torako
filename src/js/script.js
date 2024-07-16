@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // サムネイルスライダー
   new Swiper('.js-thumbnail', {
     loop: true,
-    speed: 1500,
+    speed: 2000,
     slidesPerView: "auto",
     autoplay: {
       delay: 1500,
@@ -121,9 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    lazy: {
-      loadPrevNext: true,
     },
   });
 
