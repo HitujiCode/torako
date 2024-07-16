@@ -160,9 +160,22 @@
 
   @include mq("md") {
     font-size: rem(26);
-    line-height: calc(34/26);
+    line-height: 1;
     letter-spacing: 0.3em;
     writing-mode: vertical-rl;
     padding: rem(20) rem(4);
+    width: rem(42);
+    height: fit-content;
+  }
+}
+
+.scene__text span {
+  @include mq("md") {
+    writing-mode: vertical-lr;
+    white-space: pre;
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 }

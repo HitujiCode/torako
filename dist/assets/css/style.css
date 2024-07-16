@@ -246,6 +246,7 @@ a {
 
 .access__guide {
 	border: 1px solid;
+	display: grid;
 	margin-top: 2.5rem;
 	padding-bottom: 0.5rem;
 	padding-left: 1rem;
@@ -759,7 +760,7 @@ a {
 }
 
 .cta__reservation {
-	background-color: #000;
+	background-color: #DC001B;
 	color: #fff;
 	display: block;
 	flex: 1;
@@ -793,7 +794,18 @@ a {
 }
 
 .cta__instagram {
+	align-items: center;
+	aspect-ratio: 1/1;
+	background-color: #DC001B;
+	display: grid;
+	justify-items: center;
+	place-items: center;
 	width: 4rem;
+}
+
+.cta__instagram-icon {
+	filter: brightness(0) invert(1);
+	width: 2.0625rem;
 }
 
 .cta__instagram img {
@@ -872,9 +884,9 @@ a {
 }
 
 .floor__list {
-	grid-gap: 1.5rem;
+	grid-gap: 2.25rem;
 	display: grid;
-	gap: 1.5rem;
+	gap: 2.25rem;
 	grid-template-columns: 1fr;
 	margin-top: 2.5rem;
 }
@@ -1535,6 +1547,10 @@ a {
 	width: 10.625rem;
 }
 
+.footer__logo a {
+	display: block;
+}
+
 .footer__logo img {
 	-o-object-fit: contain;
 	aspect-ratio: 170/158;
@@ -1857,6 +1873,10 @@ a {
 
 .header__logo.is-open {
 	position: fixed;
+}
+
+.header__logo a {
+	display: block;
 }
 
 .header__logo img {
@@ -2324,7 +2344,7 @@ a {
 }
 
 .menu__taste {
-	background-color: #000;
+	background-color: #DC001B;
 	color: #fff;
 	display: grid;
 	font-size: 1rem;
@@ -2730,11 +2750,11 @@ a {
 }
 
 .cta__reservation:hover {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .cta__instagram:hover {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .footer__page-top:hover {
@@ -2875,9 +2895,7 @@ html {
 }
 
 .access__guide {
-	grid-gap: 1.5rem;
 	align-items: center;
-	display: grid;
 	gap: 1.5rem;
 	grid-template-columns: repeat(2, auto);
 	margin-left: auto;
@@ -3286,6 +3304,10 @@ html {
 }
 
 .cta__instagram {
+	width: 100%;
+}
+
+.cta__instagram-icon {
 	width: 2.5rem;
 }
 
@@ -4562,10 +4584,22 @@ html {
 
 .scene__text {
 	font-size: 1.625rem;
+	height: -moz-fit-content;
+	height: fit-content;
 	letter-spacing: 0.3em;
-	line-height: 1.3076923077;
+	line-height: 1;
 	padding: 1.25rem 0.25rem;
+	width: 2.625rem;
 	writing-mode: vertical-rl;
+}
+
+.scene__text span {
+	align-items: center;
+	display: inline-block;
+	display: flex;
+	white-space: pre;
+	width: 100%;
+	writing-mode: vertical-lr;
 }
 
 .section-head,

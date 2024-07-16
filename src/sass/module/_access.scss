@@ -135,12 +135,12 @@
   padding-bottom: rem(8);
   border: 1px solid;
   text-align: center;
+  display: grid;
 
   @include mq("md") {
     margin-top: rem(80);
     margin-inline: auto;
     max-width: rem(1014);
-    display: grid;
     grid-template-columns: repeat(2, auto);
     gap: rem(24);
     align-items: center;

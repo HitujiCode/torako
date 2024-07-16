@@ -24,7 +24,7 @@
   color: $white;
   line-height: calc(20/14);
   letter-spacing: 0.25em;
-  background-color: $black;
+  background-color: $red;
   flex: 1;
   padding-top: rem(20);
   padding-bottom: rem(23);
@@ -71,7 +71,20 @@
 }
 
 .cta__instagram {
+  display: grid;
+  place-items: center;
   width: rem(64);
+  aspect-ratio: 1/1;
+  background-color: $red;
+
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.cta__instagram-icon {
+  width: rem(33);
+  filter: brightness(0) invert(1);
 
   @include mq("md") {
     width: rem(40);
@@ -87,10 +100,10 @@
 
 @media (any-hover: hover) {
   .cta__reservation:hover {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .cta__instagram:hover {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
