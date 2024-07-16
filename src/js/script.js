@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         delay: 1500,
       },
     });
-  }, 1000);
+  }, 3000);
 
   // サムネイルスライダー
   new Swiper('.js-thumbnail', {
