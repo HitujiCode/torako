@@ -122,6 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    on: {
+      init: function () {
+        document.querySelector('.thumbnail').classList.add('initialized');
+      }
+    }
   });
 
   // アニメーション
