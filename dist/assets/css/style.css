@@ -760,7 +760,7 @@ a {
 }
 
 .cta__reservation {
-	background-color: #DC001B;
+	background-color: rgba(220, 0, 27, 0.8);
 	color: #fff;
 	display: block;
 	flex: 1;
@@ -2752,11 +2752,11 @@ a {
 }
 
 .cta__reservation:hover {
-	background-color: rgba(220, 0, 27, 0.2);
+	background-color: rgba(220, 0, 27, 0.5);
 }
 
 .cta__instagram:hover {
-	background-color: rgba(220, 0, 27, 0.2);
+	background-color: rgba(220, 0, 27, 0.5);
 }
 
 .footer__page-top:hover {

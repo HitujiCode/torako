@@ -24,7 +24,7 @@
   color: $white;
   line-height: calc(20/14);
   letter-spacing: 0.25em;
-  background-color: $red;
+  background-color: rgb($red, 0.8);
   flex: 1;
   padding-top: rem(20);
   padding-bottom: rem(23);
@@ -103,12 +103,10 @@
 
 @media (any-hover: hover) {
   .cta__reservation:hover {
-    // opacity: 0.2;
-    background-color: rgb($red, 0.2);
+    background-color: rgb($red, 0.5);
   }
 
   .cta__instagram:hover {
-    // opacity: 0.2;
-    background-color: rgb($red, 0.2);
+    background-color: rgb($red, 0.5);
   }
 }
