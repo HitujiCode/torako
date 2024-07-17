@@ -3304,11 +3304,12 @@ html {
 }
 
 .cta__instagram {
-	width: 100%;
+	border-radius: 50%;
+	width: 2.5rem;
 }
 
 .cta__instagram-icon {
-	width: 2.5rem;
+	width: 1.3125rem;
 }
 
 .drink__note {

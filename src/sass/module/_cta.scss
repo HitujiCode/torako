@@ -78,7 +78,8 @@
   background-color: $red;
 
   @include mq("md") {
-    width: 100%;
+    width: rem(40);
+    border-radius: 50%;
   }
 }
 
@@ -87,7 +88,7 @@
   filter: brightness(0) invert(1);
 
   @include mq("md") {
-    width: rem(40);
+    width: rem(21);
   }
 }
 
