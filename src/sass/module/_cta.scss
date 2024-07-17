@@ -29,6 +29,7 @@
   padding-top: rem(20);
   padding-bottom: rem(23);
   text-align: center;
+  transition: background-color 0.3s;
 
   @include mq("md") {
     width: rem(56);
@@ -76,6 +77,7 @@
   width: rem(64);
   aspect-ratio: 1/1;
   background-color: $red;
+  transition: background-color 0.3s;
 
   @include mq("md") {
     width: rem(40);
@@ -101,10 +103,12 @@
 
 @media (any-hover: hover) {
   .cta__reservation:hover {
-    opacity: 0.8;
+    // opacity: 0.2;
+    background-color: rgb($red, 0.2);
   }
 
   .cta__instagram:hover {
-    opacity: 0.8;
+    // opacity: 0.2;
+    background-color: rgb($red, 0.2);
   }
 }

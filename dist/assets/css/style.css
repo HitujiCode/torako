@@ -770,6 +770,7 @@ a {
 	padding-bottom: 1.4375rem;
 	padding-top: 1.25rem;
 	text-align: center;
+	transition: background-color 0.3s;
 }
 
 .cta__reservation span {
@@ -800,6 +801,7 @@ a {
 	display: grid;
 	justify-items: center;
 	place-items: center;
+	transition: background-color 0.3s;
 	width: 4rem;
 }
 
@@ -884,9 +886,9 @@ a {
 }
 
 .floor__list {
-	grid-gap: 2.25rem;
+	grid-gap: 2.75rem;
 	display: grid;
-	gap: 2.25rem;
+	gap: 2.75rem;
 	grid-template-columns: 1fr;
 	margin-top: 2.5rem;
 }
@@ -2750,11 +2752,11 @@ a {
 }
 
 .cta__reservation:hover {
-	opacity: 0.8;
+	background-color: rgba(220, 0, 27, 0.2);
 }
 
 .cta__instagram:hover {
-	opacity: 0.8;
+	background-color: rgba(220, 0, 27, 0.2);
 }
 
 .footer__page-top:hover {
