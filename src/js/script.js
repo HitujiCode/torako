@@ -45,10 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".js-hamburger");
   const drawer = document.querySelector(".js-drawer");
   const header = document.querySelector(".js-header");
-  const logo = document.querySelector(".js-logo");
   const outer = document.querySelector(".outer");
 
-  if (hamburger && drawer && header && logo && outer) {
+  if (hamburger && drawer && header && outer) {
     hamburger.addEventListener("click", function () {
       const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 
@@ -57,16 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
         drawer.style.width = "";
         document.body.classList.remove("is-noscroll");
         outer.classList.remove("is-noscroll");
-        logo.classList.remove("is-open");
       } else {
         const headerWidth = header.offsetWidth;
         header.style.width = `calc(100% - ${scrollBarWidth}px)`;
         drawer.style.width = `calc(100% - ${scrollBarWidth}px)`;
         document.body.classList.add("is-noscroll");
         outer.classList.add("is-noscroll");
-        setTimeout(() => {
-          logo.classList.add("is-open");
-        }, 500);
       }
 
       hamburger.classList.toggle("is-open");
@@ -80,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
       drawer.style.width = "";
       hamburger.classList.remove("is-open");
       drawer.classList.remove("is-open");
-      logo.classList.remove("is-open");
     });
 
     const drawerLinks = drawer.querySelectorAll("a[href]");
@@ -92,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
         drawer.style.width = "";
         hamburger.classList.remove("is-open");
         drawer.classList.remove("is-open");
-        logo.classList.remove("is-open");
       });
     });
   }

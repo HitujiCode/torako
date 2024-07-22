@@ -4,7 +4,7 @@ body {
 	font-family: "Noto Sans JP", sans-serif;
 	font-weight: 400;
 	letter-spacing: 0.2em;
-	min-height: 100dvh;
+	min-height: 100svh;
 	overflow-y: scroll;
 	position: relative;
 }
@@ -953,6 +953,10 @@ a {
 	padding-right: 4.0816326531vw;
 }
 
+.food-block__text .text + .text {
+	margin-top: 1rem;
+}
+
 .food-block__info {
 	margin-top: 1rem;
 }
@@ -1857,6 +1861,7 @@ a {
 	overflow-y: scroll;
 	padding-bottom: 2rem;
 	padding-top: 5.625rem;
+	position: relative;
 	scrollbar-width: none;
 	transition: top 0.5s;
 	width: 100%;
@@ -1872,10 +1877,6 @@ a {
 	position: absolute;
 	top: 1rem;
 	width: 7.0625rem;
-}
-
-.header__logo.is-open {
-	position: fixed;
 }
 
 .header__logo a {
@@ -2070,7 +2071,7 @@ a {
 	background-color: #fff;
 	bottom: 0;
 	left: 0;
-	min-height: 100dvh;
+	min-height: 100svh;
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -2399,7 +2400,7 @@ a {
 
 .mv {
 	background-color: #000;
-	height: 100dvh;
+	height: 100svh;
 	position: relative;
 }
 
@@ -2653,13 +2654,6 @@ a {
 
 .text--white {
 	color: #fff;
-}
-
-.text + .text,
-.text--white + .text,
-.text + .text--white,
-.text--white + .text--white {
-	margin-top: 1rem;
 }
 
 .thumbnail {
@@ -4150,11 +4144,6 @@ html {
 	position: static;
 	position: initial;
 	width: 100%;
-}
-
-.header__logo.is-open {
-	position: static;
-	position: initial;
 }
 
 .header__container {

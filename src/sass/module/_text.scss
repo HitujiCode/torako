@@ -10,7 +10,3 @@
   @extend .text;
   color: $white;
 }
-
-.text+.text {
-  margin-top: rem(16);
-}

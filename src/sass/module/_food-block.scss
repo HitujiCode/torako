@@ -57,6 +57,10 @@
   }
 }
 
+.food-block__text .text+.text {
+  margin-top: rem(16);
+}
+
 .food-block__info {
   margin-top: rem(16);
 }
