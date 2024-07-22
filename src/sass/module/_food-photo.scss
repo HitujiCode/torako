@@ -137,6 +137,7 @@
   bottom: 0;
   right: 0;
   display: flex;
+  flex-direction: row-reverse;
   place-items: flex-end;
 
   @include mq("md") {

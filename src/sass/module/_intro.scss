@@ -61,6 +61,7 @@
 .intro__title-main {
   margin-top: rem(12);
   width: rem(158);
+  aspect-ratio: 158/51;
   grid-area: main;
 
   @include mq("md") {
@@ -69,13 +70,6 @@
     margin-left: rem(36);
     padding-top: rem(10);
   }
-}
-
-.intro__title-main img {
-  aspect-ratio: 158/51;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .intro__title-location {
