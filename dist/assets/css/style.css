@@ -232,7 +232,7 @@ a {
 }
 
 .access__description span {
-	margin-left: 6.25em;
+	display: inline-block;
 }
 
 .access__buttons {
@@ -248,10 +248,10 @@ a {
 	border: 1px solid;
 	display: grid;
 	margin-top: 2.5rem;
-	padding-bottom: 0.5rem;
+	padding-bottom: 1.25rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-	padding-top: 1.5rem;
+	padding-top: 1.25rem;
 	text-align: center;
 }
 

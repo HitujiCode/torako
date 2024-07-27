@@ -107,7 +107,8 @@
 }
 
 .access__description span {
-  margin-left: 6.25em;
+  // margin-left: 6.25em;
+  display: inline-block;
 }
 
 .access__buttons {
@@ -130,9 +131,9 @@
 
 .access__guide {
   margin-top: rem(40);
-  padding-top: rem(24);
+  padding-top: rem(20);
   padding-inline: rem(16);
-  padding-bottom: rem(8);
+  padding-bottom: rem(20);
   border: 1px solid;
   text-align: center;
   display: grid;
