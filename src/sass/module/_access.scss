@@ -91,7 +91,7 @@
   @include mq("md") {
     display: grid;
     grid-template-columns: auto calc(382/568*100%);
-    gap: rem(40);
+    gap: min(40/1440*100vw, rem(40));
     padding-block: rem(8);
     padding-inline: rem(16);
   }
@@ -103,8 +103,7 @@
 
 .access__term {}
 
-.access__description {
-}
+.access__description {}
 
 .access__description span {
   // margin-left: 6.25em;

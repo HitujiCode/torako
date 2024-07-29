@@ -2886,9 +2886,9 @@ html {
 }
 
 .access__wrap {
-	grid-gap: 2.5rem;
+	grid-gap: min(2.7777777778vw, 2.5rem);
 	display: grid;
-	gap: 2.5rem;
+	gap: min(2.7777777778vw, 2.5rem);
 	grid-template-columns: auto 67.2535211268%;
 	padding-bottom: 0.5rem;
 	padding-left: 1rem;
