@@ -110,19 +110,9 @@
   background-color: $black;
 
   @include mq("md") {
-    display: grid;
-    grid-template-columns: rem(280) minmax(0, rem(600));
-    gap: min(calc(38/1440*100vw), rem(38));
-    align-items: center;
-    justify-content: space-around;
     padding-bottom: rem(32);
-    padding-inline: rem(60);
-    min-height: rem(260)
-  }
-
-  @include mq("lg") {
-    padding-left: min(calc(104/1440*100vw), rem(104));
-    padding-right: min(calc(100/1440*100vw), rem(100));
+    padding-inline: rem(40);
+    min-height: rem(260);
   }
 }
 
@@ -132,6 +122,17 @@
   @include mq("md") {
     margin-top: rem(40);
   }
+}
+
+.course-block__menu-inner {
+  @include mq("md") {
+      display: grid;
+      grid-template-columns: rem(280) minmax(0, rem(600));
+      gap: min(calc(38/1440*100vw), rem(38));
+      align-items: center;
+      max-width: rem(812);
+      margin-inline: auto;
+    }
 }
 
 .course-block__menu-title {
